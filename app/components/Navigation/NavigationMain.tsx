@@ -1,5 +1,6 @@
 import { Box, Heading } from "@chakra-ui/react";
 import { Link } from "@remix-run/react";
+import { LogoMitobyte } from "../Logos/LogoMitobyte";
 
 export const NavigationMain = () => {
   return (
@@ -13,9 +14,7 @@ export const NavigationMain = () => {
     >
       <Box background="whiteAlpha.300" padding={3} boxShadow="base" mb={1}>
         <Link to="/">
-          <Heading textAlign="center" fontSize="4xl">
-            Mitobyte
-          </Heading>
+          <LogoMitobyte />
         </Link>
       </Box>
     </Box>
