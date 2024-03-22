@@ -9,12 +9,23 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import { LinksFunction } from "@remix-run/node"; // Depends on the runtime you choose
+import { LinksFunction, MetaFunction } from "@remix-run/node"; // Depends on the runtime you choose
 
 import { ServerStyleContext, ClientStyleContext } from "./context";
 import { mitobyteTheme } from "./theme/mitobyte-theme";
+
+// even though we're using splide-react we import css from just splide
+// https://github.com/remix-run/remix/discussions/4068#discussioncomment-3477875
 import splideCSSCore from "@splidejs/splide/dist/css/splide-core.min.css";
 import splideCSSTheme from "@splidejs/splide/dist/css/themes/splide-default.min.css";
+
+export const meta: MetaFunction = () => [
+  {
+    charset: "utf-8",
+    title: "Mitobyte",
+    viewport: "width=device-width,initial-scale=1",
+  },
+];
 
 export let links: LinksFunction = () => {
   return [
@@ -86,7 +97,6 @@ export default function App() {
   return (
     <Document>
       <ChakraProvider theme={mitobyteTheme}>
-        {/* <PageHome /> */}
         <Outlet />
       </ChakraProvider>
     </Document>
