@@ -1,4 +1,3 @@
-// root.tsx
 import React, { useContext, useEffect } from "react";
 import { withEmotionCache } from "@emotion/react";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -10,19 +9,12 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import { MetaFunction, LinksFunction } from "@remix-run/node"; // Depends on the runtime you choose
+import { LinksFunction } from "@remix-run/node"; // Depends on the runtime you choose
 
 import { ServerStyleContext, ClientStyleContext } from "./context";
-import { PageHome } from "./pages/PageHome/PageHome";
 import { mitobyteTheme } from "./theme/mitobyte-theme";
-import splideCSSCore from "@splidejs/react-splide/dist/css/splide-core.min.css";
-import splideCSSTheme from "@splidejs/react-splide/dist/css/themes/splide-default.min.css";
-
-// export const meta: MetaFunction = () => ({
-//   charset: 'utf-8',
-//   title: 'New Remix App',
-//   viewport: 'width=device-width,initial-scale=1',
-// });
+import splideCSSCore from "@splidejs/splide/dist/css/splide-core.min.css";
+import splideCSSTheme from "@splidejs/splide/dist/css/themes/splide-default.min.css";
 
 export let links: LinksFunction = () => {
   return [
