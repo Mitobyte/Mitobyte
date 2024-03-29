@@ -2,6 +2,12 @@
 
 This repo uses volta to set node and npm. Configure it here: https://docs.volta.sh/guide/getting-started
 
+Make sure the following 2 lines are in your .zshrc file
+```
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+```
+
 If first time opening...
 ```
 npm install
