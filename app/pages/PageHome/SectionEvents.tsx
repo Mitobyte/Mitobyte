@@ -51,26 +51,24 @@ export const SectionEvents: FC<SectionEventsProps> = ({
         alignItems="stretch"
       >
         <CardEvent
-          imageSrc="/assets/logos-events/event-code-and-brews.png"
-          heading="Code + Brews"
-          // description="Occurs on the second Wednesday of every month. A Milwaukee coding meetup for any dev-curious, aspiring, or professional developer to work/hack on your project."
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
-          linkText="Learn More >"
-          linkTo="/codeandbrews"
-        />
-        <CardEvent
           imageSrc="/assets/logos-events/event-code-and-coffee.png"
           heading="Code & Coffee"
           // description="Occurs on the first Saturday of every month. A Milwaukee coding meetup for any dev-curious, aspiring, or professional developer to work/hack on your project."
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+          description="Code and Coffee is a morning collaboration and networking event held on the first Saturday of each month."
           linkText="Learn More >"
           linkTo="/codeandcoffee"
         />
         <CardEvent
+          imageSrc="/assets/logos-events/event-code-and-brews.png"
+          heading="Code + Brews"
+          description="Code and Brews has the same format as Code and Coffee, but at night with beer instead of coffee"
+          linkText="Learn More >"
+          linkTo="/codeandbrews"
+        />
+        <CardEvent
           imageSrc="/assets/logos-events/event-hackreation-big.png"
           heading="Hackreation"
-          // description="Our newest recurring event. Come to this event for focused hacking or working on person projects and show and tell at the end."
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor."
+          description="Our newest recurring event. Come to this event for focused hacking or working on person projects."
           linkText="Learn More >"
           linkTo="/hackreation"
         />

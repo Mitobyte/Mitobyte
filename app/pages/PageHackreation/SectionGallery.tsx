@@ -9,28 +9,28 @@ import { Wrapper, WrapperProps } from "~/components/Wrapper/Wrapper";
 
 const images: GalleryImageProps[] = [
   {
-    src: "/assets/images/events/codeAndBrews/IMG_4371.jpeg",
-    alt: "Code and Brews image 1",
+    src: "/assets/images/events/hackathons/IMG_3910.jpeg",
+    alt: "Hackreaction photo 1",
   },
   {
-    src: "/assets/images/events/codeAndBrews/IMG_4372.jpeg",
-    alt: "Code and Brews image 2",
+    src: "/assets/images/events/hackathons/IMG_3916.jpeg",
+    alt: "Hackreaction photo 2",
   },
   {
-    src: "/assets/images/events/codeAndBrews/IMG_4373.jpeg",
-    alt: "Code and Brews image 3",
+    src: "/assets/images/events/hackathons/IMG_3919.jpeg",
+    alt: "Hackreaction photo 3",
   },
   {
-    src: "/assets/images/events/codeAndBrews/IMG_4374.jpeg",
-    alt: "Code and Brews image 4",
+    src: "/assets/images/events/hackathons/IMG_3922.jpeg",
+    alt: "Hackreaction photo 4",
   },
   {
-    src: "/assets/images/events/codeAndBrews/IMG_4375.jpeg",
-    alt: "Code and Brews image 5",
+    src: "/assets/images/events/hackathons/IMG_3925.jpeg",
+    alt: "Hackreaction photo 5",
   },
   {
-    src: "/assets/images/events/codeAndBrews/IMG_4376.jpeg",
-    alt: "Code and Brews image 6",
+    src: "/assets/images/events/hackathons/IMG_3930.jpeg",
+    alt: "Hackreaction photo 6",
   },
 ];
 
