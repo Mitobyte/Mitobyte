@@ -12,7 +12,7 @@ To start local
 npm run dev
 ```
 
-If you run into a husky issue try doing the following
+If you run into a husky issue or commit issues try doing the following
 ```
 npx husky init
 npx husky install

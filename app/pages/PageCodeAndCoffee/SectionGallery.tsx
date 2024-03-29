@@ -9,28 +9,28 @@ import { Wrapper, WrapperProps } from "~/components/Wrapper/Wrapper";
 
 const images: GalleryImageProps[] = [
   {
-    src: "/assets/images/events/codeAndBrews/IMG_4371.jpeg",
-    alt: "Code and Brews image 1",
+    src: "/assets/images/events/codeAndCoffee/IMG_3840.jpeg",
+    alt: "Code and Coffee image 1",
   },
   {
-    src: "/assets/images/events/codeAndBrews/IMG_4372.jpeg",
-    alt: "Code and Brews image 2",
+    src: "/assets/images/events/codeAndCoffee/IMG_3842.jpeg",
+    alt: "Code and Coffee image 2",
   },
   {
-    src: "/assets/images/events/codeAndBrews/IMG_4373.jpeg",
-    alt: "Code and Brews image 3",
+    src: "/assets/images/events/codeAndCoffee/IMG_3843.jpeg",
+    alt: "Code and Coffee image 3",
   },
   {
-    src: "/assets/images/events/codeAndBrews/IMG_4374.jpeg",
-    alt: "Code and Brews image 4",
+    src: "/assets/images/events/codeAndCoffee/IMG_4344.jpeg",
+    alt: "Code and Coffee image 4",
   },
   {
-    src: "/assets/images/events/codeAndBrews/IMG_4375.jpeg",
-    alt: "Code and Brews image 5",
+    src: "/assets/images/events/codeAndCoffee/IMG_4345.jpeg",
+    alt: "Code and Coffee image 5",
   },
   {
-    src: "/assets/images/events/codeAndBrews/IMG_4376.jpeg",
-    alt: "Code and Brews image 6",
+    src: "/assets/images/events/codeAndCoffee/IMG_4376.jpeg",
+    alt: "Code and Coffee image 6",
   },
 ];
 

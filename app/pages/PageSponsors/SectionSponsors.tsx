@@ -1,4 +1,4 @@
-import { Heading, Image, Box, SimpleGrid } from "@chakra-ui/react";
+import { Heading, Image, SimpleGrid } from "@chakra-ui/react";
 import { FC } from "react";
 import { Wrapper, WrapperProps } from "~/components/Wrapper/Wrapper";
 
@@ -7,6 +7,7 @@ const sponsors = [
   "/assets/logos-sponsors/logo-codeworks.jpg",
   "/assets/logos-sponsors/logo-expansive.png",
   "/assets/logos-sponsors/logo-indeed.png",
+  "/assets/logos-sponsors/logo-explorium.png",
   "/assets/logos-sponsors/logo-new-resources.png",
   "/assets/logos-sponsors/logo-skygen.jpg",
   "/assets/logos-sponsors/logo-vba.jpg",
@@ -14,6 +15,9 @@ const sponsors = [
   "/assets/logos-sponsors/logo-form-labs.jpg",
   "/assets/logos-sponsors/logo-roof-marketplace.png",
   "/assets/logos-sponsors/logo-pkware.png",
+  "/assets/logos-sponsors/logo-mistura.png",
+  "/assets/logos-sponsors/logo-nvisia.png",
+  "/assets/logos-sponsors/logo-northern-ground.png",
 ];
 
 export interface SectionSponsorsProps extends Omit<WrapperProps, "children"> {}
