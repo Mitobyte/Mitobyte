@@ -3,10 +3,12 @@ import { SectionHero } from "./SectionHero";
 import { SectionPremierSponsor } from "./SectionPremeirSponsor";
 import { SectionHowItWorks } from "./SectionHowItWorks";
 import { SectionGallery } from "./SectionGallery";
+import { LogoHeaderMitobyte } from "~/components/Logos/LogoHeaderMitobyte";
 
 export const PageHackreation = () => {
   return (
     <>
+      <LogoHeaderMitobyte />
       <NavigationMain />
       <SectionHero marginBottom={20} />
       <SectionPremierSponsor

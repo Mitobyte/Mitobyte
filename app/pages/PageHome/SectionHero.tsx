@@ -51,7 +51,7 @@ export const SectionHero: FC<SectionHeroProps> = ({
             textAlign="center"
             fontSize="6xl"
           >
-            Let's Build Together
+            Build Together
           </Heading>
         </Box>
         <Image

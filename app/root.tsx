@@ -14,6 +14,9 @@ import { LinksFunction, MetaFunction } from "@remix-run/node"; // Depends on the
 import { ServerStyleContext, ClientStyleContext } from "./context";
 import { mitobyteTheme } from "./theme/mitobyte-theme";
 
+import globalStylesUrl from "./styles/global.css";
+import fontsStylesUrl from "./styles/fonts.css";
+
 // even though we're using splide-react we import css from just splide
 // https://github.com/remix-run/remix/discussions/4068#discussioncomment-3477875
 import splideCSSCore from "@splidejs/splide/dist/css/splide-core.min.css";
@@ -23,6 +26,7 @@ export const meta: MetaFunction = () => [
   {
     charset: "utf-8",
     title: "Mitobyte",
+    name: "viewport",
     viewport: "width=device-width,initial-scale=1",
   },
 ];
@@ -43,6 +47,8 @@ export let links: LinksFunction = () => {
       rel: "stylesheet",
       href: splideCSSTheme,
     },
+    { rel: "stylesheet", href: globalStylesUrl },
+    { rel: "stylesheet", href: fontsStylesUrl },
   ];
 };
 
@@ -73,6 +79,10 @@ const Document = withEmotionCache(
       <html lang="en">
         <head>
           <Meta />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
           <Links />
           {serverStyleData?.map(({ key, ids, css }) => (
             <style

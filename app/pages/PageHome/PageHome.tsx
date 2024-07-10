@@ -6,10 +6,12 @@ import { SectionEvents } from "./SectionEvents";
 import { SectionPeople } from "./SectionPeople";
 import { SectionQuotes } from "./SectionQuotes";
 import { SectionWhySponsor } from "./SectionWhySponsor";
+import { LogoHeaderMitobyte } from "~/components/Logos/LogoHeaderMitobyte";
 
 export const PageHome = () => {
   return (
     <>
+      <LogoHeaderMitobyte />
       <NavigationMain />
       <SectionHero />
       <SectionMission
