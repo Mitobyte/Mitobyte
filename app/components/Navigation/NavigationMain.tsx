@@ -95,6 +95,7 @@ export const NavigationMain = () => {
               bg="white"
               position="absolute"
               top="64px"
+              left="0"
               width="100%"
               height="calc(100vh - 66px)"
               borderTop="1px solid"
@@ -157,6 +158,7 @@ export const NavigationMain = () => {
                 align="start"
                 justify="space-between"
                 mb={4}
+                ml={3}
               >
                 <Text as="span" fontSize="xl">
                   Founded in Milwaukee, WI

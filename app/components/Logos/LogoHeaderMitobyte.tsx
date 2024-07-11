@@ -26,7 +26,7 @@ export const LogoHeaderMitobyte = () => {
   });
 
   return (
-    <Box>
+    <Box id="header-logo">
       {/* Link for the Large Logo */}
       <Box
         position="relative"
