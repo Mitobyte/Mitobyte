@@ -12,46 +12,36 @@ import { useBreakpointValue } from "@chakra-ui/media-query";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 export const SectionHero: FC = () => {
-  const flexD = useBreakpointValue({
-    base: "column-reverse",
-    lg: "row",
-  });
-  const pT = useBreakpointValue({
-    md: "0",
-    lg: "64px",
-  });
-  const justify = useBreakpointValue({
-    md: "flex-start",
-    lg: "space-between",
-  });
-
   return (
     <Box
       as="section"
       w="100%"
       display="flex"
       justifyContent="center"
-      pt={pT}
+      pt={{ sm: "0", md: "64px" }}
       pb="64px"
       borderBottom="1px solid"
       borderColor="syntaxBlack.300"
     >
       <Flex
         alignSelf="stretch"
-        flexDirection={flexD}
+        flexDirection={{ base: "column-reverse", md: "row" }}
         justifyContent="space-between"
         alignItems="flex-start"
         w="100%"
-        gap="16px"
+        gap={10}
+        maxWidth="1390px"
       >
         <Flex
           flex="1 1 0"
           alignSelf="stretch"
           pl="16px"
+          pr={{ base: "16px", sm: "0" }}
           flexDirection="column"
-          justifyContent={justify}
+          justifyContent={{ sm: "flex-start", md: "space-between" }}
           alignItems="flex-start"
           max-width="892px"
+          gap={8}
         >
           <Flex
             alignSelf="stretch"
@@ -59,7 +49,6 @@ export const SectionHero: FC = () => {
             justifyContent="flex-start"
             alignItems="flex-start"
             gap="22px"
-            minWidth="620px"
           >
             <VStack
               alignSelf="stretch"
@@ -69,7 +58,7 @@ export const SectionHero: FC = () => {
             >
               <Heading
                 as="h1"
-                size="4xl"
+                size={{ sm: "xl", xl: "2xl", xxl: "4xl" }}
                 color="syntaxBlack.300"
                 fontFamily="Satoshi"
                 fontWeight="700"
@@ -86,7 +75,7 @@ export const SectionHero: FC = () => {
               gap="16px"
             >
               <Text
-                fontSize="22px"
+                fontSize={{ md: "lg", lg: "xl" }}
                 color="syntaxBlack.300"
                 fontFamily="Satoshi"
                 fontWeight="500"
@@ -101,17 +90,20 @@ export const SectionHero: FC = () => {
             href="/events"
             px="24px"
             py="12px"
-            height="48px"
+            height={{ base: "auto", sm: "48px" }}
             bg="deployOrange.300"
             color="white.300"
-            fontSize="20px"
+            fontSize="lg"
             fontFamily="Satoshi"
             fontWeight="700"
             lineHeight="28px"
             borderRadius="6px"
             display="inline-flex"
+            flexWrap={{ base: "wrap", sm: "nowrap" }}
             alignItems="center"
+            whiteSpace={{ base: "normal", sm: "nowrap" }}
             gap="2px"
+            width={{ base: "100%", sm: "auto" }}
             _hover={{ bg: "deployOrange.400" }}
             _active={{ bg: "deployOrange.700" }}
           >
@@ -123,12 +115,13 @@ export const SectionHero: FC = () => {
           flexDirection="column"
           justifyContent="flex-start"
           alignItems="flex-start"
+          overflow="none"
         >
           <Image
             alignSelf="stretch"
-            maxHeight="722px"
-            minHeight="352px"
-            minWidth="610px"
+            height="100%"
+            maxHeight="422px"
+            objectFit="contain"
             src="assets/images/events/codeAndCoffee/codeCoffee1.jpg"
             alt="A group of people collaborating at a large table in a modern office space, with laptops and drinks on the table, and a whiteboard in the background."
           />

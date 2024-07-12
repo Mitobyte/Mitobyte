@@ -3,26 +3,11 @@ import { LogoLargeMitobyte } from "../Logos/LogoLargeMitobyte";
 
 export const LogoHeaderMitobyte = () => {
   // Use Chakra's responsive values for logo scaling
-  const logoWidth = useBreakpointValue({
-    base: "90vw",
-    sm: "320px",
-    md: "500px",
-    lg: "836px",
-    xl: "836px",
-  });
   const logoPosition = useBreakpointValue({
     base: "0",
-    sm: "21px",
     md: "26px",
     lg: "0",
     xl: "0",
-  });
-  const containerHeight = useBreakpointValue({
-    base: "32vw",
-    sm: "96px",
-    md: "146px",
-    lg: "202px",
-    xl: "202px",
   });
 
   return (
@@ -32,7 +17,12 @@ export const LogoHeaderMitobyte = () => {
         position="relative"
         textAlign="center"
         mb={1}
-        height={containerHeight}
+        height={{
+          base: "32vw",
+          md: "119px",
+          lg: "202px",
+          xl: "202px",
+        }}
       >
         <Link
           href="/"
@@ -52,7 +42,12 @@ export const LogoHeaderMitobyte = () => {
         transform={`translate(-50%,${logoPosition})`}
         zIndex="4"
         pointerEvents="none"
-        width={logoWidth}
+        width={{
+          base: "90vw",
+          md: "500px",
+          lg: "836px",
+          xl: "836px",
+        }}
       >
         <LogoLargeMitobyte />
       </Box>

@@ -80,4 +80,13 @@ export const mitobyteTheme = extendTheme({
     "5xl": "3rem",
     "6xl": "4rem",
   },
+  breakpoints: {
+    base: "0",
+    sm: "258px",
+    md: "576px",
+    lg: "768px",
+    xl: "992px",
+    xxl: "1200px",
+    xxxl: "1250px",
+  },
 });
