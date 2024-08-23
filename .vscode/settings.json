@@ -1,0 +1,20 @@
+{
+  // ESLint Config Settings
+  "eslint.workingDirectories": ["./src/*"],
+
+  // Typescript Config Settings
+  "typescript.preferences.importModuleSpecifier": "shortest",
+
+  // Editor Config Settings
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.rulers": [120], // Set's the ruler to eslint's mex-len and prettier's printWidth
+
+  // On File-Save Settings
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+}
