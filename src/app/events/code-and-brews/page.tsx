@@ -1,4 +1,5 @@
 import { type Metadata } from 'next';
+import { PageCodeAndBrews } from './__page__/PageCodeAndBrews';
 
 export const metadata: Metadata = {
   title: 'Code + Brews',
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
 
 const CodeAndBrews = () => {
   return (
-    <h1>Code + Brews</h1>
+    <PageCodeAndBrews />
   );
 };
 

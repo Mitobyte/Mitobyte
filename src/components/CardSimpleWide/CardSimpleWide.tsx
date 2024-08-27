@@ -47,7 +47,7 @@ export const CardSimpleWide = ({
           {title}
         </Heading>
         {showDescription && <Text>{description}</Text>}
-        {showLink && linkUrl && <Link href={linkUrl}>{linkText}</Link>}
+        {showLink && linkUrl && <Link href={linkUrl ?? ''}>{linkText}</Link>}
       </GridItem>
       {showBadge && (
         <GridItem>

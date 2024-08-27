@@ -1,5 +1,6 @@
-import { Box, Heading, Image } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import NextImage from 'next/image';
+import backdrop from '@/common/assets/images/heroes/backdrop-min.jpeg'
 
 import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
 
@@ -55,14 +56,11 @@ export const SectionHero = ({
             Help Support Your Tech Community
           </Heading>
         </Box>
-        <Image
-          as={NextImage}
+        <NextImage
           alt="serious banner"
-          src="@/common/assets/images/heroes/backdrop-min.jpeg"
-          position="absolute"
-          top={{ base: "0", md: "-100px", lg: "-150px" }}
-          transform="translateX(50%, -50%)"
-          width="100%"
+          src={backdrop}
+          height={800}
+          width={1600}
         />
       </Box>
     </Wrapper>

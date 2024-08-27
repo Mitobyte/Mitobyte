@@ -1,4 +1,5 @@
 import { type Metadata } from 'next';
+import { PageHackAndTell } from './__page__/PageHackAndTell';
 
 export const metadata: Metadata = {
   title: 'Hack & Tell',
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
 
 const HackAndTell = () => {
   return (
-    <h1>Hack & Tell</h1>
+    <PageHackAndTell />
   );
 };
 

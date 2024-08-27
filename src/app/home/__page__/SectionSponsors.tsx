@@ -64,7 +64,7 @@ export const SectionSponsors = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-      <Heading textAlign="center" mb={10}>
+      <Heading textAlign="center" mb={14}>
         Sponsors
       </Heading>
       <SimpleGrid columns={[2, null, 3]} spacingX={9} spacingY={9}>

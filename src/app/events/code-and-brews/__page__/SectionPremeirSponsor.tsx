@@ -1,7 +1,7 @@
 import { Container, Heading, Text } from "@chakra-ui/react";
 import { ImageAndContent } from "@/components/ImageAndContent/ImageAndContent";
 import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
-
+import person from '@/common/assets/images/people/person1.webp'
 export interface SectionPremierSponsorProps
   extends Omit<WrapperProps, "children"> {}
 
@@ -36,7 +36,7 @@ export const SectionPremierSponsor = ({
         maxWidth="2xl"
       >
         <ImageAndContent
-          imageSrc="@/common/assets/images/people/person1.webp"
+          imageSrc={person}
           imageAlt="A person"
           title="MKE TECH <3 PKWARE"
           text="Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

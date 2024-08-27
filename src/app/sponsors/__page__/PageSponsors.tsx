@@ -1,3 +1,5 @@
+'use client';
+
 import { NavigationMain } from "@/components/Navigation/NavigationMain";
 import { SectionHero } from "./SectionHero";
 import { SectionSponsors } from "./SectionSponsors";

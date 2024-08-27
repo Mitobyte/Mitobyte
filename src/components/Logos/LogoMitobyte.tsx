@@ -1,14 +1,13 @@
-import { Image } from "@chakra-ui/react";
-import NextImage from 'next/link';
+import NextImage from 'next/image';
+import logo from "../../common/assets/logos-mitobyte/mitobyte.png";
 
 export const LogoMitobyte = () => {
   return (
-    <Image
-      as={NextImage}
+    <NextImage
       alt="Mitobyte Logo"
-      src="@/common/assets/logos-mitobyte/mitobyte.png"
-      width="200px"
-      margin="0 auto"
+      src={logo}
+      width={200}
+      height={200}
     />
   );
 };

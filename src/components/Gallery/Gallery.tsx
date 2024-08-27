@@ -1,10 +1,8 @@
-import { Box, Image, Grid, GridItem } from "@chakra-ui/react";
-import NextImage from "next/image";
-
-import { placeholderImages } from "./placeholderImages";
+import { Box, Grid, GridItem } from "@chakra-ui/react";
+import NextImage, { StaticImageData } from "next/image";
 
 export interface GalleryImageProps {
-  src: string;
+  src: StaticImageData;
   alt: string;
 }
 
@@ -12,13 +10,13 @@ export interface GalleryProps {
   images?: GalleryImageProps[];
 }
 
-export const Gallery = ({ images = placeholderImages }: GalleryProps) => {
+export const Gallery = ({ images }: GalleryProps) => {
   return (
     <Box>
       <Grid templateColumns="repeat(3, 1fr)" gap={6}>
-        {images.map((image, index) => (
+        {images?.map((image, index) => (
           <GridItem key={index}>
-            <Image as={NextImage} src={image.src} alt={image.alt} width={150} />
+            <NextImage src={image.src} alt={image.alt} width={750} height={750} />
           </GridItem>
         ))}
       </Grid>

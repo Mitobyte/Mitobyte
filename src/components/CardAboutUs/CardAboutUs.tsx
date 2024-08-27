@@ -39,8 +39,8 @@ export const CardAboutUs = ({
       </CardBody>
       <CardFooter>
         <ButtonGroup spacing="2">
-          <Link href={linkGithub}>Github</Link>
-          <Link href={linkLinkedIn}>LinkedIn</Link>
+          <Link href={linkGithub ?? ''}>Github</Link>
+          <Link href={linkLinkedIn ?? ''}>LinkedIn</Link>
         </ButtonGroup>
       </CardFooter>
     </Card>

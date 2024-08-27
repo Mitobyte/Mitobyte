@@ -1,13 +1,13 @@
-import { Image } from "@chakra-ui/react";
 import NextImage from "next/image";
+import meetupLogo from '@/common/assets/logos-third-party/logo-meetup.png';
 
 export const LogoMeetup = () => {
   return (
-    <Image
-      as={NextImage}
+    <NextImage
       alt="meetup logo"
-      src="@/common/assets/logos-third-party/logo-meetup.png"
-      width="25px"
+      src={meetupLogo}
+      width={25}
+      height={25}
     />
   );
 };

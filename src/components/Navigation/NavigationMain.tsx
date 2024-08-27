@@ -1,7 +1,7 @@
 'use client';
 
-import { Box, Heading } from "@chakra-ui/react";
-import Link from "next/link";
+import { Box } from "@chakra-ui/react";
+import NextLink from "next/link";
 import { LogoMitobyte } from "../Logos/LogoMitobyte";
 import { ROUTES } from "@/config/routes";
 
@@ -16,9 +16,9 @@ export const NavigationMain = () => {
       background="white"
     >
       <Box background="whiteAlpha.300" padding={3} boxShadow="base" mb={1}>
-        <Link href={ROUTES.ROOT}>
+        <NextLink href={ROUTES.ROOT ?? ''}>
           <LogoMitobyte />
-        </Link>
+        </NextLink>
       </Box>
     </Box>
   );

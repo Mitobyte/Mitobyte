@@ -5,6 +5,11 @@ import { LogoMeetup } from "@/components/Logos/LogoMeetup.tsx";
 import { SectionIntroWithButtons } from "@/components/SectionIntro/SectionIntroWithButtons";
 import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
 
+import codeAndCoffee from "@/common/assets/logos-events/event-code-and-coffee.png";
+import cordeAndBrews from "@/common/assets/logos-events/event-code-and-brews.png"
+import hackreation from "@/common/assets/logos-events/event-hackreation-big.png";
+import { ROUTES } from "@/config/routes";
+
 export interface SectionEventsProps extends Omit<WrapperProps, "children"> {}
 
 export const SectionEvents = ({
@@ -50,26 +55,26 @@ export const SectionEvents = ({
         alignItems="stretch"
       >
         <CardEvent
-          imageSrc="@/common/assets/logos-events/event-code-and-coffee.png"
+          imageSrc={codeAndCoffee}
           heading="Code & Coffee"
           // description="Occurs on the first Saturday of every month. A Milwaukee coding meetup for any dev-curious, aspiring, or professional developer to work/hack on your project."
           description="Code and Coffee is a morning collaboration and networking event held on the first Saturday of each month."
           linkText="Learn More >"
-          linkTo="/codeandcoffee"
+          linkTo={ROUTES.EVENTS.CODE_AND_COFFEE}
         />
         <CardEvent
-          imageSrc="@/common/assets/logos-events/event-code-and-brews.png"
+          imageSrc={cordeAndBrews}
           heading="Code + Brews"
           description="Code and Brews has the same format as Code and Coffee, but at night with beer instead of coffee"
           linkText="Learn More >"
-          linkTo="/codeandbrews"
+          linkTo={ROUTES.EVENTS.CODE_AND_BREWS}
         />
         <CardEvent
-          imageSrc="@/common/assets/logos-events/event-hackreation-big.png"
-          heading="Hackreation"
+          imageSrc={hackreation}
+          heading="Hack & Tell"
           description="Our newest recurring event. Come to this event for focused hacking or working on person projects."
           linkText="Learn More >"
-          linkTo="/hackreation"
+          linkTo={ROUTES.EVENTS.HACK_AND_TELL}
         />
       </SimpleGrid>
     </Wrapper>

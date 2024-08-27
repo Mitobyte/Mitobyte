@@ -6,7 +6,7 @@ import { SectionPremierSponsor } from "./SectionPremeirSponsor";
 import { SectionHowItWorks } from "./SectionHowItWorks";
 import { SectionGallery } from "./SectionGallery";
 
-export const PageHackreation = () => {
+export const PageHackAndTell = () => {
   return (
     <>
       <NavigationMain />

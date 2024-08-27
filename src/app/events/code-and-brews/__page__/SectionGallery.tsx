@@ -6,29 +6,36 @@ import {
 import { SectionIntro } from "@/components/SectionIntro/SectionIntro";
 import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
 
+import image1 from "@/common/assets/images/events/codeAndBrews/IMG_4371.jpeg";
+import image2 from "@/common/assets/images/events/codeAndBrews/IMG_4372.jpeg";
+import image3 from "@/common/assets/images/events/codeAndBrews/IMG_4373.jpeg";
+import image4 from "@/common/assets/images/events/codeAndBrews/IMG_4374.jpeg";
+import image5 from "@/common/assets/images/events/codeAndBrews/IMG_4375.jpeg";
+import image6 from "@/common/assets/images/events/codeAndBrews/IMG_4376.jpeg";
+
 const images: GalleryImageProps[] = [
   {
-    src: "@/common/assets/images/events/codeAndBrews/IMG_4371.jpeg",
+    src: image1,
     alt: "Code and Brews image 1",
   },
   {
-    src: "@/common/assets/images/events/codeAndBrews/IMG_4372.jpeg",
+    src: image2,
     alt: "Code and Brews image 2",
   },
   {
-    src: "@/common/assets/images/events/codeAndBrews/IMG_4373.jpeg",
+    src: image3,
     alt: "Code and Brews image 3",
   },
   {
-    src: "@/common/assets/images/events/codeAndBrews/IMG_4374.jpeg",
+    src: image4,
     alt: "Code and Brews image 4",
   },
   {
-    src: "@/common/assets/images/events/codeAndBrews/IMG_4375.jpeg",
+    src: image5,
     alt: "Code and Brews image 5",
   },
   {
-    src: "@/common/assets/images/events/codeAndBrews/IMG_4376.jpeg",
+    src: image6,
     alt: "Code and Brews image 6",
   },
 ];

@@ -1,6 +1,7 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import { PageHome } from "./__page__/PageHome";
+import "./page.module.css";
+import "@splidejs/react-splide/css";
+
+import { PageHome } from "./home/__page__/PageHome";
 
 export default function Home() {
   return (

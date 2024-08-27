@@ -1,4 +1,3 @@
-import { FC } from "react";
 import {
   Gallery,
   GalleryImageProps,
@@ -7,30 +6,32 @@ import {
 import { SectionIntro } from "@/components/SectionIntro/SectionIntro";
 import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
 
+import image1 from "@/common/assets/images/events/codeAndCoffee/IMG_3840.jpeg";
+import image2 from "@/common/assets/images/events/codeAndCoffee/IMG_3842.jpeg";
+import image3 from "@/common/assets/images/events/codeAndCoffee/IMG_3843.jpeg";
+import image4 from "@/common/assets/images/events/codeAndCoffee/IMG_3844.jpeg";
+import image5 from "@/common/assets/images/events/codeAndCoffee/IMG_3845.jpeg";
+
 const images: GalleryImageProps[] = [
   {
-    src: "@/common/assets/images/events/codeAndCoffee/IMG_3840.jpeg",
+    src: image1,
     alt: "Code and Coffee image 1",
   },
   {
-    src: "@/common/assets/images/events/codeAndCoffee/IMG_3842.jpeg",
+    src: image2,
     alt: "Code and Coffee image 2",
   },
   {
-    src: "@/common/assets/images/events/codeAndCoffee/IMG_3843.jpeg",
+    src: image3,
     alt: "Code and Coffee image 3",
   },
   {
-    src: "@/common/assets/images/events/codeAndCoffee/IMG_4344.jpeg",
+    src: image4,
     alt: "Code and Coffee image 4",
   },
   {
-    src: "@/common/assets/images/events/codeAndCoffee/IMG_4345.jpeg",
+    src: image5,
     alt: "Code and Coffee image 5",
-  },
-  {
-    src: "@/common/assets/images/events/codeAndCoffee/IMG_4376.jpeg",
-    alt: "Code and Coffee image 6",
   },
 ];
 

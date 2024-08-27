@@ -55,7 +55,7 @@ export const SectionHero = ({
           </Heading>
         </Box>
         <Image
-          as={NextImage}
+          // as={NextImage}
           alt="serious banner"
           src="@/common/assets/images/heroes/backdrop-min.jpeg"
           position="absolute"

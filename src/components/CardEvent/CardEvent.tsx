@@ -4,20 +4,16 @@ import {
   CardBody,
   CardFooter,
   CardHeader,
-  Heading,
   Image,
 } from "@chakra-ui/react";
-import NextImage from "next/image";
 import Link from "next/link";
 import { InfoIcon } from "@chakra-ui/icons";
-
-// import { LogoEventbrite } from "../Logos/LogoEventbrite";
-// import { LogoMeetup } from "../Logos/LogoMeetup.tsx";
+import NextImage, { StaticImageData } from "next/image";
 
 export interface CardEventProps {
   heading: string;
   description: string;
-  imageSrc: string;
+  imageSrc: StaticImageData;
   linkMeetup?: string;
   linkEventbrite?: string;
   linkText?: string;
@@ -38,17 +34,13 @@ export const CardEvent = ({
   return (
     <Card maxW="md">
       <CardHeader pb={2}>
-        <Image
-          as={NextImage}
+        <NextImage
           objectFit="cover"
           src={imageSrc}
           alt="event image"
-          maxHeight="60px"
-          margin="0 auto"
           width={150}
-          // pb={3}
+          height={150}
         />
-        {/* <Heading size='md'>{heading}</Heading> */}
       </CardHeader>
 
       <CardBody>{description}</CardBody>
@@ -70,7 +62,7 @@ export const CardEvent = ({
             flex="1"
             variant="ghost"
             leftIcon={<InfoIcon />}
-            href={linkTo}
+            href={linkTo ?? ''}
           >
             {linkText}
           </Button>

@@ -1,4 +1,5 @@
 import { type Metadata } from 'next';
+import { PageSponsors } from './__page__/PageSponsors';
 
 export const metadata: Metadata = {
   title: 'Sponsors',
@@ -6,7 +7,7 @@ export const metadata: Metadata = {
 
 const Sponsors = () => {
   return (
-    <h1>Sponsors</h1>
+    <PageSponsors />
   );
 };
 

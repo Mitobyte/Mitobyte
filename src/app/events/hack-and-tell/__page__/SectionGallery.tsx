@@ -6,29 +6,36 @@ import {
 import { SectionIntro } from "@/components/SectionIntro/SectionIntro";
 import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
 
+import image1 from "@/common/assets/images/events/hackathons/IMG_3910.jpeg";
+import image2 from "@/common/assets/images/events/hackathons/IMG_3916.jpeg";
+import image3 from "@/common/assets/images/events/hackathons/IMG_3919.jpeg";
+import image4 from "@/common/assets/images/events/hackathons/IMG_3922.jpeg";
+import image5 from "@/common/assets/images/events/hackathons/IMG_3925.jpeg";
+import image6 from "@/common/assets/images/events/hackathons/IMG_3930.jpeg";
+
 const images: GalleryImageProps[] = [
   {
-    src: "@/common/assets/images/events/hackathons/IMG_3910.jpeg",
+    src: image1,
     alt: "Hackreaction photo 1",
   },
   {
-    src: "@/common/assets/images/events/hackathons/IMG_3916.jpeg",
+    src:image2,
     alt: "Hackreaction photo 2",
   },
   {
-    src: "@/common/assets/images/events/hackathons/IMG_3919.jpeg",
+    src: image3,
     alt: "Hackreaction photo 3",
   },
   {
-    src: "@/common/assets/images/events/hackathons/IMG_3922.jpeg",
+    src: image4,
     alt: "Hackreaction photo 4",
   },
   {
-    src: "@/common/assets/images/events/hackathons/IMG_3925.jpeg",
+    src: image5,
     alt: "Hackreaction photo 5",
   },
   {
-    src: "@/common/assets/images/events/hackathons/IMG_3930.jpeg",
+    src: image6,
     alt: "Hackreaction photo 6",
   },
 ];
