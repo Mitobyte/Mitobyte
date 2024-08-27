@@ -14,7 +14,7 @@ export const PageHome = () => {
     <>
       <NavigationMain />
       <SectionHero />
-      <SectionMission
+      {/* <SectionMission
         maxWidth="4xl"
         paddingTop={20}
         paddingBottom={20}
@@ -38,7 +38,7 @@ export const PageHome = () => {
         marginTop={20}
         marginBottom={20}
       />
-      <SectionSponsors paddingTop={20} paddingBottom={20} maxWidth="2xl" />
+      <SectionSponsors paddingTop={20} paddingBottom={20} maxWidth="2xl" /> */}
     </>
   );
 };

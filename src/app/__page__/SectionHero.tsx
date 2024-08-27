@@ -57,11 +57,12 @@ export const SectionHero = ({
         <Image
           as={NextImage}
           alt="serious banner"
-          src="@/common/assets/images/heroes/backdrop-min.jpeg"
+          src={"/assets/images/heroes/backdrop-min.jpeg"}
           position="absolute"
           top={{ base: "0", md: "-100px", lg: "-150px" }}
           transform="translateX(50%, -50%)"
           width="100%"
+          unoptimized
         />
       </Box>
     </Wrapper>

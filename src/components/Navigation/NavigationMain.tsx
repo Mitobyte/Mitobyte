@@ -16,9 +16,9 @@ export const NavigationMain = () => {
       background="white"
     >
       <Box background="whiteAlpha.300" padding={3} boxShadow="base" mb={1}>
-        <Link href={ROUTES.ROOT}>
+        {/* <Link href={'/'}>
           <LogoMitobyte />
-        </Link>
+        </Link> */}
       </Box>
     </Box>
   );
