@@ -10,7 +10,7 @@ import logoIndeed from "@/common/assets/logos-sponsors/logo-indeed.png";
 import logoExplorium from "@/common/assets/logos-sponsors/logo-explorium.png";
 import logoNewResources from "@/common/assets/logos-sponsors/logo-new-resources.png";
 import logoSkygen from "@/common/assets/logos-sponsors/logo-skygen.jpg";
-import logoVba from "@/common/assets/logos-sponsors/logo-vba.jpg";
+// import logoVba from "@/common/assets/logos-sponsors/logo-vba.jpg";
 import logoWickidCool from "@/common/assets/logos-sponsors/logo-wickid-cool.png";
 import logoFormLabs from "@/common/assets/logos-sponsors/logo-form-labs.jpg";
 import logoRoofMarketplace from "@/common/assets/logos-sponsors/logo-roof-marketplace.png";
@@ -27,7 +27,7 @@ const sponsors = [
   logoExplorium,
   logoNewResources,
   logoSkygen,
-  logoVba,
+  // logoVba,
   logoWickidCool,
   logoFormLabs,
   logoRoofMarketplace,

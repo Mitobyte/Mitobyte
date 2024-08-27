@@ -1,4 +1,8 @@
+'use client';
+
 import { Box, Heading, Text } from "@chakra-ui/react";
+// https://github.com/Splidejs/splide/issues/1248
+// @ts-ignore this won't be fixed until splide merges a pr see above ^^
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 import { Quote } from "@/components/Quote/Quote";
