@@ -1,30 +1,36 @@
-# Mitobyte
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-This repo uses volta to set node and npm. Configure it here: https://docs.volta.sh/guide/getting-started
+## Getting Started
 
-Make sure the following 2 lines are in your .zshrc file
-```
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
-```
+First, run the development server:
 
-If first time opening...
-```
-npm install
-```
-
-To start local
-```
+```bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-If you run into a husky issue or commit issues try doing the following
-```
-npx husky init
-npx husky install
-```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This repo uses conventional commmits: https://www.conventionalcommits.org/en/v1.0.0/
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-You can view valid commit prefixes here:
-[text](commitlint.config.js)
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
