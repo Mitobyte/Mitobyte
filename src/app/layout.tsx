@@ -1,9 +1,25 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { LayoutMain } from "@/common/layouts/LayoutMain";
+import localFont from "next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+const satoshi = localFont({
+  display: 'swap',
+  src: [
+    {
+      path: './fonts/Satoshi-Variable.woff2',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Satoshi-Variable.woff',
+      style: 'italic',
+    },
+    {
+      path: './fonts/Satoshi-Variable.ttf',
+      style: 'normal',
+    },
+  ],
+})
 
 export const metadata: Metadata = {
   title: "Mitobyte",
@@ -17,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={satoshi.className}>
         <LayoutMain>
          {children}
         </LayoutMain>
