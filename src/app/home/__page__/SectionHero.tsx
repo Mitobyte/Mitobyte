@@ -1,11 +1,10 @@
 import {
-  Box,
   Heading,
   Text,
-  VStack,
-  Flex,
   Button,
   Icon,
+  GridItem,
+  Grid,
 } from "@chakra-ui/react";
 import NextImage from "next/image";
 import { FaChevronCircleRight } from "react-icons/fa";
@@ -14,122 +13,67 @@ import hero from '@/common/assets/images/events/codeAndCoffee/codeCoffee1.jpg'
 
 export const SectionHero = () => {
   return (
-    <Box
-      as="section"
-      w="100%"
-      display="flex"
-      justifyContent="center"
-      pt={{ sm: "0", md: "64px" }}
-      pb="64px"
-      borderBottom="1px solid"
-      borderColor="syntaxBlack.300"
-    >
-      <Flex
-        alignSelf="stretch"
-        flexDirection={{ base: "column-reverse", md: "row" }}
-        justifyContent="space-between"
-        alignItems="flex-start"
-        w="100%"
-        gap={10}
-        maxWidth="1390px"
-      >
-        <Flex
-          flex="1 1 0"
-          alignSelf="stretch"
-          pl="16px"
-          pr={{ base: "16px", sm: "0" }}
-          flexDirection="column"
-          justifyContent={{ sm: "flex-start", md: "space-between" }}
-          alignItems="flex-start"
-          max-width="892px"
-          gap={8}
-        >
-          <Flex
-            alignSelf="stretch"
-            flexDirection="column"
-            justifyContent="flex-start"
-            alignItems="flex-start"
-            gap="22px"
-          >
-            <VStack
-              alignSelf="stretch"
-              justifyContent="flex-start"
-              alignItems="flex-start"
-              gap="2px"
+    <Grid templateColumns={{ base: "1fr", lg: "1fr 2fr" }} gap={6} maxW={1150} m="0 auto">
+      <GridItem>
+        <Grid templateColumns="1fr" templateRows="auto auto 1fr" height="100%">
+          <GridItem>
+            <Heading
+              as="h1"
+              size={{ sm: "xl", xl: "2xl", xxl: "4xl" }}
+              color="syntaxBlack.300"
+              fontWeight="700"
+              mt={8}
             >
-              <Heading
-                as="h1"
-                size={{ sm: "xl", xl: "2xl", xxl: "4xl" }}
-                color="syntaxBlack.300"
-                fontFamily="Satoshi"
-                fontWeight="700"
-              >
-                Build Together
-              </Heading>
-            </VStack>
-            <VStack
-              alignSelf="stretch"
-              h="82px"
-              pb="24px"
-              justifyContent="flex-start"
-              alignItems="flex-start"
-              gap="16px"
+              Build Together
+            </Heading>
+          </GridItem>
+          <GridItem>
+           <Text
+              fontSize={{ md: "lg", lg: "xl" }}
+              color="syntaxBlack.300"
+              fontWeight="500"
+              lineHeight="29.26px"
+              mt={4}
             >
-              <Text
-                fontSize={{ md: "lg", lg: "xl" }}
-                color="syntaxBlack.300"
-                fontFamily="Satoshi"
-                fontWeight="500"
-                lineHeight="29.26px"
-              >
-                Join Our Events, Connect with Innovators, and Drive Growth
-              </Text>
-            </VStack>
-          </Flex>
-          <Button
-            as="a"
-            href="/events"
-            px="24px"
-            py="12px"
-            height={{ base: "auto", sm: "48px" }}
-            bg="deployOrange.300"
-            color="white.300"
-            fontSize="lg"
-            fontFamily="Satoshi"
-            fontWeight="700"
-            lineHeight="28px"
-            borderRadius="6px"
-            display="inline-flex"
-            flexWrap={{ base: "wrap", sm: "nowrap" }}
-            alignItems="center"
-            whiteSpace={{ base: "normal", sm: "nowrap" }}
-            gap="2px"
-            width={{ base: "100%", sm: "auto" }}
-            _hover={{ bg: "deployOrange.400" }}
-            _active={{ bg: "deployOrange.700" }}
-          >
-            View events and register
+              Join Our Events, Connect with Innovators, and Drive Growth
+            </Text>
+          </GridItem>
+          <GridItem alignSelf="end">
+            <Button
+              as="a"
+              href="/events"
+              px="24px"
+              py="12px"
+              height={{ base: "auto", sm: "48px" }}
+              bg="deployOrange.300"
+              color="white.300"
+              fontSize="lg"
+              fontWeight="700"
+              lineHeight="28px"
+              borderRadius="6px"
+              display="inline-flex"
+              flexWrap={{ base: "wrap", sm: "nowrap" }}
+              alignItems="center"
+              whiteSpace={{ base: "normal", sm: "nowrap" }}
+              mt={4}
+              width={{ base: "100%", sm: "auto" }}
+              _hover={{ bg: "deployOrange.400" }}
+              _active={{ bg: "deployOrange.700" }}
+            >
+              View events and register
             <Icon as={FaChevronCircleRight} style={{ marginLeft: "8px" }} />
           </Button>
-        </Flex>
-        <Flex
-          flexDirection="column"
-          justifyContent="flex-start"
-          alignItems="flex-start"
-          overflow="none"
-        >
-          <NextImage
-            // alignSelf="stretch"
-            // height="100%"
-            // maxHeight="422px"
-            // objectFit="contain"
-            height={422}
-            width={2000}
-            src={hero}
-            alt="A group of people collaborating at a large table in a modern office space, with laptops and drinks on the table, and a whiteboard in the background."
-          />
-        </Flex>
-      </Flex>
-    </Box>
-  );
+        </GridItem>
+      </Grid>
+    </GridItem>
+    <GridItem>
+      <NextImage
+        height={422}
+        width={2000}
+        src={hero}
+        alt="A group of people collaborating at a large table in a modern office space, with laptops and drinks on the table, and a whiteboard in the background."
+      />
+    </GridItem>
+  </Grid>
+  )
 };

@@ -1,4 +1,4 @@
-import { Heading, Text, Box } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 import { FC } from "react";
 import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
 

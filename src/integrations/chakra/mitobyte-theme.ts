@@ -66,7 +66,7 @@ export const mitobyteTheme = extendTheme({
   fonts: {
     body: "'Satoshi', sans-serif",
     heading: "'Satoshi', sans-serif",
-    mono: "Menlo, monospace",
+    mono: "Satoshi, monospace",
   },
   fontSizes: {
     xs: "0.75rem",
@@ -88,5 +88,15 @@ export const mitobyteTheme = extendTheme({
     xl: "992px",
     xxl: "1200px",
     xxxl: "1250px",
+  },
+  styles: {
+    global: {
+      a: {
+        textDecoration: "unset",
+        _hover: {
+          textDecoration: "unset",
+        },
+      },
+    },
   },
 });

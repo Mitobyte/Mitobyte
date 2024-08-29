@@ -1,5 +1,8 @@
 import { Heading, SimpleGrid } from "@chakra-ui/react";
 import NextImage from 'next/image';
+// https://github.com/Splidejs/splide/issues/1248
+// @ts-ignore this won't be fixed until splide merges a pr see above ^^
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
 
@@ -64,20 +67,32 @@ export const SectionSponsors = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-      <Heading textAlign="center" mb={14}>
+      {/* <Heading textAlign="center" mb={14}>
         Sponsors
-      </Heading>
-      <SimpleGrid columns={[2, null, 3]} spacingX={9} spacingY={9}>
+      </Heading> */}
+      <Splide
+        aria-label="My Favorite Images"
+        options={{
+          type: 'loop',
+          perPage: 4,
+          arrows: false,
+          autoplay: 1000,
+          flickPower: 100,
+          pagination: false,
+        }}
+      >
         {sponsors.map((sponsor) => (
-          <NextImage
-            width={150}
-            height={150}
-            alt="sponsor"
-            key={sponsor.toString()}
-            src={sponsor}
-          />
+          <SplideSlide >
+            <NextImage
+              width={150}
+              height={150}
+              alt="sponsor"
+              key={sponsor.toString()}
+              src={sponsor}
+            />
+          </SplideSlide>
         ))}
-      </SimpleGrid>
+      </Splide>
     </Wrapper>
   );
 };

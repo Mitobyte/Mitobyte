@@ -9,6 +9,10 @@ import { SectionPeople } from "./SectionPeople";
 import { SectionQuotes } from "./SectionQuotes";
 import { SectionWhySponsor } from "./SectionWhySponsor";
 import { LogoHeaderMitobyte } from "@/components/Logos/LogoHeaderMitobyte";
+import { SectionEventsAlt } from "./SectionEventsAlt";
+import { SectionAboutUs } from "./SecitionAboutUs";
+import { SectionDots } from "./SectionDots";
+import { SectionStats } from "./SectionStats";
 
 export const PageHome = () => {
   return (
@@ -16,13 +20,38 @@ export const PageHome = () => {
       <LogoHeaderMitobyte />
       <NavigationMain />
       <SectionHero />
-      <SectionMission
+      <SectionEventsAlt
+        maxWidth="8xl"
+        paddingTop={20}
+        paddingBottom={20}
+      />
+      <SectionAboutUs />
+      <SectionDots
+        maxWidth="100%"
+        paddingTop={{ base: 10, lg: 20}}
+        paddingBottom={{ base: 10, lg: 20}}
+      />
+      <SectionStats
+        maxWidth="6xl"
+        paddingTop={20}
+        paddingBottom={20}
+      />
+      <SectionDots
+        maxWidth="100%"
+        paddingTop={{ base: 10, lg: 20}}
+        paddingBottom={{ base: 10, lg: 20}}
+      />
+      <SectionSponsors
+        paddingTop={20}
+        paddingBottom={20}
+        maxWidth="8xl"
+      />
+      <SectionEvents
         maxWidth="4xl"
         paddingTop={20}
         paddingBottom={20}
-        background="gray.50"
       />
-      <SectionEvents maxWidth="4xl" paddingTop={20} paddingBottom={20} />
+
       <SectionPeople
         maxWidth="4xl"
         paddingTop={20}
@@ -31,7 +60,11 @@ export const PageHome = () => {
         marginTop={20}
         marginBottom={20}
       />
-      <SectionQuotes paddingTop={20} paddingBottom={20} maxWidth="2xl" />
+      <SectionQuotes
+        paddingTop={20}
+        paddingBottom={20}
+        maxWidth="2xl"
+      />
       <SectionWhySponsor
         paddingTop={20}
         paddingBottom={20}
@@ -40,7 +73,7 @@ export const PageHome = () => {
         marginTop={20}
         marginBottom={20}
       />
-      <SectionSponsors paddingTop={20} paddingBottom={20} maxWidth="2xl" />
+
     </>
   );
 };
