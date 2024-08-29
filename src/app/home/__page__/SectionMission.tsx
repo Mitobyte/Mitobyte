@@ -1,9 +1,10 @@
 import { Heading, Text, Box } from "@chakra-ui/react";
+import { FC } from "react";
 import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
 
 export interface SectionMissionProps extends Omit<WrapperProps, "children"> {}
 
-export const SectionMission = ({
+export const SectionMission: FC<SectionMissionProps> = ({
   maxWidth,
   paddingBottom,
   paddingTop,
@@ -14,7 +15,7 @@ export const SectionMission = ({
   marginLeft,
   marginRight,
   marginTop,
-}: SectionMissionProps) => {
+}) => {
   return (
     <Wrapper
       maxWidth={maxWidth}

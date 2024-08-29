@@ -1,5 +1,5 @@
 import NextImage from 'next/image';
-import logo from "../../common/assets/logos-mitobyte/mitobyte.png";
+import logo from "@/common/assets/logos-mitobyte/mitobyte.png";
 
 export const LogoMitobyte = () => {
   return (
