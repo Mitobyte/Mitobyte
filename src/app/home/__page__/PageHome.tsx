@@ -13,6 +13,9 @@ import { SectionEventsAlt } from "./SectionEventsAlt";
 import { SectionAboutUs } from "./SecitionAboutUs";
 import { SectionDots } from "./SectionDots";
 import { SectionStats } from "./SectionStats";
+import { SectionFaq } from "./SectionSponsorFaq";
+import { SectionTeam } from "./SectionTeam";
+import { Divider } from "@chakra-ui/react";
 
 export const PageHome = () => {
   return (
@@ -22,10 +25,13 @@ export const PageHome = () => {
       <SectionHero />
       <SectionEventsAlt
         maxWidth="8xl"
-        paddingTop={20}
+        paddingTop={40}
         paddingBottom={20}
       />
-      <SectionAboutUs />
+      <SectionAboutUs
+        paddingTop={20}
+        paddingBottom={0}
+        />
       <SectionDots
         maxWidth="100%"
         paddingTop={{ base: 10, lg: 20}}
@@ -34,24 +40,31 @@ export const PageHome = () => {
       <SectionStats
         maxWidth="6xl"
         paddingTop={20}
-        paddingBottom={20}
-      />
-      <SectionDots
-        maxWidth="100%"
-        paddingTop={{ base: 10, lg: 20}}
-        paddingBottom={{ base: 10, lg: 20}}
+        paddingBottom={10}
       />
       <SectionSponsors
-        paddingTop={20}
+        paddingTop={10}
         paddingBottom={20}
         maxWidth="8xl"
       />
+      <SectionFaq
+        maxWidth="6xl"
+        paddingTop={20}
+        paddingBottom={20}
+      />
+      <Divider borderColor="black" />
+      <SectionTeam
+        maxWidth="6xl"
+        paddingTop={20}
+        paddingBottom={20}
+      />
+
+{/*
       <SectionEvents
         maxWidth="4xl"
         paddingTop={20}
         paddingBottom={20}
       />
-
       <SectionPeople
         maxWidth="4xl"
         paddingTop={20}
@@ -72,7 +85,7 @@ export const PageHome = () => {
         background="gray.50"
         marginTop={20}
         marginBottom={20}
-      />
+      /> */}
 
     </>
   );

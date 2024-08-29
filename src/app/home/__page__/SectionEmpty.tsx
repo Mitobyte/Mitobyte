@@ -1,13 +1,9 @@
 import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
 
-export interface SectionDotsProps extends Omit<WrapperProps, "children" | "background"> {}
+export interface SectionEmptyProps extends Omit<WrapperProps, "children"> {}
 
-const dotbg = 'white';
-const dotcolor = 'black';
-const dotsize = '2px';
-const dotspace = '15px';
-
-export const SectionDots = ({
+export const SectionEmpty = ({
+  background,
   maxWidth,
   paddingBottom,
   paddingTop,
@@ -17,7 +13,7 @@ export const SectionDots = ({
   marginLeft,
   marginRight,
   marginTop,
-}: SectionDotsProps) => {
+}: SectionEmptyProps) => {
   return (
     <Wrapper
       maxWidth={maxWidth}
@@ -25,9 +21,7 @@ export const SectionDots = ({
       paddingTop={paddingTop}
       paddingLeft={paddingLeft}
       paddingRight={paddingRight}
-      background={`linear-gradient(90deg, ${dotbg} calc(${dotspace} - ${dotsize}), transparent 1%) center / ${dotspace} ${dotspace},
-      linear-gradient(${dotbg} calc(${dotspace} - ${dotsize}), transparent 1%) center / ${dotspace} ${dotspace},
-      ${dotcolor}`}
+      background={background}
       marginBottom={marginBottom}
       marginLeft={marginLeft}
       marginRight={marginRight}
