@@ -3,7 +3,6 @@ import { ImageAndContent } from "@/components/ImageAndContent/ImageAndContent";
 import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
 import person1 from '@/common/assets/images/people/person1.webp'
 import person2 from '@/common/assets/images/people/person1.webp'
-import { CardPerson } from "@/components/CardPerson/CardPerson";
 
 export interface SectionPeopleProps extends Omit<WrapperProps, "children"> {}
 

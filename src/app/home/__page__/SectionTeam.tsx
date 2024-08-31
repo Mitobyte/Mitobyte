@@ -1,5 +1,5 @@
 import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
-import { AspectRatio, Box, Grid, GridItem, Heading, Icon, Text } from "@chakra-ui/react";
+import { AspectRatio, Grid, GridItem, Heading, Icon, Text } from "@chakra-ui/react";
 import NextImage from "next/image";
 import { LuArrowUpRight } from "react-icons/lu";
 
