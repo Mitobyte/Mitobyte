@@ -6,7 +6,7 @@ import { SectionPremierSponsor } from "./SectionPremeirSponsor";
 import { SectionHowItWorks } from "./SectionHowItWorks";
 import { SectionGallery } from "./SectionGallery";
 
-export const PageHackAndTell = () => {
+export const PageHackreation = () => {
   return (
     <>
       <NavigationMain />
@@ -17,7 +17,6 @@ export const PageHackAndTell = () => {
         maxWidth="2xl"
       />
       <SectionHowItWorks maxWidth="xl" marginBottom={20} />
-      <SectionGallery paddingTop={20} paddingBottom={20} />
     </>
   );
 };

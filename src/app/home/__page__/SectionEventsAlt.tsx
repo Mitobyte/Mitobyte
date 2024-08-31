@@ -37,7 +37,7 @@ export const SectionEventsAlt = ({
           <CardEventLink title="Code + Brews" time="5:00pm to 8:00pm" date="Second Wednesday of the month" />
         </GridItem>
         <GridItem borderTop={{ base: "1px solid black", lg: "0"  }} pt={{ base: 12, lg: 0 }}>
-          <CardEventLink title="Hack & Tell" time="9:00am to 4:00pm" date="Twice a year" />
+          <CardEventLink title="Hackreation" time="9:00am to 4:00pm" date="Twice a year" />
         </GridItem>
       </Grid>
     </Wrapper>
