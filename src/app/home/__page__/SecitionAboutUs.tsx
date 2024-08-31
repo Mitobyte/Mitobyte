@@ -6,7 +6,7 @@ import {
 } from "@chakra-ui/react";
 import NextImage from "next/image";
 
-import hero from "@/common/assets/images/events/hackathons/Hackathon.jpeg";
+import hero from "@/common/assets/images/events/code-and-brews/candb.jpeg";
 import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
 
 export interface SectionAboutUsProps extends Omit<WrapperProps, "children"> {}
@@ -37,7 +37,7 @@ export const SectionAboutUs = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-      <Grid templateColumns={{ base: "1fr", lg: "2fr 1fr" }} gap={6}>
+      <Grid templateColumns={{ base: "1fr", lg: "2fr 1fr" }} gap={6} maxW={1150} m="0 auto">
         <GridItem>
           <NextImage
             height={350}

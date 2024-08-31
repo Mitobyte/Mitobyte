@@ -57,7 +57,6 @@ export const SectionEvents = ({
         <CardEvent
           imageSrc={codeAndCoffee}
           heading="Code & Coffee"
-          // description="Occurs on the first Saturday of every month. A Milwaukee coding meetup for any dev-curious, aspiring, or professional developer to work/hack on your project."
           description="Code and Coffee is a morning collaboration and networking event held on the first Saturday of each month."
           linkText="Learn More >"
           linkTo={ROUTES.EVENTS.CODE_AND_COFFEE}

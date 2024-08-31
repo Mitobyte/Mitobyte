@@ -6,11 +6,11 @@ import {
 import { SectionIntro } from "@/components/SectionIntro/SectionIntro";
 import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
 
-import image1 from "@/common/assets/images/events/codeAndCoffee/IMG_3840.jpeg";
-import image2 from "@/common/assets/images/events/codeAndCoffee/IMG_3842.jpeg";
-import image3 from "@/common/assets/images/events/codeAndCoffee/IMG_3843.jpeg";
-import image4 from "@/common/assets/images/events/codeAndCoffee/IMG_3844.jpeg";
-import image5 from "@/common/assets/images/events/codeAndCoffee/IMG_3845.jpeg";
+import image1 from "@/common/assets/images/events/code-and-coffee/IMG_3840.jpeg";
+import image2 from "@/common/assets/images/events/code-and-coffee/IMG_3842.jpeg";
+import image3 from "@/common/assets/images/events/code-and-coffee/IMG_3843.jpeg";
+import image4 from "@/common/assets/images/events/code-and-coffee/IMG_3844.jpeg";
+import image5 from "@/common/assets/images/events/code-and-coffee/IMG_3845.jpeg";
 
 const images: GalleryImageProps[] = [
   {
