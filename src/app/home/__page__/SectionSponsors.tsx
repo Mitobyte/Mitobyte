@@ -1,5 +1,8 @@
-import { Heading, SimpleGrid } from "@chakra-ui/react";
+import { Heading, SimpleGrid, Box } from "@chakra-ui/react";
 import NextImage from 'next/image';
+// https://github.com/Splidejs/splide/issues/1248
+// @ts-ignore this won't be fixed until splide merges a pr see above ^^
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
 
@@ -20,21 +23,21 @@ import logoNvisia from "@/common/assets/logos-sponsors/logo-nvisia.png";
 import logoNorthernGround from "@/common/assets/logos-sponsors/logo-northern-ground.png";
 
 const sponsors = [
-  logoCaredirect,
-  logoCodeworks,
-  logoExpansive,
-  logoIndeed,
-  logoExplorium,
-  logoNewResources,
-  logoSkygen,
-  // logoVba,
-  logoWickidCool,
-  logoFormLabs,
-  logoRoofMarketplace,
-  logoPkware,
-  logoMistura,
-  logoNvisia,
-  logoNorthernGround,
+  { name: "CareDirect", logo: logoCaredirect, height: 100, width: 200 },
+  { name: "Codeworks", logo: logoCodeworks, height: 100, width: 200 },
+  { name: "Expansive", logo: logoExpansive, height: 100, width: 200 },
+  { name: "Indeed", logo: logoIndeed, height: 100, width: 100 },
+  { name: "Explorium", logo: logoExplorium, height: 100, width: 100 },
+  { name: "New Resources", logo: logoNewResources, height: 100, width: 200 },
+  { name: "Skygen", logo: logoSkygen, height: 100, width: 200 },
+  // { name: "Vba", logo: logoVba, height: 75, width: 75 },
+  { name: "Wickid Cool", logo: logoWickidCool, height: 100, width: 200 },
+  { name: "Form Labs", logo: logoFormLabs, height: 100, width: 200 },
+  { name: "Roof Marketplace", logo: logoRoofMarketplace, height: 100, width: 200 },
+  { name: "PKWARE", logo: logoPkware, height: 100, width: 200 },
+  { name: "Mistura", logo: logoMistura, height: 100, width: 200 },
+  { name: "Nvisia", logo: logoNvisia, height: 100, width: 125 },
+  { name: "Northern Ground", logo: logoNorthernGround, height: 100, width: 200 },
 ];
 
 export interface SectionSponsorsProps extends Omit<WrapperProps, "children"> {}
@@ -64,20 +67,32 @@ export const SectionSponsors = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-      <Heading textAlign="center" mb={14}>
+      {/* <Heading textAlign="center" mb={14}>
         Sponsors
-      </Heading>
-      <SimpleGrid columns={[2, null, 3]} spacingX={9} spacingY={9}>
+      </Heading> */}
+      <Splide
+        aria-label="My Favorite Images"
+        options={{
+          type: 'loop',
+          perPage: 4,
+          arrows: false,
+          autoplay: 1000,
+          flickPower: 100,
+          pagination: false,
+        }}
+      >
         {sponsors.map((sponsor) => (
-          <NextImage
-            width={150}
-            height={150}
-            alt="sponsor"
-            key={sponsor.toString()}
-            src={sponsor}
-          />
+          <Box as={SplideSlide} alignSelf="center">
+            <NextImage
+              width={sponsor.width}
+              height={sponsor.height}
+              alt="sponsor"
+              key={sponsor.name}
+              src={sponsor.logo}
+            />
+          </Box>
         ))}
-      </SimpleGrid>
+      </Splide>
     </Wrapper>
   );
 };

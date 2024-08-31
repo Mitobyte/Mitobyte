@@ -71,10 +71,10 @@ export const SectionEvents = ({
         />
         <CardEvent
           imageSrc={hackreation}
-          heading="Hack & Tell"
+          heading="Hackreation"
           description="Our newest recurring event. Come to this event for focused hacking or working on person projects."
           linkText="Learn More >"
-          linkTo={ROUTES.EVENTS.HACK_AND_TELL}
+          linkTo={ROUTES.EVENTS.HACKREATION}
         />
       </SimpleGrid>
     </Wrapper>

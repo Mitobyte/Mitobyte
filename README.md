@@ -34,3 +34,40 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+
+
+
+
+## Saving For Later
+<!-- https://nextjs.org/docs/pages/api-reference/components/font#variable -->
+<!-- https://www.fontshare.com/fonts/satoshi -->
+
+// @font-face {
+//   font-family: 'Satoshi-Variable';
+//   src: url('../fonts/Satoshi-Variable.woff2') format('woff2'),
+//        url('../fonts/Satoshi-Variable.woff') format('woff'),
+//        url('../fonts/Satoshi-Variable.ttf') format('truetype');
+//   font-weight: 300 900;
+//   font-display: swap;
+//   font-style: normal;
+// }
+// /**
+// * This is a variable font
+// * You can control variable axes as shown below:
+// * font-variation-settings: wght 900.0;
+// *
+// * available axes:
+// 'wght' (range from 300.0 to 900.0
+// */
+// @font-face {
+//   font-family: 'Satoshi-VariableItalic';
+//   src: url('../fonts/Satoshi-VariableItalic.woff2') format('woff2'),
+//        url('../fonts/Satoshi-VariableItalic.woff') format('woff'),
+//        url('../fonts/Satoshi-VariableItalic.ttf') format('truetype');
+//   font-weight: 300 900;
+//   font-display: swap;
+//   font-style: italic;
+// }

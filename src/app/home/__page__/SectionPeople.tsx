@@ -1,7 +1,9 @@
 import { Container, Heading, Text } from "@chakra-ui/react";
 import { ImageAndContent } from "@/components/ImageAndContent/ImageAndContent";
 import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
-import person from '@/common/assets/images/people/person1.webp';
+import person1 from '@/common/assets/images/people/person1.webp'
+import person2 from '@/common/assets/images/people/person1.webp'
+import { CardPerson } from "@/components/CardPerson/CardPerson";
 
 export interface SectionPeopleProps extends Omit<WrapperProps, "children"> {}
 
@@ -39,7 +41,7 @@ export const SectionPeople = ({
         maxWidth="2xl"
       >
         <ImageAndContent
-          imageSrc={person}
+          imageSrc={person1}
           imageAlt="A person"
           title="Person Personhood"
           text="Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum."
@@ -54,7 +56,7 @@ export const SectionPeople = ({
         maxWidth="2xl"
       >
         <ImageAndContent
-          imageSrc={person}
+          imageSrc={person2}
           imageAlt="A person"
           title="Person Personhood"
           text="Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum."
