@@ -9,7 +9,7 @@ import {
 import NextImage from "next/image";
 import { FaChevronCircleRight } from "react-icons/fa";
 
-import hero from '@/common/assets/images/events/codeAndCoffee/codeCoffee1.jpg'
+import hero from '@/common/assets/images/events/code-and-coffee/codeCoffee1.jpg'
 
 export const SectionHero = () => {
   return (
