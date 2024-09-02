@@ -1,4 +1,5 @@
-import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
+'use client';
+
 import { AspectRatio, Grid, GridItem, Heading, Icon, Text } from "@chakra-ui/react";
 import NextImage from "next/image";
 import { LuArrowUpRight } from "react-icons/lu";
@@ -6,35 +7,13 @@ import { LuArrowUpRight } from "react-icons/lu";
 import joe from "@/common/assets/images/people/joe.jpeg";
 import allan from "@/common/assets/images/people/allan.jpeg";
 
-export interface SectionTeamProps extends Omit<WrapperProps, "children"> {}
+export interface PageTeamProps {}
 
-export const SectionTeam = ({
-  background,
-  maxWidth,
-  paddingBottom,
-  paddingTop,
-  paddingLeft,
-  paddingRight,
-  marginBottom,
-  marginLeft,
-  marginRight,
-  marginTop,
-}: SectionTeamProps) => {
+export const PageTeam = () => {
   return (
-    <Wrapper
-      maxWidth={maxWidth}
-      paddingBottom={paddingBottom}
-      paddingTop={paddingTop}
-      paddingLeft={paddingLeft}
-      paddingRight={paddingRight}
-      background={background}
-      marginBottom={marginBottom}
-      marginLeft={marginLeft}
-      marginRight={marginRight}
-      marginTop={marginTop}
-    >
+    <>
       <Heading mb={12} size="4xl">Meet the Team</Heading>
-      <Grid templateColumns="1fr 1fr 1fr" gap={3}>
+      <Grid templateColumns="1fr" gap={3}>
         <GridItem>
           <NextImage src={joe} height={414} width={414} alt="joseph murphy" />
           <Heading mt={4} as="h6" size="md">Joseph Murphy</Heading>
@@ -58,6 +37,6 @@ export const SectionTeam = ({
           <Heading mt={4} as="h6" size="md">Meet more of our team...</Heading>
         </GridItem>
       </Grid>
-    </Wrapper>
+    </>
   );
 };

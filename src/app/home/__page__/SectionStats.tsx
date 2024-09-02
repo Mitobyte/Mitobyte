@@ -1,4 +1,4 @@
-import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
+import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 import { Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 
 export interface SectionStatsProps extends Omit<WrapperProps, "children"> {}

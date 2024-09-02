@@ -1,7 +1,7 @@
 import { Heading, SimpleGrid } from "@chakra-ui/react";
 import NextImage from 'next/image';
 
-import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
+import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
 import logoCaredirect from "@/common/assets/logos-sponsors/logo-caredirect.png";
 import logoCodeworks from "@/common/assets/logos-sponsors/logo-codeworks.jpg";

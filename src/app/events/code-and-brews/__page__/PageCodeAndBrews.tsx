@@ -1,6 +1,6 @@
 'use client';
 
-import { NavigationMain } from "@/components/Navigation/NavigationMain";
+import { NavigationMain } from "@/common/components/Navigation/NavigationMain";
 import { SectionHero } from "./SectionHero";
 import { SectionGallery } from "./SectionGallery";
 import { SectionHowItWorks } from "./SectionHowItWorks";

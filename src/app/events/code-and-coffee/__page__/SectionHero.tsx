@@ -1,7 +1,7 @@
 import { Box, Heading, Image } from "@chakra-ui/react";
 import NextImage from "next/image";
 
-import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
+import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
 export interface SectionHeroProps extends Omit<WrapperProps, "children"> {}
 

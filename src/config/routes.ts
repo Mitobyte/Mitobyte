@@ -8,5 +8,6 @@ export const ROUTES = {
     RESUME_WORKSHOP: '/events/resume-workshop',
   },
   SPONSORS: '/sponsors',
+  TEAM: '/team',
 };
 

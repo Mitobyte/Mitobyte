@@ -2,7 +2,7 @@ import { Box, Heading } from "@chakra-ui/react";
 import NextImage from 'next/image';
 import backdrop from '@/common/assets/images/heroes/backdrop-min.jpeg'
 
-import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
+import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
 export interface SectionHeroProps extends Omit<WrapperProps, "children"> {}
 

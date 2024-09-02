@@ -1,6 +1,6 @@
 import { Heading, Text, Box, Flex, Button } from "@chakra-ui/react";
-import { ListPoint } from "@/components/ListPoint/ListPoint";
-import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
+import { ListPoint } from "@/common/components/ListPoint/ListPoint";
+import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 import NextLink from "next/link";
 import { ROUTES } from "@/config/routes";
 

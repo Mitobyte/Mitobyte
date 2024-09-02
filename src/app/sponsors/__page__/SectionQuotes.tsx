@@ -5,8 +5,8 @@ import { Box, Heading, Text } from "@chakra-ui/react";
 // @ts-ignore this won't be fixed until splide merges a pr see above ^^
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-import { Quote } from "@/components/Quote/Quote";
-import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
+import { Quote } from "@/common/components/Quote/Quote";
+import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
 export interface SectionQuotesProps extends Omit<WrapperProps, "children"> {}
 

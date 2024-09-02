@@ -1,9 +1,9 @@
 import { SimpleGrid } from "@chakra-ui/react";
-import { CardEvent } from "@/components/CardEvent/CardEvent";
-import { LogoEventbrite } from "@/components/Logos/LogoEventbrite";
-import { LogoMeetup } from "@/components/Logos/LogoMeetup.tsx";
-import { SectionIntroWithButtons } from "@/components/SectionIntro/SectionIntroWithButtons";
-import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
+import { CardEvent } from "@/common/components/CardEvent/CardEvent";
+import { LogoEventbrite } from "@/common/components/Logos/LogoEventbrite";
+import { LogoMeetup } from "@/common/components/Logos/LogoMeetup.tsx";
+import { SectionIntroWithButtons } from "@/common/components/SectionIntro/SectionIntroWithButtons";
+import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
 import codeAndCoffee from "@/common/assets/logos-events/event-code-and-coffee.png";
 import cordeAndBrews from "@/common/assets/logos-events/event-code-and-brews.png"

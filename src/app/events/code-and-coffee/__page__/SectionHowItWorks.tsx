@@ -1,8 +1,8 @@
 import { Text, Box, Flex, Button } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { ListPoint } from "@/components/ListPoint/ListPoint";
-import { SectionIntro } from "@/components/SectionIntro/SectionIntro";
-import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
+import { ListPoint } from "@/common/components/ListPoint/ListPoint";
+import { SectionIntro } from "@/common/components/SectionIntro/SectionIntro";
+import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 import { ROUTES } from "@/config/routes";
 
 export interface SectionHowItWorks extends Omit<WrapperProps, "children"> {}

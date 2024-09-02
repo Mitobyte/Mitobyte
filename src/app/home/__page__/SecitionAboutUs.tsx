@@ -7,7 +7,7 @@ import {
 import NextImage from "next/image";
 
 import hero from "@/common/assets/images/events/code-and-brews/candb.jpeg";
-import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
+import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
 export interface SectionAboutUsProps extends Omit<WrapperProps, "children"> {}
 
