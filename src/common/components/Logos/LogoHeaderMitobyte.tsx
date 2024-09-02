@@ -1,6 +1,11 @@
 import { Box, Link, useBreakpointValue } from "@chakra-ui/react";
 import { LogoLargeMitobyte } from "./LogoLargeMitobyte";
 
+const dotbg = 'white';
+const dotcolor = '#999999';
+const dotsize = '2px';
+const dotspace = '15px';
+
 export const LogoHeaderMitobyte = () => {
   // Use Chakra's responsive values for logo scaling
   const logoPosition = useBreakpointValue({
@@ -11,7 +16,9 @@ export const LogoHeaderMitobyte = () => {
   });
 
   return (
-    <Box id="header-logo">
+    <Box id="header-logo" background={`linear-gradient(90deg, ${dotbg} calc(${dotspace} - ${dotsize}), transparent 1%) center / ${dotspace} ${dotspace},
+    linear-gradient(${dotbg} calc(${dotspace} - ${dotsize}), transparent 1%) center / ${dotspace} ${dotspace},
+    ${dotcolor}`}>
       {/* Link for the Large Logo */}
       <Box
         position="relative"

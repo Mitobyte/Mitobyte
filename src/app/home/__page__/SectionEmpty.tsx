@@ -1,4 +1,4 @@
-import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
+import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
 export interface SectionEmptyProps extends Omit<WrapperProps, "children"> {}
 

@@ -2,9 +2,9 @@ import {
   Gallery,
   GalleryImageProps,
   GalleryProps,
-} from "@/components/Gallery/Gallery";
-import { SectionIntro } from "@/components/SectionIntro/SectionIntro";
-import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
+} from "@/common/components/Gallery/Gallery";
+import { SectionIntro } from "@/common/components/SectionIntro/SectionIntro";
+import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
 import image1 from "@/common/assets/images/events/code-and-brews/IMG_4371.jpeg";
 import image2 from "@/common/assets/images/events/code-and-brews/IMG_4372.jpeg";

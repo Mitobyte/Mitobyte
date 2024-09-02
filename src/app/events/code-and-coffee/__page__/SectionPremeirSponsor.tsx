@@ -1,6 +1,6 @@
 import { Container, Heading, Text } from "@chakra-ui/react";
-import { ImageAndContent } from "@/components/ImageAndContent/ImageAndContent";
-import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
+import { ImageAndContent } from "@/common/components/ImageAndContent/ImageAndContent";
+import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 import person from '@/common/assets/images/people/person1.webp'
 
 export interface SectionPremierSponsorProps

@@ -1,5 +1,5 @@
-import { CardEventLink } from "@/components/CardEventLink/CardEventLink";
-import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
+import { CardEventLink } from "@/common/components/CardEventLink/CardEventLink";
+import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 import { Grid, GridItem } from "@chakra-ui/react";
 
 export interface SectionEventsAltProps extends Omit<WrapperProps, "children"> {}

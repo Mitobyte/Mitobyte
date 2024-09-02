@@ -1,10 +1,9 @@
 'use client';
 
-import { NavigationMain } from "@/components/Navigation/NavigationMain";
+import { NavigationMain } from "@/common/components/Navigation/NavigationMain";
 import { SectionHero } from "./SectionHero";
 import { SectionPremierSponsor } from "./SectionPremeirSponsor";
 import { SectionHowItWorks } from "./SectionHowItWorks";
-import { SectionGallery } from "./SectionGallery";
 
 export const PageHackreation = () => {
   return (

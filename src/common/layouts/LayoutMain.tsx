@@ -1,6 +1,7 @@
 'use client';
 
 import { Providers } from '../../bootstrap/providers';
+import { Footer } from '../components/Footer/Footer';
 
 export const LayoutMain = ({
   children,
@@ -8,6 +9,9 @@ export const LayoutMain = ({
   children: React.ReactNode,
 }) => {
   return (
-    <Providers>{children}</Providers>
+    <Providers>
+      {children}
+      <Footer />
+    </Providers>
   )
 }

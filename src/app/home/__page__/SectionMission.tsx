@@ -1,6 +1,6 @@
 import { Heading } from "@chakra-ui/react";
 import { FC } from "react";
-import { Wrapper, WrapperProps } from "@/components/Wrapper/Wrapper";
+import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
 export interface SectionMissionProps extends Omit<WrapperProps, "children"> {}
 
