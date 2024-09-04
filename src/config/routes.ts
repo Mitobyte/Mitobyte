@@ -6,6 +6,7 @@ export const ROUTES = {
     CODE_AND_COFFEE: '/events/code-and-coffee',
     HACKREATION: '/events/hackreation',
     RESUME_WORKSHOP: '/events/resume-workshop',
+    ROOT: '/events',
   },
   SPONSORS: '/sponsors',
   TEAM: '/team',

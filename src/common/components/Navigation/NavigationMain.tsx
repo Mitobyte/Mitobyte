@@ -115,13 +115,13 @@ export const NavigationMain = () => {
                   Events
                 </Link>
                 <Link
-                  href="/sponsors"
+                  href="/team"
                   px={6}
                   py={2}
                   fontWeight="500"
                   fontSize="3xl"
                 >
-                  About
+                  Team
                 </Link>
                 <Link
                   href="/sponsors"
@@ -193,8 +193,8 @@ export const NavigationMain = () => {
               <Link href="/events" px={6} py={2} fontWeight="500" fontSize="xl">
                 Events
               </Link>
-              <Link href="/about" px={6} py={2} fontWeight="500" fontSize="xl">
-                About
+              <Link href="/team" px={6} py={2} fontWeight="500" fontSize="xl">
+                Team
               </Link>
               <Link
                 href="/contact"
