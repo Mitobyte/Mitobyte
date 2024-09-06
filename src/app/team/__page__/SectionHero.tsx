@@ -32,7 +32,7 @@ export const SectionHero = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-      <Grid templateColumns={{ base: "1fr", lg: "2fr 2fr" }} gap={6} m="0 auto">
+      <Grid templateColumns={{ base: "1fr", lg: "2fr 2fr" }} gap={12} m="0 auto">
         <GridItem>
           <NextImage
             height={422}
@@ -46,10 +46,9 @@ export const SectionHero = ({
             <GridItem>
               <Heading
                 as="h1"
-                size={{ sm: "xl", xl: "2xl", xxl: "4xl" }}
+                size={{ sm: "2xl", xl: "3xl", xxl: "4xl" }}
                 color="syntaxBlack.300"
                 fontWeight="700"
-                mt={12}
               >
                 Empowering Engineers
               </Heading>
@@ -65,7 +64,7 @@ export const SectionHero = ({
                 Our mission is to foster a vibrant, inclusive community of software engineers at all levels, from hobbyists to professionals. We aim to inspire innovation, facilitate skill development, and create networking opportunities through collaborative events and workshops.
               </Text>
             </GridItem>
-            <GridItem alignSelf="end">
+            {/* <GridItem alignSelf="end">
               <Button
                 as="a"
                 href="/events"
@@ -90,7 +89,7 @@ export const SectionHero = ({
                 Become a sponsor
               <Icon as={FaChevronCircleRight} style={{ marginLeft: "8px" }} />
             </Button>
-            </GridItem>
+            </GridItem> */}
           </Grid>
         </GridItem>
       </Grid>

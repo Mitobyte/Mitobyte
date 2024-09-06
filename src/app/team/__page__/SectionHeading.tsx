@@ -28,7 +28,7 @@ export const SectionHeading = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-      <Heading size="4xl">Our Team</Heading>
+      <Heading size={{ sm: "2xl", xl: "3xl", xxl: "4xl" }}>Our Team</Heading>
       <Text fontSize="xl">United together through development and design</Text>
     </Wrapper>
   );
