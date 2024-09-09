@@ -15,7 +15,7 @@ export const Footer = () => {
       pb={20}
       textAlign="center"
     >
-      <Grid templateColumns={{ base: '2fr 1fr 1fr 2fr'}} maxWidth="1150" margin="0 auto">
+      <Grid templateColumns={{ base: '1fr', lg: '2fr 1fr 1fr 2fr' }} maxWidth="1150" margin="0 auto" gap={6}>
         <GridItem>
           <NextImage src={logo} height={44} width={66} alt="mitobyte" />
           <Text fontSize="lg" textAlign="left">Founded in Milwaukee, WI</Text>
@@ -36,9 +36,9 @@ export const Footer = () => {
           <FooterLink href={ROUTES.ROOT} mt={4}>GDPR</FooterLink>
         </GridItem>
         <GridItem>
-          <Text fontSize="lg" textAlign="right">Designed by Shovel</Text>
-          <Text fontSize="lg" textAlign="right">Developed by Mitobyte</Text>
-          <Text fontSize="lg" textAlign="right">Powered by Artisan Hosting</Text>
+          <Text fontSize="lg" textAlign={{ base: "left", lg: "right" }}>Designed by Shovel</Text>
+          <Text fontSize="lg" textAlign={{ base: "left", lg: "right" }}>Developed by Mitobyte</Text>
+          <Text fontSize="lg" textAlign={{ base: "left", lg: "right" }}>Powered by Artisan Hosting</Text>
         </GridItem>
       </Grid>
     </Box>

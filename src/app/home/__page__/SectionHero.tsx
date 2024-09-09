@@ -19,7 +19,7 @@ export const SectionHero = () => {
           <GridItem>
             <Heading
               as="h1"
-              size={{ sm: "xl", xl: "2xl", xxl: "4xl" }}
+              size={{ sm: "2xl", xl: "3xl", xxl: "4xl" }}
               color="syntaxBlack.300"
               fontWeight="700"
               mt={12}
