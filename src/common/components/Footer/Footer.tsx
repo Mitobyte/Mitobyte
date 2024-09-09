@@ -1,12 +1,8 @@
-import { Box, Grid, GridItem, Icon, Link, Text } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Text } from "@chakra-ui/react";
 import logo from '@/common/assets/logos-mitobyte/mb-bw-small.svg';
 import NextImage from 'next/image';
-import NextLink from 'next/link';
 import { ROUTES } from "@/config/routes";
-import { LuArrowUpRight } from "react-icons/lu";
 import { FooterLink } from "./FooterLink";
-
-
 
 export const Footer = () => {
   return (
@@ -27,10 +23,10 @@ export const Footer = () => {
         </GridItem>
         <GridItem>
           <FooterLink href={ROUTES.ROOT}>Home</FooterLink>
-          <FooterLink href={ROUTES.ROOT} mt={4}>Events</FooterLink>
+          <FooterLink href={ROUTES.EVENTS.ROOT} mt={4}>Events</FooterLink>
           <FooterLink href={ROUTES.ROOT} mt={4}>About</FooterLink>
-          <FooterLink href={ROUTES.ROOT} mt={4}>Contact</FooterLink>
-          <FooterLink href={ROUTES.ROOT} mt={4}>Sponsors</FooterLink>
+          <FooterLink href="https://us5.list-manage.com/contact-form?u=e1e45fd6e057c2ffc679ea161&form_id=a9b4712bef02361db14007105b78d1b9" mt={4}>Contact</FooterLink>
+          <FooterLink href={ROUTES.SPONSORS} mt={4}>Sponsors</FooterLink>
         </GridItem>
         <GridItem>
           <FooterLink href={ROUTES.ROOT}>Privacy</FooterLink>
@@ -42,6 +38,7 @@ export const Footer = () => {
         <GridItem>
           <Text fontSize="lg" textAlign="right">Designed by Shovel</Text>
           <Text fontSize="lg" textAlign="right">Developed by Mitobyte</Text>
+          <Text fontSize="lg" textAlign="right">Powered by Artisan Hosting</Text>
         </GridItem>
       </Grid>
     </Box>

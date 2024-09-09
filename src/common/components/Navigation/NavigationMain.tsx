@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import { Box, Link, Flex, Spacer, Text, Icon } from "@chakra-ui/react";
 import { useBreakpointValue } from "@chakra-ui/media-query";
-import { LogoSmallMitobyte } from "../Logos/LogoSmallMitobyte";
 import { FaGrinStars } from "react-icons/fa";
+
+import { ROUTES } from "@/config/routes";
+
+import { LogoSmallMitobyte } from "../Logos/LogoSmallMitobyte";
 
 export const NavigationMain = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -106,7 +109,7 @@ export const NavigationMain = () => {
                   Home
                 </Link>
                 <Link
-                  href="/sponsors"
+                  href={ROUTES.EVENTS.ROOT}
                   px={6}
                   py={2}
                   fontWeight="500"
@@ -115,7 +118,7 @@ export const NavigationMain = () => {
                   Events
                 </Link>
                 <Link
-                  href="/team"
+                  href={ROUTES.TEAM}
                   px={6}
                   py={2}
                   fontWeight="500"
@@ -124,16 +127,17 @@ export const NavigationMain = () => {
                   Team
                 </Link>
                 <Link
-                  href="/sponsors"
+                  href="https://us5.list-manage.com/contact-form?u=e1e45fd6e057c2ffc679ea161&form_id=a9b4712bef02361db14007105b78d1b9"
                   px={6}
                   py={2}
+                  target="_blank"
                   fontWeight="500"
                   fontSize="3xl"
                 >
                   Contact
                 </Link>
                 <Link
-                  href="/sponsors"
+                  href={ROUTES.SPONSORS}
                   px={6}
                   py={2}
                   fontWeight="500"
@@ -142,7 +146,8 @@ export const NavigationMain = () => {
                   Sponsors
                 </Link>
                 <Link
-                  href="/sponsor"
+                  href="https://hcb.hackclub.com/donations/start/mitobyte"
+                  target="_blank"
                   px={6}
                   py={2}
                   color="codeBlue.300"
@@ -187,26 +192,27 @@ export const NavigationMain = () => {
               </Link>
             </Box>
             <Box>
-              <Link href="/" px={6} py={2} fontWeight="500" fontSize="xl">
+              <Link href={ROUTES.ROOT} px={6} py={2} fontWeight="500" fontSize="xl">
                 Home
               </Link>
-              <Link href="/events" px={6} py={2} fontWeight="500" fontSize="xl">
+              <Link href={ROUTES.EVENTS.ROOT} px={6} py={2} fontWeight="500" fontSize="xl">
                 Events
               </Link>
-              <Link href="/team" px={6} py={2} fontWeight="500" fontSize="xl">
+              <Link href={ROUTES.TEAM} px={6} py={2} fontWeight="500" fontSize="xl">
                 Team
               </Link>
               <Link
-                href="/contact"
+                href="https://us5.list-manage.com/contact-form?u=e1e45fd6e057c2ffc679ea161&form_id=a9b4712bef02361db14007105b78d1b9"
                 px={6}
                 py={2}
+                target="_blank"
                 fontWeight="500"
                 fontSize="xl"
               >
                 Contact
               </Link>
               <Link
-                href="/sponsors"
+                href={ROUTES.SPONSORS}
                 px={6}
                 py={2}
                 fontWeight="500"
@@ -218,13 +224,13 @@ export const NavigationMain = () => {
             <Spacer />
             <Box>
               <Link
-                href="/sponsor"
+                href="https://hcb.hackclub.com/donations/start/mitobyte"
                 color="codeBlue.300"
                 fontWeight="700"
                 fontSize="xl"
               >
                 <Flex align="center">
-                  Sponsor an event
+                  Sponsor us!
                   <Icon as={FaGrinStars} style={{ marginLeft: "8px" }} />
                 </Flex>
               </Link>
