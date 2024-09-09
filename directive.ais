@@ -1,0 +1,11 @@
+# THIS FILE DOESN'T SUPPORT INLINE COMMENTS
+{
+  "url": "https://mito.artisanhosting.net",
+  "apache": false,
+  "port": 3000,
+  "php_fpm_version": "",
+  "nodejs_bool": true,
+  # Not fully implemented the default is 22 with npm 10.8
+  "nodejs_version": "",
+  "directive_executed": true
+}
