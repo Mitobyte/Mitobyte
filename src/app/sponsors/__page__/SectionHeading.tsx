@@ -1,22 +1,20 @@
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
+import { Heading, Text } from "@chakra-ui/react";
 
-import { SponsorCarousel } from "@/common/components/SponsorCarousel/SponsorCarousel";
+export interface SectionHeadingProps extends Omit<WrapperProps, "children"> {}
 
-export interface SectionSponsorsProps extends Omit<WrapperProps, "children"> {}
-
-export const SectionSponsors = ({
+export const SectionHeading = ({
+  background,
   maxWidth,
   paddingBottom,
   paddingTop,
   paddingLeft,
   paddingRight,
-  background,
   marginBottom,
   marginLeft,
   marginRight,
   marginTop,
-}: SectionSponsorsProps) => {
-
+}: SectionHeadingProps) => {
   return (
     <Wrapper
       maxWidth={maxWidth}
@@ -30,7 +28,8 @@ export const SectionSponsors = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-      <SponsorCarousel />
+      <Heading size={{ sm: "2xl", xl: "3xl", xxl: "4xl" }}>Become a supporter</Heading>
+      <Text fontSize="xl">Help us provide valuable resources, foster innovation, and create opportunities for the next generation of tech talent by becoming a sponsor.</Text>
     </Wrapper>
   );
 };

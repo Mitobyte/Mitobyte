@@ -6,6 +6,8 @@ import { FaGrinStars } from "react-icons/fa";
 import { ROUTES } from "@/config/routes";
 
 import { LogoSmallMitobyte } from "../Logos/LogoSmallMitobyte";
+import { NavigationMobile } from "./NavigationMobile";
+import { NavigationDesktop } from "./NavigationDesktop";
 
 export const NavigationMain = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -33,6 +35,14 @@ export const NavigationMain = () => {
       document.documentElement.style.overflow = "";
     }
   }, [menuOpen]);
+
+  return (
+    <>
+      <NavigationMobile />
+      <NavigationDesktop />
+    </>
+  )
+
 
   return (
     <Box

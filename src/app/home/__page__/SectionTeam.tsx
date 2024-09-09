@@ -33,7 +33,7 @@ export const SectionTeam = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-      <Heading mb={12} size="4xl">Meet the Team</Heading>
+      <Heading mb={12} size={{ sm: "2xl", xl: "3xl", xxl: "4xl" }}>Meet the Team</Heading>
       <Grid templateColumns="1fr 1fr 1fr" gap={3}>
         <GridItem>
           <NextImage src={joe} height={414} width={414} alt="joseph murphy" />
