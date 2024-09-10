@@ -1,10 +1,12 @@
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
-import { AspectRatio, Grid, GridItem, Heading, Icon, Text } from "@chakra-ui/react";
+import { AspectRatio, Grid, GridItem, Heading, Icon, Text, Link } from "@chakra-ui/react";
 import NextImage from "next/image";
 import { LuArrowUpRight } from "react-icons/lu";
+import NextLink from "next/link";
 
-import joe from "@/common/assets/images/people/joe.jpeg";
-import allan from "@/common/assets/images/people/allan.jpeg";
+import joe from "@/common/assets/images/people/profile-joe.jpg";
+import allan from "@/common/assets/images/people/profile-allan.jpg";
+import { ROUTES } from "@/config/routes";
 
 export interface SectionTeamProps extends Omit<WrapperProps, "children"> {}
 
@@ -46,6 +48,7 @@ export const SectionTeam = ({
           <Text>Software Engineer @ Tactacam</Text>
         </GridItem>
         <GridItem>
+          <Link as={NextLink} href={ROUTES.TEAM}>
           <AspectRatio maxW='414px' ratio={1} bg="white" border="1px solid black">
             <Icon
               height={75}
@@ -56,6 +59,7 @@ export const SectionTeam = ({
             />
           </AspectRatio>
           <Heading mt={4} as="h6" size="md">Meet more of our team...</Heading>
+          </Link>
         </GridItem>
       </Grid>
     </Wrapper>

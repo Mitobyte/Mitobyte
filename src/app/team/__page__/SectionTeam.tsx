@@ -2,10 +2,10 @@ import { AspectRatio, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 import { LuArrowUpRight } from "react-icons/lu";
 import NextImage from "next/image";
 
-import joe from "@/common/assets/images/people/joe.jpeg";
-import allan from "@/common/assets/images/people/allan.jpeg";
-import blaze from "@/common/assets/images/people/blaze.jpeg";
-import paul from "@/common/assets/images/people/paul.jpeg";
+import joe from "@/common/assets/images/people/profile-joe.jpg";
+import allan from "@/common/assets/images/people/profile-allan.jpg";
+import blaze from "@/common/assets/images/people/profile-blaze.jpg";
+import paul from "@/common/assets/images/people/profile-paul.jpg";
 
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
@@ -75,7 +75,7 @@ export const SectionTeam = ({
         <GridItem>
           <Grid templateColumns={{ base: "1fr", md: "2fr 1fr" }}>
             <GridItem order={{ base: 1, md: 0 }}>
-              <Heading mt={4} as="h6" size="xl">Blaze Smith</Heading>
+              <Heading mt={4} as="h6" size="xl">Paul Rinaldi</Heading>
               <Text fontSize="xl">Developer Consultant @ Thoughtworks</Text>
             </GridItem>
             <GridItem order={{ base: 0, md: 1 }}>
