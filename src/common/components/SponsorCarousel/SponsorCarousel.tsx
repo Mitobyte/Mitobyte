@@ -1,10 +1,7 @@
 'use client';
 
-import { Box, useBreakpointValue, useMediaQuery } from "@chakra-ui/react";
+import { Box, keyframes } from "@chakra-ui/react";
 import NextImage from 'next/image';
-// https://github.com/Splidejs/splide/issues/1248
-// @ts-ignore this won't be fixed until splide merges a pr see above ^^
-import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 
 import logoCaredirect from "@/common/assets/logos-sponsors/logo-caredirect.png";
@@ -40,30 +37,79 @@ const sponsors = [
   { name: "Northern Ground", logo: logoNorthernGround, height: 100, width: 200 },
 ];
 
-export const SponsorCarousel = () => {
+const logoloop = keyframes`
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+`;
+
+const InnerCarousel = () => {
   return (
-    <Splide
-      aria-label="My Favorite Images"
-      options={{
-        type: 'loop',
-        autoWidth: true,
-        arrows: false,
-        autoplay: 1000,
-        flickPower: 50,
-        pagination: false,
-      }}
-    >
-      {sponsors.map((sponsor) => (
-        <Box as={SplideSlide} alignSelf="center" px={12}>
-          <NextImage
-            width={sponsor.width}
+    <>
+      <Box
+        animation={`${logoloop} 90s linear infinite`}
+        flexFlow="row"
+        flex="none"
+        justifyContent="center"
+        alignItems="center"
+        display="flex"
+      >
+        {sponsors.map((sponsor) => (
+          <Box
+            as={NextImage}
+            flexBasis={sponsor.width}
             height={sponsor.height}
+            marginLeft="2rem"
+            marginRight="2rem"
+            display="inline-block"
+            width={sponsor.width}
             alt="sponsor"
-            key={sponsor.name}
+            objectFit="contain"
             src={sponsor.logo}
           />
-        </Box>
-      ))}
-    </Splide>
+        ))}
+      </Box>
+      <Box
+        zIndex="1"
+        pointerEvents="none"
+        backgroundImage="linear-gradient(270deg, #fff 1%, #21212100 10%, #2220 90%, #fff 99%)"
+        width="100%"
+        height="100%"
+        marginLeft="auto"
+        marginRight="auto"
+        position="absolute"
+      />
+    </>
   );
+};
+
+export const SponsorCarousel = () => {
+
+  return (
+    <Box
+      gridColumnGap="2rem"
+      gridRowGap="2rem"
+      textAlign="center"
+      flexFlow="column"
+      justifyContent="spaceBetween"
+      alignItems="center"
+      width="100%"
+      display="flex"
+    >
+      <Box
+        textAlign="center"
+        flexDirection="row"
+        justifyContent="flex-start"
+        alignItems="stretch"
+        maxWidth="100vw"
+        marginLeft="auto"
+        marginRight="auto"
+        display="flex"
+        position="relative"
+        overflow="clip"
+      >
+        <InnerCarousel />
+        <InnerCarousel />
+    </Box>
+  </Box>
+  )
 };
