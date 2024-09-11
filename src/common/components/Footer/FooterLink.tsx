@@ -16,7 +16,7 @@ export const FooterLink = ({ href, children, ...rest }: FooterLinkProps) => {
       display="block"
       fontWeight={700}
       textAlign="left"
-      fontSize="xl"
+      fontSize="lg"
       {...rest}
     >
       {children}

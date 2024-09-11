@@ -10,5 +10,8 @@ export const ROUTES = {
   },
   SPONSORS: '/sponsors',
   TEAM: '/team',
+  CODE_OF_CONDUCT: '/code-of-conduct',
+  PRIVACY: '/privacy',
+  ABOUT: '/about',
 };
 

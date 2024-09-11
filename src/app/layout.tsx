@@ -3,6 +3,9 @@ import "./globals.css";
 import { LayoutMain } from "@/common/layouts/LayoutMain";
 import localFont from "next/font/local";
 
+import "@splidejs/splide/dist/css/splide-core.min.css";
+import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+
 const satoshi = localFont({
   display: 'swap',
   src: [
