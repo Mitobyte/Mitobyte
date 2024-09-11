@@ -1,7 +1,5 @@
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Grid, GridItem, Heading } from "@chakra-ui/react";
 
-
-
 const FAQ = [
   {
     title: 'Why should I sponsor Mitobyte’s events?',
