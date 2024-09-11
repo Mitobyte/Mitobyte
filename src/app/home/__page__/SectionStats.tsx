@@ -28,8 +28,12 @@ export const SectionStats = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-      <Grid templateColumns={{ base: '1fr', lg: 'repeat(4, 1fr)' }} gap={0} border="1px solid black">
-        <GridItem borderRight={{ base: "1px solid black" }} ml={6} p={6}>
+      <Grid
+        templateColumns={{ base: '1fr', lg: 'repeat(4, 1fr)' }}
+        gap={0}
+        border="1px solid black"
+      >
+        <GridItem borderRight={{ base: 0, lg: "1px solid black" }} ml={6} p={6}>
           <Heading>
             650+
           </Heading>
@@ -37,7 +41,7 @@ export const SectionStats = ({
             Members across Meetup & Eventbrite
           </Text>
         </GridItem>
-        <GridItem borderRight={{ base: "1px solid black" }} ml={6} p={6}>
+        <GridItem borderRight={{ base: 0, lg: "1px solid black" }} ml={6} p={6}>
           <Heading>
             5+ years
           </Heading>
@@ -45,7 +49,7 @@ export const SectionStats = ({
             In curating engineering focused events
           </Text>
         </GridItem>
-        <GridItem borderRight={{ base: "1px solid black" }} ml={6} p={6}>
+        <GridItem borderRight={{ base: 0, lg: "1px solid black" }} ml={6} p={6}>
           <Heading>
             100+ events
           </Heading>

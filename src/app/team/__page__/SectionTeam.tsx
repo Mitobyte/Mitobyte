@@ -1,11 +1,10 @@
-import { AspectRatio, Grid, GridItem, Heading, Text } from "@chakra-ui/react";
-import { LuArrowUpRight } from "react-icons/lu";
+import { Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 import NextImage from "next/image";
 
-import joe from "@/common/assets/images/people/joe.jpeg";
-import allan from "@/common/assets/images/people/allan.jpeg";
-import blaze from "@/common/assets/images/people/blaze.jpeg";
-import paul from "@/common/assets/images/people/paul.jpeg";
+import joe from "@/common/assets/images/people/profile-joe.jpg";
+import allan from "@/common/assets/images/people/profile-allan.jpg";
+import blaze from "@/common/assets/images/people/profile-blaze.jpg";
+import paul from "@/common/assets/images/people/profile-paul.jpg";
 
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
@@ -36,7 +35,7 @@ export const SectionTeam = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-      <Grid templateColumns="1fr" rowGap={12}>
+      <Grid templateColumns="1fr" rowGap={{ base: 6, md: 0}}>
         <GridItem>
           <Grid templateColumns={{ base: "1fr", md: "2fr 1fr" }}>
             <GridItem order={{ base: 1, md: 0 }}>
@@ -44,7 +43,7 @@ export const SectionTeam = ({
               <Text fontSize="xl">Software Engineer @ Little Otter</Text>
             </GridItem>
             <GridItem order={{ base: 0, md: 1 }}>
-              <NextImage src={joe} height={414} width={414} alt="joseph murphy" />
+              <NextImage src={joe} height={700} width={700} alt="joseph murphy" />
             </GridItem>
           </Grid>
         </GridItem>
@@ -56,7 +55,7 @@ export const SectionTeam = ({
               <Text fontSize="xl">Software Engineer @ Tactacam</Text>
             </GridItem>
             <GridItem order={{ base: 0, md: 1 }}>
-              <NextImage src={allan} height={414} width={414} alt="allan wick" />
+              <NextImage src={allan} height={700} width={700} alt="allan wick" />
             </GridItem>
           </Grid>
         </GridItem>
@@ -68,18 +67,18 @@ export const SectionTeam = ({
               <Text fontSize="xl">UX Design Intern @ Associated Bank</Text>
             </GridItem>
             <GridItem order={{ base: 0, md: 1 }}>
-              <NextImage src={blaze} height={414} width={414} alt="blaze smith" />
+              <NextImage src={blaze} height={700} width={700} alt="blaze smith" />
             </GridItem>
           </Grid>
         </GridItem>
         <GridItem>
           <Grid templateColumns={{ base: "1fr", md: "2fr 1fr" }}>
             <GridItem order={{ base: 1, md: 0 }}>
-              <Heading mt={4} as="h6" size="xl">Blaze Smith</Heading>
+              <Heading mt={4} as="h6" size="xl">Paul Rinaldi</Heading>
               <Text fontSize="xl">Developer Consultant @ Thoughtworks</Text>
             </GridItem>
             <GridItem order={{ base: 0, md: 1 }}>
-              <NextImage src={paul} height={414} width={414} alt="paul rinaldi" />
+              <NextImage src={paul} height={700} width={700} alt="paul rinaldi" />
             </GridItem>
           </Grid>
         </GridItem>

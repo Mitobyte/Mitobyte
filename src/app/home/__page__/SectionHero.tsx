@@ -13,9 +13,9 @@ import hero from '@/common/assets/images/events/code-and-coffee/codeCoffee1.jpg'
 
 export const SectionHero = () => {
   return (
-    <Grid templateColumns={{ base: "1fr", lg: "1fr 2fr" }} gap={6} maxW={1150} m="0 auto">
+    <Grid templateColumns={{ base: "1fr", lg: "1fr 2fr" }} gap={{ base: 12, lg: 6 }} maxW={1150} m="0 auto">
       <GridItem>
-        <Grid templateColumns="1fr" templateRows="auto auto 1fr" height="100%">
+        <Grid templateColumns="1fr" templateRows="auto auto 1fr" height="100%" mx={{ base: 6, lg: 3 }}>
           <GridItem>
             <Heading
               as="h1"

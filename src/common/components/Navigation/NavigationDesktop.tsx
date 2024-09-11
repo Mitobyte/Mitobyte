@@ -1,4 +1,4 @@
-import { Box, Link, Flex, Spacer, Icon } from "@chakra-ui/react";
+import { Box, Link, Flex, Spacer, Icon, Button } from "@chakra-ui/react";
 import { FaGrinStars } from "react-icons/fa";
 
 import { ROUTES } from "@/config/routes";
@@ -56,17 +56,19 @@ export const NavigationDesktop = () => {
         </Box>
         <Spacer />
         <Box>
-          <Link
+          <Button
+            as="a"
+            variant="ghost"
             href="https://hcb.hackclub.com/donations/start/mitobyte"
-            color="codeBlue.300"
+            colorScheme="codeBlue"
             fontWeight="700"
             fontSize="xl"
+            target="_blank"
+            rightIcon={<FaGrinStars />}
+            size="lg"
           >
-            <Flex align="center">
-              Sponsor us!
-              <Icon as={FaGrinStars} style={{ marginLeft: "8px" }} />
-            </Flex>
-          </Link>
+            Sponsor us!
+          </Button>
         </Box>
       </Box>
     </Box>

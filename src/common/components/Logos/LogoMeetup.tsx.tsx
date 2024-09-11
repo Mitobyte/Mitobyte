@@ -6,8 +6,8 @@ export const LogoMeetup = () => {
     <NextImage
       alt="meetup logo"
       src={meetupLogo}
-      width={25}
-      height={25}
+      width={35}
+      height={35}
     />
   );
 };

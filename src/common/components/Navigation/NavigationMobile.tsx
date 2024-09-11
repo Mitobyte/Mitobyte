@@ -134,6 +134,7 @@ export const NavigationMobile = () => {
           direction="column"
           align="start"
           justify="space-between"
+          mt={6}
           mb={4}
           ml={3}
         >
