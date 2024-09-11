@@ -94,6 +94,7 @@ export const SponsorCarousel = () => {
       alignItems="center"
       width="100%"
       display="flex"
+      overflow="hidden"
     >
       <Box
         textAlign="center"
