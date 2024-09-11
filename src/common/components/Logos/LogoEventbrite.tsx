@@ -6,8 +6,8 @@ export const LogoEventbrite = () => {
     <NextImage
       alt="eventbrite logo"
       src={eventbriteLogo}
-      width={25}
-      height={25}
+      width={30}
+      height={30}
     />
   );
 };

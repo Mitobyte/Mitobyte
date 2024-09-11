@@ -1,10 +1,11 @@
-import { Box, useBreakpointValue } from "@chakra-ui/react";
+'use client';
+
+import { Box, useBreakpointValue, useMediaQuery } from "@chakra-ui/react";
 import NextImage from 'next/image';
 // https://github.com/Splidejs/splide/issues/1248
 // @ts-ignore this won't be fixed until splide merges a pr see above ^^
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/splide/dist/css/splide-core.min.css";
-import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+
 
 import logoCaredirect from "@/common/assets/logos-sponsors/logo-caredirect.png";
 import logoCodeworks from "@/common/assets/logos-sponsors/logo-codeworks.jpg";
@@ -40,23 +41,20 @@ const sponsors = [
 ];
 
 export const SponsorCarousel = () => {
-
-  const isMobile = useBreakpointValue({ base: true, lg: false });
-
   return (
     <Splide
       aria-label="My Favorite Images"
       options={{
         type: 'loop',
-        perPage: isMobile ? 2 : 6,
+        autoWidth: true,
         arrows: false,
         autoplay: 1000,
-        flickPower: 100,
+        flickPower: 50,
         pagination: false,
       }}
     >
       {sponsors.map((sponsor) => (
-        <Box as={SplideSlide} alignSelf="center">
+        <Box as={SplideSlide} alignSelf="center" px={12}>
           <NextImage
             width={sponsor.width}
             height={sponsor.height}

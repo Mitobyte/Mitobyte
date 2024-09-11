@@ -9,7 +9,7 @@ interface EventDescriptionProps {
 export const EventDescription = ({ title, description, imageSlot }: EventDescriptionProps) => {
 
   return (
-    <Grid templateColumns={{ base: "2fr 1fr" }} gap={6} p={12}>
+    <Grid templateColumns={{ base: "1fr", lg: "2fr 1fr" }} gap={6} p={{ base: 3, lg: 12 }}>
       <GridItem>
         <Heading mb={3} size="lg">{title}</Heading>
         <UnorderedList>

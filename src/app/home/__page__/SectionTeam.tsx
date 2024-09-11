@@ -36,20 +36,26 @@ export const SectionTeam = ({
       marginTop={marginTop}
     >
       <Heading mb={12} size={{ sm: "2xl", xl: "3xl", xxl: "4xl" }}>Meet the Team</Heading>
-      <Grid templateColumns="1fr 1fr 1fr" gap={3}>
+      <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr 1fr" }} gap={{ base: 12, lg: 3 }}>
         <GridItem>
-          <NextImage src={joe} height={414} width={414} alt="joseph murphy" />
+          <NextImage src={joe} height={700} width={700} alt="joseph murphy" />
           <Heading mt={4} as="h6" size="md">Joseph Murphy</Heading>
           <Text>Software Engineer @ Little Otter</Text>
         </GridItem>
         <GridItem>
-          <NextImage src={allan} height={414} width={414} alt="allan wick" />
+          <NextImage src={allan} height={700} width={700} alt="allan wick" />
           <Heading mt={4} as="h6" size="md">Allan Wick</Heading>
           <Text>Software Engineer @ Tactacam</Text>
         </GridItem>
         <GridItem>
           <Link as={NextLink} href={ROUTES.TEAM}>
-          <AspectRatio maxW='414px' ratio={1} bg="white" border="1px solid black">
+          <AspectRatio
+            maxW={{ base: '700px', lg: '700px' }}
+            ratio={{ base: 3, lg: 1}}
+            bg="white"
+            borderWidth="1px"
+            borderColor="syntaxBlack.300"
+          >
             <Icon
               height={75}
               width={75}
