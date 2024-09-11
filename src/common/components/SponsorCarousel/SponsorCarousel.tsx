@@ -65,6 +65,7 @@ const InnerCarousel = () => {
             alt="sponsor"
             objectFit="contain"
             src={sponsor.logo}
+            key={sponsor.name}
           />
         ))}
       </Box>
