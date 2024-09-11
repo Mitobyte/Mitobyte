@@ -17,7 +17,7 @@ export const LogoHeaderMitobyte = () => {
       ${dotcolor}`}
     >
       <Flex pointerEvents="none" mx="auto" justifyContent="center" mb={{ base: "-28px", lg: "-65px" }} pt="67px" maxWidth={{ base: "350px", lg: "800px" }}>
-        <NextImage alt="Mitobyte logo" src={logo} height={274} width={836} style={{ zIndex: 3 }} />
+        <NextImage alt="Mitobyte logo" src={logo} height={274} width={836} style={{ zIndex: 3, pointerEvents: 'none' }} />
       </Flex>
     </Box>
   );

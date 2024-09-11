@@ -41,6 +41,7 @@ export const NavigationMobile = () => {
           justifyContent="center"
           gap="4px"
           position="relative"
+          cursor="pointer"
         >
           <Box
             width="100%"
