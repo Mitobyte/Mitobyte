@@ -1,14 +1,12 @@
-import { type Metadata } from 'next';
-import { PageHome as Home } from './__page__/PageHome';
+import { type Metadata } from "next";
+import { PageHome as Home } from "./__page__/PageHome";
 
 export const metadata: Metadata = {
-  title: 'Home Page',
+  title: "Home Page",
 };
 
 const PageHome = () => {
-  return (
-    <Home />
-  );
+  return <Home />;
 };
 
 export default PageHome;

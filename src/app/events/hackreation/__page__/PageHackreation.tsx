@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { NavigationMain } from "@/common/components/Navigation/NavigationMain";
 import { SectionHero } from "./SectionHero";

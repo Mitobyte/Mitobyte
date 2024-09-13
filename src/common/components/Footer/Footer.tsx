@@ -1,6 +1,6 @@
 import { Box, Grid, GridItem, Text } from "@chakra-ui/react";
-import logo from '@/common/assets/logos-mitobyte/mb-bw-small.svg';
-import NextImage from 'next/image';
+import logo from "@/common/assets/logos-mitobyte/mb-bw-small.svg";
+import NextImage from "next/image";
 import { ROUTES } from "@/config/routes";
 import { FooterLink } from "./FooterLink";
 
@@ -15,32 +15,67 @@ export const Footer = () => {
       pb={20}
       textAlign="center"
     >
-      <Grid templateColumns={{ base: '1fr', lg: '2fr 1fr 1fr 2fr' }} maxWidth="1150" margin="0 auto" gap={6}>
+      <Grid
+        templateColumns={{ base: "1fr", lg: "2fr 1fr 1fr 2fr" }}
+        maxWidth="1150"
+        margin="0 auto"
+        gap={6}
+      >
         <GridItem>
           <NextImage src={logo} height={44} width={66} alt="mitobyte" />
-          <Text fontSize="lg" textAlign="left">Founded in Milwaukee, WI</Text>
-          <Text fontSize="lg" textAlign="left"> &copy; 2024 Mitobyte. All rights reserved.</Text>
+          <Text fontSize="lg" textAlign="left">
+            Founded in Milwaukee, WI
+          </Text>
+          <Text fontSize="lg" textAlign="left">
+            {" "}
+            &copy; 2024 Mitobyte. All rights reserved.
+          </Text>
         </GridItem>
         <GridItem>
           <FooterLink href={ROUTES.ROOT}>Home</FooterLink>
-          <FooterLink href={ROUTES.EVENTS.ROOT} mt={4}>Events</FooterLink>
-          <FooterLink href={ROUTES.ABOUT} mt={4}>About</FooterLink>
-          <FooterLink href="https://us5.list-manage.com/contact-form?u=e1e45fd6e057c2ffc679ea161&form_id=a9b4712bef02361db14007105b78d1b9" mt={4}>Contact</FooterLink>
-          <FooterLink href={ROUTES.SPONSORS} mt={4}>Sponsors</FooterLink>
+          <FooterLink href={ROUTES.EVENTS.ROOT} mt={4}>
+            Events
+          </FooterLink>
+          <FooterLink href={ROUTES.ABOUT} mt={4}>
+            About
+          </FooterLink>
+          <FooterLink
+            href="https://us5.list-manage.com/contact-form?u=e1e45fd6e057c2ffc679ea161&form_id=a9b4712bef02361db14007105b78d1b9"
+            mt={4}
+          >
+            Contact
+          </FooterLink>
+          <FooterLink href={ROUTES.SPONSORS} mt={4}>
+            Sponsors
+          </FooterLink>
         </GridItem>
         <GridItem>
           <FooterLink href={ROUTES.PRIVACY}>Privacy</FooterLink>
-          <FooterLink href={ROUTES.CODE_OF_CONDUCT} mt={4}>Code of Conduct</FooterLink>
-          <FooterLink href={ROUTES.ROOT} mt={4}>Accessibility</FooterLink>
-          <FooterLink href={ROUTES.ROOT} mt={4}>Cookies</FooterLink>
-          <FooterLink href={ROUTES.ROOT} mt={4}>GDPR</FooterLink>
+          <FooterLink href={ROUTES.CODE_OF_CONDUCT} mt={4}>
+            Code of Conduct
+          </FooterLink>
+          <FooterLink href={ROUTES.ROOT} mt={4}>
+            Accessibility
+          </FooterLink>
+          <FooterLink href={ROUTES.ROOT} mt={4}>
+            Cookies
+          </FooterLink>
+          <FooterLink href={ROUTES.ROOT} mt={4}>
+            GDPR
+          </FooterLink>
         </GridItem>
         <GridItem>
-          <Text fontSize="lg" textAlign={{ base: "left", lg: "right" }}>Designed by Shovel</Text>
-          <Text fontSize="lg" textAlign={{ base: "left", lg: "right" }}>Developed by Mitobyte</Text>
-          <Text fontSize="lg" textAlign={{ base: "left", lg: "right" }}>Powered by Artisan Hosting</Text>
+          <Text fontSize="lg" textAlign={{ base: "left", lg: "right" }}>
+            Designed by Shovel
+          </Text>
+          <Text fontSize="lg" textAlign={{ base: "left", lg: "right" }}>
+            Developed by Mitobyte
+          </Text>
+          <Text fontSize="lg" textAlign={{ base: "left", lg: "right" }}>
+            Powered by Artisan Hosting
+          </Text>
         </GridItem>
       </Grid>
     </Box>
   );
-}
+};

@@ -7,7 +7,6 @@ interface CardPersonProps {
 }
 
 export const CardPerson = ({ imageSrc, name, role }: CardPersonProps) => {
-
   return (
     <Flex
       bg="#edf3f8"
@@ -30,13 +29,7 @@ export const CardPerson = ({ imageSrc, name, role }: CardPersonProps) => {
         overflow="hidden"
         mx="auto"
       >
-        <Image
-          w="full"
-          h={56}
-          fit="cover"
-          src={imageSrc}
-          alt="avatar"
-        />
+        <Image w="full" h={56} fit="cover" src={imageSrc} alt="avatar" />
 
         <Box py={5} textAlign="center">
           <Link
@@ -62,6 +55,5 @@ export const CardPerson = ({ imageSrc, name, role }: CardPersonProps) => {
         </Box>
       </Box>
     </Flex>
-
   );
-}
+};

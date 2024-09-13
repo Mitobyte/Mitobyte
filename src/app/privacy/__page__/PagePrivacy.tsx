@@ -1,7 +1,5 @@
-import { Privacy } from "./Privacy"
+import { Privacy } from "./Privacy";
 
 export const PagePrivacy = () => {
-  return (
-    <Privacy />
-  )
-}
+  return <Privacy />;
+};

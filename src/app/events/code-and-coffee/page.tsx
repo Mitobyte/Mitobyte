@@ -1,14 +1,12 @@
-import { type Metadata } from 'next';
-import { PageCodeAndCoffee } from './__page__/PageCodeAndCoffee';
+import { type Metadata } from "next";
+import { PageCodeAndCoffee } from "./__page__/PageCodeAndCoffee";
 
 export const metadata: Metadata = {
-  title: 'Code & Coffee',
+  title: "Code & Coffee",
 };
 
 const CodeAndCoffee = () => {
-  return (
-    <PageCodeAndCoffee />
-  );
+  return <PageCodeAndCoffee />;
 };
 
 export default CodeAndCoffee;

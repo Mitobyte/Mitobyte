@@ -6,7 +6,6 @@ import { ROUTES } from "@/config/routes";
 import { LogoSmallMitobyte } from "../Logos/LogoSmallMitobyte";
 
 export const NavigationDesktop = () => {
-
   return (
     <Box
       display={{ base: "none", xl: "block" }}
@@ -28,7 +27,13 @@ export const NavigationDesktop = () => {
           <LogoSmallMitobyte />
         </Link>
         <Box>
-          <Link href={ROUTES.EVENTS.ROOT} px={6} py={2} fontWeight="500" fontSize="xl">
+          <Link
+            href={ROUTES.EVENTS.ROOT}
+            px={6}
+            py={2}
+            fontWeight="500"
+            fontSize="xl"
+          >
             Events
           </Link>
           <Link href={ROUTES.TEAM} px={6} py={2} fontWeight="500" fontSize="xl">

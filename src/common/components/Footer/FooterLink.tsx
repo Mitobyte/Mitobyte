@@ -1,6 +1,6 @@
-import NextLink from 'next/link';
-import { Icon, Link, LinkProps } from '@chakra-ui/react';
-import { LuArrowUpRight } from 'react-icons/lu';
+import NextLink from "next/link";
+import { Icon, Link, LinkProps } from "@chakra-ui/react";
+import { LuArrowUpRight } from "react-icons/lu";
 
 interface FooterLinkProps extends LinkProps {
   href: string;
@@ -20,12 +20,7 @@ export const FooterLink = ({ href, children, ...rest }: FooterLinkProps) => {
       {...rest}
     >
       {children}
-      <Icon
-        height={5}
-        width={5}
-        ml={2}
-        as={LuArrowUpRight}
-      />
+      <Icon height={5} width={5} ml={2} as={LuArrowUpRight} />
     </Link>
   );
-}
+};

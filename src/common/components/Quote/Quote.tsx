@@ -1,5 +1,4 @@
 import { Heading, Text } from "@chakra-ui/react";
-import { FC } from "react";
 
 export interface QuoteProps {
   quote: string;

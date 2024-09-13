@@ -1,5 +1,5 @@
 import { Box, Flex, Text, Heading } from "@chakra-ui/react";
-import NextImage, { StaticImageData } from 'next/image';
+import NextImage, { StaticImageData } from "next/image";
 
 export interface ImageAndContentProps {
   imageSrc: StaticImageData;

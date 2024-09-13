@@ -16,7 +16,12 @@ export const Gallery = ({ images }: GalleryProps) => {
       <Grid templateColumns="repeat(3, 1fr)" gap={6}>
         {images?.map((image, index) => (
           <GridItem key={index}>
-            <NextImage src={image.src} alt={image.alt} width={750} height={750} />
+            <NextImage
+              src={image.src}
+              alt={image.alt}
+              width={750}
+              height={750}
+            />
           </GridItem>
         ))}
       </Grid>

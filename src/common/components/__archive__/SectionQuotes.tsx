@@ -1,9 +1,5 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
-
-// https://github.com/Splidejs/splide/issues/1248
-// @ts-ignore this won't be fixed until splide merges a pr see above ^^
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { Quote } from "@/common/components/Quote/Quote";
+// import { Quote } from "@/common/components/Quote/Quote";
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
 export interface SectionQuotesProps extends Omit<WrapperProps, "children"> {}
@@ -42,10 +38,10 @@ export const SectionQuotes = ({
           think about our events!
         </Text>
       </Box>
-      <Splide aria-label="My Favorite Images">
+      {/* <Splide aria-label="My nexFavorite Images">
         <SplideSlide>
           <Box maxW="350px" margin="0 auto">
-            <Quote
+            <Quotenpx next lint --fix
               author="Anonymous"
               quote="I don't talk to my mama but I talk to my diary."
             />
@@ -59,7 +55,7 @@ export const SectionQuotes = ({
             />
           </Box>
         </SplideSlide>
-      </Splide>
+      </Splide> */}
     </Wrapper>
   );
 };

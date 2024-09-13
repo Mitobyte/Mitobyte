@@ -47,7 +47,7 @@ export const SectionIntroWithButtons = ({
           variant="outline"
           leftIcon={buttonOneSlot}
           mr={3}
-          href={buttonOneLink ?? ''}
+          href={buttonOneLink ?? ""}
         >
           {buttonOneText}
         </Button>
@@ -55,7 +55,7 @@ export const SectionIntroWithButtons = ({
           as="a"
           variant="outline"
           leftIcon={buttonTwoSlot}
-          href={buttonTwoLink ?? ''}
+          href={buttonTwoLink ?? ""}
         >
           {buttonTwoText}
         </Button>
