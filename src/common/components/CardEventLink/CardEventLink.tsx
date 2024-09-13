@@ -1,4 +1,4 @@
-import { Grid, GridItem, Heading, Icon, Link, Text } from "@chakra-ui/react"
+import { Grid, GridItem, Heading, Icon, Link, Text } from "@chakra-ui/react";
 import { LuArrowUpRight } from "react-icons/lu";
 
 export interface CardEventLinkProps {
@@ -13,7 +13,7 @@ export const CardEventLink = ({ date, title, time }: CardEventLinkProps) => {
       as={Link}
       href="#"
       flexWrap="nowrap"
-      templateColumns='1fr auto'
+      templateColumns="1fr auto"
       gap={4}
       textDecoration="unset !important"
       _hover={{
@@ -22,8 +22,9 @@ export const CardEventLink = ({ date, title, time }: CardEventLinkProps) => {
         },
         ".deco": {
           textDecoration: "underline",
-        }
-      }}>
+        },
+      }}
+    >
       <GridItem>
         <Heading className="deco">{title}</Heading>
         <Text>{date}</Text>
@@ -40,4 +41,4 @@ export const CardEventLink = ({ date, title, time }: CardEventLinkProps) => {
       </GridItem>
     </Grid>
   );
-}
+};

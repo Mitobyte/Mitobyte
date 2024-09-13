@@ -6,7 +6,7 @@ import { SectionIntroWithButtons } from "@/common/components/SectionIntro/Sectio
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
 import codeAndCoffee from "@/common/assets/logos-events/event-code-and-coffee.png";
-import cordeAndBrews from "@/common/assets/logos-events/event-code-and-brews.png"
+import cordeAndBrews from "@/common/assets/logos-events/event-code-and-brews.png";
 import hackreation from "@/common/assets/logos-events/event-hackreation-big.png";
 import { ROUTES } from "@/config/routes";
 

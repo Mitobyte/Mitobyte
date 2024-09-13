@@ -2,8 +2,15 @@
   "extends": [
     "next/core-web-vitals",
     "plugin:eslint-plugin-next-on-pages/recommended",
+    "prettier"
   ],
   "plugins": [
+    "prettier",
     "eslint-plugin-next-on-pages"
-  ]
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "react/no-unescaped-entities": "off"
+
+  }
 }

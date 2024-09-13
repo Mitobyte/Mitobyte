@@ -1,8 +1,7 @@
-'use client';
+"use client";
 
 import { Box, keyframes } from "@chakra-ui/react";
-import NextImage from 'next/image';
-
+import NextImage from "next/image";
 
 import logoCaredirect from "@/common/assets/logos-sponsors/logo-caredirect.png";
 import logoCodeworks from "@/common/assets/logos-sponsors/logo-codeworks.jpg";
@@ -30,11 +29,21 @@ const sponsors = [
   // { name: "Vba", logo: logoVba, height: 75, width: 75 },
   { name: "Wickid Cool", logo: logoWickidCool, height: 100, width: 200 },
   { name: "Form Labs", logo: logoFormLabs, height: 100, width: 200 },
-  { name: "Roof Marketplace", logo: logoRoofMarketplace, height: 100, width: 200 },
+  {
+    name: "Roof Marketplace",
+    logo: logoRoofMarketplace,
+    height: 100,
+    width: 200,
+  },
   { name: "PKWARE", logo: logoPkware, height: 100, width: 200 },
   { name: "Mistura", logo: logoMistura, height: 100, width: 200 },
   { name: "Nvisia", logo: logoNvisia, height: 100, width: 125 },
-  { name: "Northern Ground", logo: logoNorthernGround, height: 100, width: 200 },
+  {
+    name: "Northern Ground",
+    logo: logoNorthernGround,
+    height: 100,
+    width: 200,
+  },
 ];
 
 const logoloop = keyframes`
@@ -84,7 +93,6 @@ const InnerCarousel = () => {
 };
 
 export const SponsorCarousel = () => {
-
   return (
     <Box
       gridColumnGap="2rem"
@@ -111,7 +119,7 @@ export const SponsorCarousel = () => {
       >
         <InnerCarousel />
         <InnerCarousel />
+      </Box>
     </Box>
-  </Box>
-  )
+  );
 };

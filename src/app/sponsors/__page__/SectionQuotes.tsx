@@ -1,11 +1,8 @@
-'use client';
+"use client";
 
 import { Box, Heading, Text } from "@chakra-ui/react";
-// https://github.com/Splidejs/splide/issues/1248
-// @ts-ignore this won't be fixed until splide merges a pr see above ^^
-import { Splide, SplideSlide } from "@splidejs/react-splide";
 
-import { Quote } from "@/common/components/Quote/Quote";
+// import { Quote } from "@/common/components/Quote/Quote";
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
 export interface SectionQuotesProps extends Omit<WrapperProps, "children"> {}
@@ -43,7 +40,7 @@ export const SectionQuotes = ({
           See what our sponsors have to say!
         </Text>
       </Box>
-      <Splide aria-label="My Favorite Images">
+      {/* <Splide aria-label="My Favorite Images">
         <SplideSlide>
           <Box maxW="350px" margin="0 auto">
             <Quote
@@ -60,7 +57,7 @@ export const SectionQuotes = ({
             />
           </Box>
         </SplideSlide>
-      </Splide>
+      </Splide> */}
     </Wrapper>
   );
 };

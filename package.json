@@ -7,9 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:write": "eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
     "pages:build": "npx @cloudflare/next-on-pages",
     "preview": "npm run pages:build && wrangler pages dev",
-    "deploy": "npm run pages:build && wrangler pages deploy"
+    "deploy": "npm run pages:build && wrangler pages deploy",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
@@ -18,7 +20,6 @@
     "@emotion/react": "11.13.3",
     "@emotion/styled": "11.13.0",
     "@mailchimp/mailchimp_marketing": "^3.0.80",
-    "@splidejs/react-splide": "0.7.12",
     "@types/mailchimp__mailchimp_marketing": "^3.0.20",
     "@types/md5": "^2.3.5",
     "framer-motion": "11.3.29",
@@ -44,8 +45,18 @@
     "@types/react-dom": "18.2.7",
     "eslint": "^8",
     "eslint-config-next": "14.2.6",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-next-on-pages": "^1.13.2",
+    "eslint-plugin-prettier": "^5.2.1",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
     "storybook": "8.2.9",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,md}": "prettier --write",
+    "*.js": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }

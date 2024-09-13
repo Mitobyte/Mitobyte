@@ -31,7 +31,13 @@ export const CardAboutUs = ({
   return (
     <Card maxW="xs">
       <CardBody>
-        <Image as={NextImage} src={imageSrc} alt={imageAlt} borderRadius="lg" width={150} />
+        <Image
+          as={NextImage}
+          src={imageSrc}
+          alt={imageAlt}
+          borderRadius="lg"
+          width={150}
+        />
         <Stack mt="6" spacing="3">
           <Heading size="md">{title}</Heading>
           <Text>{description}</Text>
@@ -39,8 +45,8 @@ export const CardAboutUs = ({
       </CardBody>
       <CardFooter>
         <ButtonGroup spacing="2">
-          <Link href={linkGithub ?? ''}>Github</Link>
-          <Link href={linkLinkedIn ?? ''}>LinkedIn</Link>
+          <Link href={linkGithub ?? ""}>Github</Link>
+          <Link href={linkLinkedIn ?? ""}>LinkedIn</Link>
         </ButtonGroup>
       </CardFooter>
     </Card>

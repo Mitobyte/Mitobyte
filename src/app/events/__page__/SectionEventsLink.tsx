@@ -1,7 +1,8 @@
 import { EventsLink } from "@/common/components/EventsLink/EventsLink";
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
-export interface SectionEventsLinkProps extends Omit<WrapperProps, "children"> {}
+export interface SectionEventsLinkProps
+  extends Omit<WrapperProps, "children"> {}
 
 export const SectionEventsLink = ({
   maxWidth,
@@ -13,7 +14,7 @@ export const SectionEventsLink = ({
   marginBottom,
   marginLeft,
   marginRight,
-  marginTop
+  marginTop,
 }: SectionEventsLinkProps) => {
   return (
     <Wrapper
@@ -31,4 +32,4 @@ export const SectionEventsLink = ({
       <EventsLink />
     </Wrapper>
   );
-}
+};

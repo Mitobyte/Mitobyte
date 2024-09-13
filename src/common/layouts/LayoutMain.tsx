@@ -1,15 +1,11 @@
-'use client';
+"use client";
 
-import { Providers } from '../../bootstrap/providers';
-import { Footer } from '../components/Footer/Footer';
-import { LogoHeaderMitobyte } from '../components/Logos/LogoHeaderMitobyte';
-import { NavigationMain } from '../components/Navigation/NavigationMain';
+import { Providers } from "../../bootstrap/providers";
+import { Footer } from "../components/Footer/Footer";
+import { LogoHeaderMitobyte } from "../components/Logos/LogoHeaderMitobyte";
+import { NavigationMain } from "../components/Navigation/NavigationMain";
 
-export const LayoutMain = ({
-  children,
-}: {
-  children: React.ReactNode,
-}) => {
+export const LayoutMain = ({ children }: { children: React.ReactNode }) => {
   return (
     <Providers>
       <LogoHeaderMitobyte />
@@ -17,5 +13,5 @@ export const LayoutMain = ({
       {children}
       <Footer />
     </Providers>
-  )
-}
+  );
+};

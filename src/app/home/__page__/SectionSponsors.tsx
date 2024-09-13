@@ -16,7 +16,6 @@ export const SectionSponsors = ({
   marginRight,
   marginTop,
 }: SectionSponsorsProps) => {
-
   return (
     <Wrapper
       maxWidth={maxWidth}

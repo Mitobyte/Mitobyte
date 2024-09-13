@@ -19,7 +19,7 @@ const images: GalleryImageProps[] = [
     alt: "Hackreaction photo 1",
   },
   {
-    src:image2,
+    src: image2,
     alt: "Hackreaction photo 2",
   },
   {

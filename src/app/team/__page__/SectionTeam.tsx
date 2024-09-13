@@ -35,50 +35,78 @@ export const SectionTeam = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-      <Grid templateColumns="1fr" rowGap={{ base: 6, md: 0}}>
+      <Grid templateColumns="1fr" rowGap={{ base: 6, md: 0 }}>
         <GridItem>
           <Grid templateColumns={{ base: "1fr", md: "2fr 1fr" }}>
             <GridItem order={{ base: 1, md: 0 }}>
-              <Heading mt={4} as="h6" size="xl">Joseph Murphy</Heading>
+              <Heading mt={4} as="h6" size="xl">
+                Joseph Murphy
+              </Heading>
               <Text fontSize="xl">Software Engineer @ Little Otter</Text>
             </GridItem>
             <GridItem order={{ base: 0, md: 1 }}>
-              <NextImage src={joe} height={700} width={700} alt="joseph murphy" />
+              <NextImage
+                src={joe}
+                height={700}
+                width={700}
+                alt="joseph murphy"
+              />
             </GridItem>
           </Grid>
         </GridItem>
         <GridItem>
+          <GridItem>
+            <Grid templateColumns={{ base: "1fr", md: "2fr 1fr" }}>
+              <GridItem order={{ base: 1, md: 0 }}>
+                <Heading as="h6" size="xl">
+                  Allan Wick
+                </Heading>
+                <Text fontSize="xl">Software Engineer @ Tactacam</Text>
+              </GridItem>
+              <GridItem order={{ base: 0, md: 1 }}>
+                <NextImage
+                  src={allan}
+                  height={700}
+                  width={700}
+                  alt="allan wick"
+                />
+              </GridItem>
+            </Grid>
+          </GridItem>
+        </GridItem>
         <GridItem>
           <Grid templateColumns={{ base: "1fr", md: "2fr 1fr" }}>
             <GridItem order={{ base: 1, md: 0 }}>
-              <Heading as="h6" size="xl">Allan Wick</Heading>
-              <Text fontSize="xl">Software Engineer @ Tactacam</Text>
-            </GridItem>
-            <GridItem order={{ base: 0, md: 1 }}>
-              <NextImage src={allan} height={700} width={700} alt="allan wick" />
-            </GridItem>
-          </Grid>
-        </GridItem>
-        </GridItem>
-        <GridItem>
-          <Grid templateColumns={{ base: "1fr", md: "2fr 1fr" }}>
-            <GridItem order={{ base: 1, md: 0 }}>
-              <Heading mt={4} as="h6" size="xl">Blaze Smith</Heading>
+              <Heading mt={4} as="h6" size="xl">
+                Blaze Smith
+              </Heading>
               <Text fontSize="xl">UX Design Intern @ Associated Bank</Text>
             </GridItem>
             <GridItem order={{ base: 0, md: 1 }}>
-              <NextImage src={blaze} height={700} width={700} alt="blaze smith" />
+              <NextImage
+                src={blaze}
+                height={700}
+                width={700}
+                alt="blaze smith"
+              />
             </GridItem>
           </Grid>
         </GridItem>
         <GridItem>
           <Grid templateColumns={{ base: "1fr", md: "2fr 1fr" }}>
             <GridItem order={{ base: 1, md: 0 }}>
-              <Heading mt={4} as="h6" size="xl">Paul Rinaldi</Heading>
+              <Heading mt={4} as="h6" size="xl">
+                Paul Rinaldi
+              </Heading>
               <Text fontSize="xl">Developer Consultant @ Thoughtworks</Text>
             </GridItem>
             <GridItem order={{ base: 0, md: 1 }}>
-              <NextImage src={paul} height={700} width={700} alt="paul rinaldi" />
+              <NextImage
+                src={paul}
+                height={700}
+                width={700}
+                alt="paul rinaldi"
+              />
             </GridItem>
           </Grid>
         </GridItem>

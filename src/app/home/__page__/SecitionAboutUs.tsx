@@ -1,9 +1,4 @@
-import {
-  Heading,
-  Text,
-  Grid,
-  GridItem,
-} from "@chakra-ui/react";
+import { Heading, Text, Grid, GridItem } from "@chakra-ui/react";
 import NextImage from "next/image";
 
 import hero from "@/common/assets/images/events/code-and-brews/candb.jpeg";
@@ -23,7 +18,6 @@ export const SectionAboutUs = ({
   marginRight,
   marginTop,
 }: SectionAboutUsProps) => {
-
   return (
     <Wrapper
       maxWidth={maxWidth}
@@ -37,7 +31,12 @@ export const SectionAboutUs = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-      <Grid templateColumns={{ base: "1fr", lg: "2fr 1fr" }} gap={6} maxW={1150} m="0 auto">
+      <Grid
+        templateColumns={{ base: "1fr", lg: "2fr 1fr" }}
+        gap={6}
+        maxW={1150}
+        m="0 auto"
+      >
         <GridItem>
           <NextImage
             height={350}
@@ -63,10 +62,13 @@ export const SectionAboutUs = ({
             lineHeight="29.26px"
             m={6}
           >
-            Every year Mitobyte connects with over 1,000 Milwaukee developers annually through innovative networking events and hackathons. We foster collaboration, creativity, and growth in the local tech community. Join us to shape the future of technology in Milwaukee.
+            Every year Mitobyte connects with over 1,000 Milwaukee developers
+            annually through innovative networking events and hackathons. We
+            foster collaboration, creativity, and growth in the local tech
+            community. Join us to shape the future of technology in Milwaukee.
           </Text>
         </GridItem>
       </Grid>
     </Wrapper>
-  )
+  );
 };

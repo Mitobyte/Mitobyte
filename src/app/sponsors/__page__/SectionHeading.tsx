@@ -31,8 +31,14 @@ export const SectionHeading = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-      <Heading size={{ sm: "2xl", xl: "3xl", xxl: "4xl" }}>Become a supporter</Heading>
-      <Text fontSize="xl" mt={6} mb={6} maxW={{ base: '600px' }}>Help us provide valuable resources, foster innovation, and create opportunities for the next generation of tech talent by becoming a sponsor.</Text>
+      <Heading size={{ sm: "2xl", xl: "3xl", xxl: "4xl" }}>
+        Become a supporter
+      </Heading>
+      <Text fontSize="xl" mt={6} mb={6} maxW={{ base: "600px" }}>
+        Help us provide valuable resources, foster innovation, and create
+        opportunities for the next generation of tech talent by becoming a
+        sponsor.
+      </Text>
       <Button
         as="a"
         size="lg"
@@ -43,14 +49,10 @@ export const SectionHeading = ({
         mr={3}
       >
         Contact us
-      </Button>{' '}
-      <Text
-        fontSize="2xl"
-        display="inline-block"
-        mr={3}
-      >
+      </Button>{" "}
+      <Text fontSize="2xl" display="inline-block" mr={3}>
         or
-      </Text>{' '}
+      </Text>{" "}
       <Button
         as="a"
         variant="solid"

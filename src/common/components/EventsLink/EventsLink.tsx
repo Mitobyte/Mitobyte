@@ -4,9 +4,9 @@ import { CardEventLink } from "@/common/components/CardEventLink/CardEventLink";
 
 export const EventsLink = () => {
   return (
-    <Grid templateColumns={{ base: '1fr', lg: 'repeat(3, 1fr)' }} gap={14}>
+    <Grid templateColumns={{ base: "1fr", lg: "repeat(3, 1fr)" }} gap={14}>
       <GridItem
-        borderRightWidth={{ base: "0", lg: "1px"}}
+        borderRightWidth={{ base: "0", lg: "1px" }}
         borderRightColor={{ base: "white.600" }}
       >
         <CardEventLink
@@ -16,7 +16,7 @@ export const EventsLink = () => {
         />
       </GridItem>
       <GridItem
-        borderRightWidth={{ base: "0", lg: "1px"}}
+        borderRightWidth={{ base: "0", lg: "1px" }}
         borderRightColor={{ base: "white.600" }}
         borderTopWidth={{ base: "1px", lg: "0" }}
         borderTopColor={{ base: "white.600" }}
@@ -29,7 +29,7 @@ export const EventsLink = () => {
         />
       </GridItem>
       <GridItem
-        borderTopWidth={{ base: "1px", lg: "0"  }}
+        borderTopWidth={{ base: "1px", lg: "0" }}
         borderTopColor={{ base: "white.600" }}
         pt={{ base: 12, lg: 0 }}
       >
@@ -41,4 +41,4 @@ export const EventsLink = () => {
       </GridItem>
     </Grid>
   );
-}
+};

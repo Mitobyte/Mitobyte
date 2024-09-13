@@ -53,7 +53,7 @@ export const SectionWhySponsor = ({
         <Button
           as={NextLink}
           mt="12"
-          href={ROUTES.SPONSORS ?? '/'}
+          href={ROUTES.SPONSORS ?? "/"}
           size="lg"
           variant="solid"
           colorScheme="blue"
