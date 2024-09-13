@@ -62,7 +62,7 @@ export const CardEvent = ({
             flex="1"
             variant="ghost"
             leftIcon={<InfoIcon />}
-            href={linkTo ?? ''}
+            href={linkTo ?? ""}
           >
             {linkText}
           </Button>

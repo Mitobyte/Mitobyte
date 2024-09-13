@@ -1,14 +1,12 @@
-import { type Metadata } from 'next';
-import { PageSponsors } from './__page__/PageSponsors';
+import { type Metadata } from "next";
+import { PageSponsors } from "./__page__/PageSponsors";
 
 export const metadata: Metadata = {
-  title: 'Sponsors',
+  title: "Sponsors",
 };
 
 const Sponsors = () => {
-  return (
-    <PageSponsors />
-  );
+  return <PageSponsors />;
 };
 
 export default Sponsors;

@@ -1,21 +1,24 @@
-import {
-  Heading,
-  Text,
-  Button,
-  Icon,
-  GridItem,
-  Grid,
-} from "@chakra-ui/react";
+import { Heading, Text, Button, Icon, GridItem, Grid } from "@chakra-ui/react";
 import NextImage from "next/image";
 import { FaChevronCircleRight } from "react-icons/fa";
 
-import hero from '@/common/assets/images/events/code-and-coffee/codeCoffee1.jpg'
+import hero from "@/common/assets/images/events/code-and-coffee/codeCoffee1.jpg";
 
 export const SectionHero = () => {
   return (
-    <Grid templateColumns={{ base: "1fr", lg: "1fr 2fr" }} gap={{ base: 12, lg: 6 }} maxW={1150} m="0 auto">
+    <Grid
+      templateColumns={{ base: "1fr", lg: "1fr 2fr" }}
+      gap={{ base: 12, lg: 6 }}
+      maxW={1150}
+      m="0 auto"
+    >
       <GridItem>
-        <Grid templateColumns="1fr" templateRows="auto auto 1fr" height="100%" mx={{ base: 6, lg: 3 }}>
+        <Grid
+          templateColumns="1fr"
+          templateRows="auto auto 1fr"
+          height="100%"
+          mx={{ base: 6, lg: 3 }}
+        >
           <GridItem>
             <Heading
               as="h1"
@@ -28,7 +31,7 @@ export const SectionHero = () => {
             </Heading>
           </GridItem>
           <GridItem>
-           <Text
+            <Text
               fontSize={{ md: "lg", lg: "xl" }}
               color="syntaxBlack.300"
               fontWeight="500"
@@ -61,19 +64,19 @@ export const SectionHero = () => {
               _active={{ bg: "deployOrange.700" }}
             >
               View events and register
-            <Icon as={FaChevronCircleRight} style={{ marginLeft: "8px" }} />
-          </Button>
-        </GridItem>
-      </Grid>
-    </GridItem>
-    <GridItem>
-      <NextImage
-        height={422}
-        width={2000}
-        src={hero}
-        alt="A group of people collaborating at a large table in a modern office space, with laptops and drinks on the table, and a whiteboard in the background."
-      />
-    </GridItem>
-  </Grid>
-  )
+              <Icon as={FaChevronCircleRight} style={{ marginLeft: "8px" }} />
+            </Button>
+          </GridItem>
+        </Grid>
+      </GridItem>
+      <GridItem>
+        <NextImage
+          height={422}
+          width={2000}
+          src={hero}
+          alt="A group of people collaborating at a large table in a modern office space, with laptops and drinks on the table, and a whiteboard in the background."
+        />
+      </GridItem>
+    </Grid>
+  );
 };

@@ -8,9 +8,10 @@ import { EventDescription } from "@/common/components/EventDescription/EventDesc
 import { LogoMeetup } from "@/common/components/Logos/LogoMeetup.tsx";
 import { LogoEventbrite } from "@/common/components/Logos/LogoEventbrite";
 
-const iconSize = "125px"
+const iconSize = "125px";
 
-export interface SectionDescriptionProps extends Omit<WrapperProps, "children"> {}
+export interface SectionDescriptionProps
+  extends Omit<WrapperProps, "children"> {}
 
 export const SectionEventsDescription = ({
   background,
@@ -24,7 +25,6 @@ export const SectionEventsDescription = ({
   marginRight,
   marginTop,
 }: SectionDescriptionProps) => {
-
   return (
     <Wrapper
       maxWidth={maxWidth}
@@ -39,7 +39,8 @@ export const SectionEventsDescription = ({
       marginTop={marginTop}
     >
       <Heading
-        mb={12} display="inline-block"
+        mb={12}
+        display="inline-block"
         size={{ sm: "2xl", xl: "3xl", xxl: "4xl" }}
       >
         Core Events
@@ -71,38 +72,47 @@ export const SectionEventsDescription = ({
           <LogoEventbrite />
         </Box>
       </Button>
-      <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr" }} gap={{ base: 6, lg: 0 }}>
+      <Grid
+        templateColumns={{ base: "1fr", lg: "1fr 1fr" }}
+        gap={{ base: 6, lg: 0 }}
+      >
         <GridItem
-          borderRightWidth={{ base: 0, lg: "1px"}}
+          borderRightWidth={{ base: 0, lg: "1px" }}
           borderRightColor="white.600"
           borderBottomWidth="1px"
           borderBottomColor="white.600"
         >
           <EventDescription
             title="Code & Coffee"
-            description={["Monthly morning event", "Informal coding and networking"]}
+            description={[
+              "Monthly morning event",
+              "Informal coding and networking",
+            ]}
             imageSlot={<MdOutlineCoffee size={iconSize} />}
           />
         </GridItem>
-        <GridItem
-          borderBottomWidth="1px"
-          borderBottomColor="white.600"
-        >
+        <GridItem borderBottomWidth="1px" borderBottomColor="white.600">
           <EventDescription
             title="Code + Brews"
-            description={["Monthly evening event", "Similar to Code & Coffee but in a relaxed night setting"]}
+            description={[
+              "Monthly evening event",
+              "Similar to Code & Coffee but in a relaxed night setting",
+            ]}
             imageSlot={<RiBeerLine size={iconSize} />}
           />
         </GridItem>
         <GridItem
-          borderRightWidth={{ base: 0, lg: "1px"}}
+          borderRightWidth={{ base: 0, lg: "1px" }}
           borderRightColor="white.600"
           borderBottomWidth={{ base: "1px", lg: 0 }}
           borderBottomColor="white.600"
         >
           <EventDescription
             title="Resume Workshop"
-            description={["Regular sessions with advice from engineers and recruiters", "Help attendees polish their resumes"]}
+            description={[
+              "Regular sessions with advice from engineers and recruiters",
+              "Help attendees polish their resumes",
+            ]}
             imageSlot={<CgFileDocument size={iconSize} />}
           />
         </GridItem>

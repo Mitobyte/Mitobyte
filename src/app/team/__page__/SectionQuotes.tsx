@@ -29,10 +29,20 @@ export const SectionQuotes = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-     <Heading size={{ sm: "2xl", xl: "3xl", xxl: "4xl" }}>Hear From Attendees</Heading>
-     <Text fontSize="lg" mb={4}>Derick Williams Jr.</Text>
-     {/* TODO - actually add in a quote */}
-     <Text fontSize="lg" maxWidth={{ base: '600px' }}>“[Placeholder] Attending these developer-focused networking events has been a game-changer for me. I’ve connected with like-minded professionals, gained insights from experienced engineers, and discovered new tools that have elevated my projects. It’s not just about networking, it’s about building a community that helps you grow.”</Text>
+      <Heading size={{ sm: "2xl", xl: "3xl", xxl: "4xl" }}>
+        Hear From Attendees
+      </Heading>
+      <Text fontSize="lg" mb={4}>
+        Derick Williams Jr.
+      </Text>
+      {/* TODO - actually add in a quote */}
+      <Text fontSize="lg" maxWidth={{ base: "600px" }}>
+        “[Placeholder] Attending these developer-focused networking events has
+        been a game-changer for me. I’ve connected with like-minded
+        professionals, gained insights from experienced engineers, and
+        discovered new tools that have elevated my projects. It’s not just about
+        networking, it’s about building a community that helps you grow.”
+      </Text>
     </Wrapper>
   );
 };

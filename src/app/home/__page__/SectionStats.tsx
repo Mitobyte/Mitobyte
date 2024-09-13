@@ -13,7 +13,7 @@ export const SectionStats = ({
   marginBottom,
   marginLeft,
   marginRight,
-  marginTop
+  marginTop,
 }: SectionStatsProps) => {
   return (
     <Wrapper
@@ -29,43 +29,27 @@ export const SectionStats = ({
       marginTop={marginTop}
     >
       <Grid
-        templateColumns={{ base: '1fr', lg: 'repeat(4, 1fr)' }}
+        templateColumns={{ base: "1fr", lg: "repeat(4, 1fr)" }}
         gap={0}
         border="1px solid black"
       >
         <GridItem borderRight={{ base: 0, lg: "1px solid black" }} ml={6} p={6}>
-          <Heading>
-            650+
-          </Heading>
-          <Text>
-            Members across Meetup & Eventbrite
-          </Text>
+          <Heading>650+</Heading>
+          <Text>Members across Meetup & Eventbrite</Text>
         </GridItem>
         <GridItem borderRight={{ base: 0, lg: "1px solid black" }} ml={6} p={6}>
-          <Heading>
-            5+ years
-          </Heading>
-          <Text>
-            In curating engineering focused events
-          </Text>
+          <Heading>5+ years</Heading>
+          <Text>In curating engineering focused events</Text>
         </GridItem>
         <GridItem borderRight={{ base: 0, lg: "1px solid black" }} ml={6} p={6}>
-          <Heading>
-            100+ events
-          </Heading>
-          <Text>
-            Over a hundred events hosted
-          </Text>
+          <Heading>100+ events</Heading>
+          <Text>Over a hundred events hosted</Text>
         </GridItem>
         <GridItem ml={6} p={6}>
-        <Heading>
-            600+
-          </Heading>
-          <Text>
-            On our mailing list
-          </Text>
+          <Heading>600+</Heading>
+          <Text>On our mailing list</Text>
         </GridItem>
       </Grid>
     </Wrapper>
   );
-}
+};

@@ -1,9 +1,9 @@
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 import { Grid, GridItem, Heading, Button, Icon, Text } from "@chakra-ui/react";
 import { FaChevronCircleRight } from "react-icons/fa";
-import NextImage from 'next/image';
+import NextImage from "next/image";
 
-import hero from '@/common/assets/images/events/code-and-brews/IMG_4372.jpeg';
+import hero from "@/common/assets/images/events/code-and-brews/IMG_4372.jpeg";
 
 export interface SectionHeroProps extends Omit<WrapperProps, "children"> {}
 
@@ -32,7 +32,11 @@ export const SectionHero = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-      <Grid templateColumns={{ base: "1fr", lg: "2fr 2fr" }} gap={12} m="0 auto">
+      <Grid
+        templateColumns={{ base: "1fr", lg: "2fr 2fr" }}
+        gap={12}
+        m="0 auto"
+      >
         <GridItem>
           <NextImage
             height={422}
@@ -42,7 +46,11 @@ export const SectionHero = ({
           />
         </GridItem>
         <GridItem>
-          <Grid templateColumns="1fr" templateRows="auto auto 1fr" height="100%">
+          <Grid
+            templateColumns="1fr"
+            templateRows="auto auto 1fr"
+            height="100%"
+          >
             <GridItem>
               <Heading
                 as="h1"
@@ -61,7 +69,11 @@ export const SectionHero = ({
                 lineHeight="29.26px"
                 mt={4}
               >
-                Our mission is to foster a vibrant, inclusive community of software engineers at all levels, from hobbyists to professionals. We aim to inspire innovation, facilitate skill development, and create networking opportunities through collaborative events and workshops.
+                Our mission is to foster a vibrant, inclusive community of
+                software engineers at all levels, from hobbyists to
+                professionals. We aim to inspire innovation, facilitate skill
+                development, and create networking opportunities through
+                collaborative events and workshops.
               </Text>
             </GridItem>
             {/* <GridItem alignSelf="end">

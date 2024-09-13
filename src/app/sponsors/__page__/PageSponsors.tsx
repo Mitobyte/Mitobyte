@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { SectionSponsors } from "./SectionSponsors";
 import { SectionHeading } from "./SectionHeading";

@@ -1,11 +1,12 @@
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
-export interface SectionDotsProps extends Omit<WrapperProps, "children" | "background"> {}
+export interface SectionDotsProps
+  extends Omit<WrapperProps, "children" | "background"> {}
 
-const dotbg = 'white';
-const dotcolor = 'black';
-const dotsize = '2px';
-const dotspace = '15px';
+const dotbg = "white";
+const dotcolor = "black";
+const dotsize = "2px";
+const dotspace = "15px";
 
 export const SectionDots = ({
   maxWidth,
