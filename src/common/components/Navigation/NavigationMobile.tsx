@@ -9,16 +9,19 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { FaGrinStars } from "react-icons/fa";
+import { useState } from "react";
 
 import { ROUTES } from "@/config/routes";
 
 import { LogoSmallMitobyte } from "../Logos/LogoSmallMitobyte";
 
 export const NavigationMobile = () => {
-  const { getDisclosureProps, getButtonProps, isOpen } = useDisclosure();
+  // const { getDisclosureProps, getButtonProps, isOpen } = useDisclosure();
 
-  const buttonProps = getButtonProps();
-  const disclosureProps = getDisclosureProps();
+  // const buttonProps = getButtonProps();
+  // const disclosureProps = getDisclosureProps();
+
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Box
@@ -41,8 +44,14 @@ export const NavigationMobile = () => {
           <LogoSmallMitobyte />
         </Link>
         <Spacer />
-        <Button border={0} variant="outline" {...buttonProps}>
+        <Button
+          border={0}
+          variant="outline"
+          // {...buttonProps}
+          onClick={() => setIsOpen(!isOpen)}
+        >
           <Box
+            as="span"
             width="30px"
             height="20px"
             display="flex"
@@ -53,23 +62,26 @@ export const NavigationMobile = () => {
             cursor="pointer"
           >
             <Box
+              as="span"
               width="100%"
               height="4px"
               bg="black"
               transition="transform 0.3s, opacity 0.3s"
               transform={isOpen ? "rotate(45deg) translate(0, 5px)" : "none"}
-            ></Box>
+            />
             <Box
+              as="span"
               width="100%"
               height="4px"
               bg="black"
               transition="transform 0.3s, opacity 0.3s"
               transform={isOpen ? "rotate(-45deg) translate(0, -5px)" : "none"}
-            ></Box>
+            />
           </Box>
         </Button>
         <Box
-          {...disclosureProps}
+          // {...disclosureProps}
+          display={isOpen ? "block" : "none"}
           flexDirection="column"
           alignItems="flex-start"
           justifyContent="space-between"
@@ -146,9 +158,9 @@ export const NavigationMobile = () => {
             direction="column"
             align="start"
             justify="space-between"
-            mt={6}
+            mt={7}
             mb={4}
-            ml={3}
+            ml={5}
           >
             <Text as="span" fontSize="xl">
               Founded in Milwaukee, WI
@@ -164,6 +176,15 @@ export const NavigationMobile = () => {
               textDecoration="underline"
             >
               Website by Blaze Smith @ Shovel Studio
+            </Link>
+            <Link
+              href="#"
+              target="_blank"
+              py={2}
+              fontSize="xl"
+              textDecoration="underline"
+            >
+              Website powered by Artisan Hosting
             </Link>
           </Flex>
         </Box>
