@@ -38,7 +38,7 @@ const FAQ = [
   },
   {
     title:
-      "How does sponsoring Mitobyte align with corporate social responsibility (CSR) goals?",
+      "How does sponsoring Mitobyte align with corporate social responsibility goals?",
     content:
       "Sponsoring Mitobyte supports a local, community-focused initiative that empowers engineers and promotes education, entrepreneurship, and innovation. Your company will be contributing to the professional development of individuals, fostering a spirit of collaboration, and helping to shape the future tech ecosystem. It’s a meaningful way to give back while enhancing your brand’s reputation.",
   },
