@@ -14,9 +14,9 @@ export const LogoHeaderMitobyte = () => {
       background={`linear-gradient(90deg, ${dotbg} calc(${dotspace} - ${dotsize}), transparent 1%) center / ${dotspace} ${dotspace},
       linear-gradient(${dotbg} calc(${dotspace} - ${dotsize}), transparent 1%) center / ${dotspace} ${dotspace},
       ${dotcolor}`}
+      pointerEvents="none"
     >
       <Flex
-        pointerEvents="none"
         mx="auto"
         justifyContent="center"
         mb={{ base: "-28px", lg: "-65px" }}
