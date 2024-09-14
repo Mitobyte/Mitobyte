@@ -1,5 +1,5 @@
 import { Text, Box, Flex, Button } from "@chakra-ui/react";
-import NextLink from "next/link";
+import { Link } from "@chakra-ui/next-js";
 import { ListPoint } from "@/common/components/ListPoint/ListPoint";
 import { SectionIntro } from "@/common/components/SectionIntro/SectionIntro";
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
@@ -55,9 +55,9 @@ export const SectionHowItWorks = ({
       </Box>
       <Flex alignItems="center">
         <Button
-          as={NextLink}
+          as={Link}
           mt="12"
-          href={ROUTES.SPONSORS ?? "/"}
+          href={ROUTES.SPONSORS}
           size="lg"
           variant="solid"
           colorScheme="blue"

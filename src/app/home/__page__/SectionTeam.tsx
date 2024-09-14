@@ -6,11 +6,10 @@ import {
   Heading,
   Icon,
   Text,
-  Link,
 } from "@chakra-ui/react";
 import NextImage from "next/image";
 import { LuArrowUpRight } from "react-icons/lu";
-import NextLink from "next/link";
+import { Link } from "@chakra-ui/next-js";
 
 import joe from "@/common/assets/images/people/profile-joe.jpg";
 import allan from "@/common/assets/images/people/profile-allan.jpg";
@@ -65,7 +64,7 @@ export const SectionTeam = ({
           <Text>Software Engineer @ Tactacam</Text>
         </GridItem>
         <GridItem>
-          <Link as={NextLink} href={ROUTES.TEAM}>
+          <Link as={Link} href={ROUTES.TEAM}>
             <AspectRatio
               maxW={{ base: "700px", lg: "700px" }}
               ratio={{ base: 3, lg: 1 }}
