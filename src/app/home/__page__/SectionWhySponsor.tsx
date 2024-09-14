@@ -1,7 +1,7 @@
 import { Heading, Text, Box, Flex, Button } from "@chakra-ui/react";
 import { ListPoint } from "@/common/components/ListPoint/ListPoint";
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
-import NextLink from "next/link";
+import { Link } from "@chakra-ui/next-js";
 import { ROUTES } from "@/config/routes";
 
 export interface SectionWhySponsorProps
@@ -51,9 +51,9 @@ export const SectionWhySponsor = ({
       </Box>
       <Flex alignItems="center">
         <Button
-          as={NextLink}
+          as={Link}
           mt="12"
-          href={ROUTES.SPONSORS ?? "/"}
+          href={ROUTES.SPONSORS}
           size="lg"
           variant="solid"
           colorScheme="blue"

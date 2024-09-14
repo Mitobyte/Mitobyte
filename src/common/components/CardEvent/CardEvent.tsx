@@ -4,9 +4,8 @@ import {
   CardBody,
   CardFooter,
   CardHeader,
-  Image,
 } from "@chakra-ui/react";
-import Link from "next/link";
+import { Link } from "@chakra-ui/next-js";
 import { InfoIcon } from "@chakra-ui/icons";
 import NextImage, { StaticImageData } from "next/image";
 

@@ -1,5 +1,5 @@
-import NextLink from "next/link";
-import { Icon, Link, LinkProps } from "@chakra-ui/react";
+import { Link } from "@chakra-ui/next-js";
+import { Icon, LinkProps } from "@chakra-ui/react";
 import { LuArrowUpRight } from "react-icons/lu";
 
 interface FooterLinkProps extends LinkProps {
@@ -10,7 +10,6 @@ interface FooterLinkProps extends LinkProps {
 export const FooterLink = ({ href, children, ...rest }: FooterLinkProps) => {
   return (
     <Link
-      as={NextLink}
       href={href}
       color="white"
       display="block"
