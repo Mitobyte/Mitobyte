@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Box,
   Link,
@@ -9,19 +11,16 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { FaGrinStars } from "react-icons/fa";
-import { useState } from "react";
 
 import { ROUTES } from "@/config/routes";
 
 import { LogoSmallMitobyte } from "../Logos/LogoSmallMitobyte";
 
 export const NavigationMobile = () => {
-  // const { getDisclosureProps, getButtonProps, isOpen } = useDisclosure();
+  const { getDisclosureProps, getButtonProps, isOpen } = useDisclosure();
 
-  // const buttonProps = getButtonProps();
-  // const disclosureProps = getDisclosureProps();
-
-  const [isOpen, setIsOpen] = useState(false);
+  const buttonProps = getButtonProps();
+  const disclosureProps = getDisclosureProps();
 
   return (
     <Box
@@ -44,12 +43,7 @@ export const NavigationMobile = () => {
           <LogoSmallMitobyte />
         </Link>
         <Spacer />
-        <Button
-          border={0}
-          variant="outline"
-          // {...buttonProps}
-          onClick={() => setIsOpen(!isOpen)}
-        >
+        <Button border={0} variant="outline" {...buttonProps}>
           <Box
             as="span"
             width="30px"
@@ -80,7 +74,6 @@ export const NavigationMobile = () => {
           </Box>
         </Button>
         <Box
-          // {...disclosureProps}
           display={isOpen ? "block" : "none"}
           flexDirection="column"
           alignItems="flex-start"
