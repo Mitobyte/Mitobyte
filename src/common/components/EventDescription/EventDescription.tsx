@@ -29,7 +29,9 @@ export const EventDescription = ({
         </Heading>
         <UnorderedList>
           {description.map((desc) => (
-            <ListItem key={desc}>{desc}</ListItem>
+            <ListItem key={desc} fontSize="md">
+              {desc}
+            </ListItem>
           ))}
         </UnorderedList>
       </GridItem>

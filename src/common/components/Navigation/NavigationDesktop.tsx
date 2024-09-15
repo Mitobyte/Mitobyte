@@ -1,4 +1,4 @@
-import { Box, Link, Flex, Spacer, Icon, Button } from "@chakra-ui/react";
+import { Box, Link, Spacer, Button } from "@chakra-ui/react";
 import { FaGrinStars } from "react-icons/fa";
 
 import { ROUTES } from "@/config/routes";
