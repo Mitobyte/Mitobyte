@@ -48,7 +48,7 @@ export const SectionHeading = ({
         target="_blank"
         mr={3}
       >
-        Contact us
+        Contact
       </Button>{" "}
       <Text fontSize="2xl" display="inline-block" mr={3}>
         or
@@ -62,7 +62,7 @@ export const SectionHeading = ({
         href="https://hcb.hackclub.com/donations/start/mitobyte"
         target="_blank"
       >
-        Contribute today!
+        Contribute
       </Button>
     </Wrapper>
   );

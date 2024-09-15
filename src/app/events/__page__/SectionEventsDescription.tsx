@@ -1,5 +1,5 @@
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
-import { Box, Button, Grid, GridItem, Heading } from "@chakra-ui/react";
+import { Button, Grid, GridItem, Heading } from "@chakra-ui/react";
 import { MdOutlineCoffee } from "react-icons/md";
 import { RiBeerLine } from "react-icons/ri";
 import { CgFileDocument } from "react-icons/cg";
@@ -39,39 +39,42 @@ export const SectionEventsDescription = ({
       marginTop={marginTop}
     >
       <Heading
-        mb={12}
+        mb={4}
+        ml={5}
         display="inline-block"
         size={{ sm: "2xl", xl: "3xl", xxl: "4xl" }}
       >
         Core Events
       </Heading>
-      <Button
-        as="a"
-        target="_blank"
-        href="https://www.meetup.com/milwaukee-code-and-coffee/?eventOrigin=event_home_page"
-        variant="outline"
-        display="inline-block"
-        verticalAlign="baseline"
-        mx={6}
-        size="lg"
+      <Grid
+        templateColumns={{ base: "1fr 1fr", lg: "1fr 1fr" }}
+        mb={12}
+        maxWidth="400px"
       >
-        <Box as="span" display="block" pt="6px">
-          <LogoMeetup />
-        </Box>
-      </Button>
-      <Button
-        as="a"
-        target="_blank"
-        href="https://www.eventbrite.com/o/code-brews-collective-49824193943"
-        variant="outline"
-        display="inline-block"
-        verticalAlign="baseline"
-        size="lg"
-      >
-        <Box as="span" display="block" pt="6px">
-          <LogoEventbrite />
-        </Box>
-      </Button>
+        <Button
+          as="a"
+          target="_blank"
+          href="https://www.meetup.com/milwaukee-code-and-coffee/?eventOrigin=event_home_page"
+          variant="outline"
+          verticalAlign="baseline"
+          mx={6}
+          size="lg"
+          leftIcon={<LogoMeetup />}
+        >
+          Meetup
+        </Button>
+        <Button
+          as="a"
+          target="_blank"
+          href="https://www.eventbrite.com/o/code-brews-collective-49824193943"
+          variant="outline"
+          verticalAlign="baseline"
+          size="lg"
+          leftIcon={<LogoEventbrite />}
+        >
+          Eventbrite
+        </Button>
+      </Grid>
       <Grid
         templateColumns={{ base: "1fr", lg: "1fr 1fr" }}
         gap={{ base: 6, lg: 0 }}

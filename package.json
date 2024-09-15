@@ -20,6 +20,7 @@
     "@emotion/react": "11.13.3",
     "@emotion/styled": "11.13.0",
     "@mailchimp/mailchimp_marketing": "^3.0.80",
+    "@next/bundle-analyzer": "^14.2.11",
     "@types/mailchimp__mailchimp_marketing": "^3.0.20",
     "@types/md5": "^2.3.5",
     "framer-motion": "11.3.29",

@@ -38,24 +38,6 @@ export const SectionQuotes = ({
           think about our events!
         </Text>
       </Box>
-      {/* <Splide aria-label="My nexFavorite Images">
-        <SplideSlide>
-          <Box maxW="350px" margin="0 auto">
-            <Quotenpx next lint --fix
-              author="Anonymous"
-              quote="I don't talk to my mama but I talk to my diary."
-            />
-          </Box>
-        </SplideSlide>
-        <SplideSlide>
-          <Box maxW="350px" margin="0 auto">
-            <Quote
-              author="Anonymous"
-              quote="'Twas I who stole from the cookie jar."
-            />
-          </Box>
-        </SplideSlide>
-      </Splide> */}
     </Wrapper>
   );
 };
