@@ -74,7 +74,7 @@ export const NavigationMobile = () => {
           </Box>
         </Button>
         <Box
-          display={isOpen ? "block" : "none"}
+          {...disclosureProps}
           flexDirection="column"
           alignItems="flex-start"
           justifyContent="space-between"

@@ -1,7 +1,6 @@
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
-import { Button, Heading, Link, Text } from "@chakra-ui/react";
+import { Button, Heading, Text } from "@chakra-ui/react";
 import { LiaHandsHelpingSolid } from "react-icons/lia";
-import { MdOutlineAlternateEmail } from "react-icons/md";
 import { AiOutlineMail } from "react-icons/ai";
 
 export interface SectionHeadingProps extends Omit<WrapperProps, "children"> {}
