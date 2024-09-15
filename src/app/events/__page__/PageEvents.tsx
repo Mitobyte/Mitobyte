@@ -11,7 +11,13 @@ export const PageEvents = () => {
         paddingBottom={20}
         maxWidth="8xl"
       />
-      <SectionEventsLink paddingTop={20} paddingBottom={20} maxWidth="8xl" />
+      <SectionEventsLink
+        marginLeft={5}
+        marginRight={5}
+        paddingTop={20}
+        paddingBottom={20}
+        maxWidth="8xl"
+      />
     </>
   );
 };
