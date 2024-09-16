@@ -171,7 +171,7 @@ export const NavigationMobile = () => {
               Website by Blaze Smith @ Shovel Studio
             </Link>
             <Link
-              href="#"
+              href="https://www.artisanhosting.net"
               target="_blank"
               py={2}
               fontSize="xl"
