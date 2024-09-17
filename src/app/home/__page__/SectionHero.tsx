@@ -1,8 +1,10 @@
 import { Heading, Text, Button, Icon, GridItem, Grid } from "@chakra-ui/react";
+import { Link } from "@chakra-ui/next-js";
 import NextImage from "next/image";
 import { FaChevronCircleRight } from "react-icons/fa";
 
 import hero from "@/common/assets/images/events/code-and-coffee/codeCoffee1.jpg";
+import { ROUTES } from "@/config/routes";
 
 export const SectionHero = () => {
   return (
@@ -43,28 +45,18 @@ export const SectionHero = () => {
           </GridItem>
           <GridItem alignSelf="end">
             <Button
-              as="a"
-              href="/events"
-              px="24px"
-              py="12px"
-              height={{ base: "auto", sm: "48px" }}
+              as={Link}
+              href={ROUTES.EVENTS.ROOT}
+              size="lg"
+              mt={6}
               bg="deployOrange.300"
               color="white.300"
-              fontSize="lg"
-              fontWeight="700"
-              lineHeight="28px"
-              borderRadius="6px"
-              display="inline-flex"
-              flexWrap={{ base: "wrap", sm: "nowrap" }}
-              alignItems="center"
-              whiteSpace={{ base: "normal", sm: "nowrap" }}
-              mt={4}
               width={{ base: "100%", sm: "auto" }}
-              _hover={{ bg: "deployOrange.400" }}
+              _hover={{ bg: "deployOrange.400", textDecoration: "none" }}
               _active={{ bg: "deployOrange.700" }}
+              rightIcon={<FaChevronCircleRight />}
             >
               View events and register
-              <Icon as={FaChevronCircleRight} style={{ marginLeft: "8px" }} />
             </Button>
           </GridItem>
         </Grid>
