@@ -38,25 +38,25 @@ export const SectionHero = ({
         display="inline-block"
         size={{ sm: "2xl", xl: "3xl", xxl: "4xl" }}
       >
-        Code + Brews
+        Resume Workshop
       </Heading>
 
       <Text fontSize="xl" ml={6} maxWidth="700px" mb={5}>
-        Code + Brews is a spin off of{" "}
-        <Link color="blue.600" href="https://codeandcoffee.org/">
-          Code & Coffee,
-        </Link>{" "}
-        which is part of a national network of software engineering and
-        community lead events. It is a meetup for developers to make friends and
-        grow. All of our events abide by the following code of conduct found{" "}
+        Our Resume Workshop event is meant to bring together recruiters, hiring
+        managers, and software engineers together to help fellow developers
+        prepare for interview and make their resumes top notch. By combining the
+        expertise of recruiters and hiring managers with the experience of
+        software engineers, we hope to provide a unique perspective on what it
+        takes to get hired in the tech industry. Like all our other events, our
+        Resume Workshop abides by the following code of conduct found{" "}
         <Link color="blue.600" href={ROUTES.CODE_OF_CONDUCT}>
           here.
         </Link>
       </Text>
 
       <Text fontSize="xl" ml={6} maxWidth="700px" mb={5}>
-        You can register for our Code + Brews events by either looking through
-        our calendar on Eventbrite or Meetup.
+        You can register for our Resume Workshop events by either looking
+        through our calendar on Eventbrite or Meetup.
       </Text>
 
       <Grid

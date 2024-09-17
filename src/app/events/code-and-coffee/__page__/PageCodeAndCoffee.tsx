@@ -1,22 +1,14 @@
 "use client";
 
-import { NavigationMain } from "@/common/components/Navigation/NavigationMain";
 import { SectionHero } from "./SectionHero";
-import { SectionPremierSponsor } from "./SectionPremeirSponsor";
-import { SectionHowItWorks } from "./SectionHowItWorks";
 import { SectionGallery } from "./SectionGallery";
+import { SectionStats } from "./SectionStats";
 
 export const PageCodeAndCoffee = () => {
   return (
     <>
-      <NavigationMain />
-      <SectionHero marginBottom={20} />
-      <SectionPremierSponsor
-        paddingTop={20}
-        paddingBottom={20}
-        maxWidth="2xl"
-      />
-      <SectionHowItWorks maxWidth="xl" marginBottom={20} />
+      <SectionHero paddingTop={20} />
+      <SectionStats paddingTop={20} paddingBottom={20} maxWidth="6xl" />
       <SectionGallery paddingTop={20} paddingBottom={20} />
     </>
   );
