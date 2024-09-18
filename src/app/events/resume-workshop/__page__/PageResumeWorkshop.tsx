@@ -4,16 +4,12 @@ import { SectionGallery } from "./SectionGallery";
 import { SectionHero } from "./SectionHero";
 import { SectionStats } from "./SectionStats";
 
-interface ResumeWorkshopProps {
-  children: React.ReactNode;
-}
-
-export const PageResumeWorkshop = ({ children }: ResumeWorkshopProps) => {
+export const PageResumeWorkshop = () => {
   return (
     <>
-      <SectionHero paddingTop={20} />
+      <SectionHero paddingTop={20} maxWidth="6xl" />
       <SectionStats paddingTop={20} paddingBottom={20} maxWidth="6xl" />
-      <SectionGallery paddingTop={20} paddingBottom={20} />
+      <SectionGallery paddingTop={20} paddingBottom={20} maxWidth="6xl" />
     </>
   );
 };

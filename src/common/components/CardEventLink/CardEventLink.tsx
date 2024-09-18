@@ -1,17 +1,25 @@
-import { Grid, GridItem, Heading, Icon, Link, Text } from "@chakra-ui/react";
+import { Grid, GridItem, Heading, Icon, Text } from "@chakra-ui/react";
+import { Link, LinkProps } from "@chakra-ui/next-js";
 import { LuArrowUpRight } from "react-icons/lu";
 
 export interface CardEventLinkProps {
   date: string;
   title: string;
   time: string;
+  href: LinkProps["href"];
 }
 
-export const CardEventLink = ({ date, title, time }: CardEventLinkProps) => {
+export const CardEventLink = ({
+  date,
+  title,
+  time,
+  href,
+}: CardEventLinkProps) => {
   return (
     <Grid
+      p={6}
       as={Link}
-      href="#"
+      href={href}
       flexWrap="nowrap"
       templateColumns="1fr auto"
       gap={4}
