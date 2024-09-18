@@ -1,48 +1,12 @@
-import {
-  Gallery,
-  GalleryImageProps,
-  GalleryProps,
-} from "@/common/components/Gallery/Gallery";
-import { SectionIntro } from "@/common/components/SectionIntro/SectionIntro";
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
+import NextImage from "next/image";
+import { Grid, GridItem } from "@chakra-ui/react";
 
-import image1 from "@/common/assets/images/events/hackathons/IMG_3910.jpeg";
-import image2 from "@/common/assets/images/events/hackathons/IMG_3916.jpeg";
-import image3 from "@/common/assets/images/events/hackathons/IMG_3919.jpeg";
-import image4 from "@/common/assets/images/events/hackathons/IMG_3922.jpeg";
-import image5 from "@/common/assets/images/events/hackathons/IMG_3925.jpeg";
-import image6 from "@/common/assets/images/events/hackathons/IMG_3930.jpeg";
+import resumeworkshop1 from "@/common/assets/images/events/code-and-coffee/code_and_coffee1.jpeg";
+import resumeworkshop2 from "@/common/assets/images/events/code-and-coffee/code_and_coffee2.jpeg";
+import resumeworkshop3 from "@/common/assets/images/events/code-and-coffee/code_and_coffee3.jpg";
 
-const images: GalleryImageProps[] = [
-  {
-    src: image1,
-    alt: "Hackreaction photo 1",
-  },
-  {
-    src: image2,
-    alt: "Hackreaction photo 2",
-  },
-  {
-    src: image3,
-    alt: "Hackreaction photo 3",
-  },
-  {
-    src: image4,
-    alt: "Hackreaction photo 4",
-  },
-  {
-    src: image5,
-    alt: "Hackreaction photo 5",
-  },
-  {
-    src: image6,
-    alt: "Hackreaction photo 6",
-  },
-];
-
-export interface SectionGalleryProps
-  extends Omit<WrapperProps, "children">,
-    GalleryProps {}
+export interface SectionGalleryProps extends Omit<WrapperProps, "children"> {}
 
 export const SectionGallery = ({
   maxWidth,
@@ -55,7 +19,6 @@ export const SectionGallery = ({
   marginLeft,
   marginRight,
   marginTop,
-  ...galleryProps
 }: SectionGalleryProps) => {
   return (
     <Wrapper
@@ -70,12 +33,32 @@ export const SectionGallery = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-      <SectionIntro
-        title="Photos From Past Events"
-        text="We love getting together and here's the proof!"
-        showText
-      />
-      <Gallery {...galleryProps} images={images} />
+      <Grid templateColumns={{ base: "1fr", lg: "1fr 1fr 1fr" }}>
+        <GridItem>
+          <NextImage
+            src={resumeworkshop1}
+            alt="Resume Workshop"
+            height={800}
+            width={800}
+          />
+        </GridItem>
+        <GridItem>
+          <NextImage
+            src={resumeworkshop2}
+            alt="Resume Workshop"
+            height={800}
+            width={800}
+          />
+        </GridItem>
+        <GridItem>
+          <NextImage
+            src={resumeworkshop3}
+            alt="Resume Workshop"
+            height={800}
+            width={800}
+          />
+        </GridItem>
+      </Grid>
     </Wrapper>
   );
 };

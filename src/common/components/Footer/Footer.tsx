@@ -45,23 +45,17 @@ export const Footer = () => {
           >
             Contact
           </FooterLink>
-          <FooterLink href={ROUTES.SPONSORS} mt={4}>
-            Sponsors
-          </FooterLink>
         </GridItem>
         <GridItem>
-          <FooterLink href={ROUTES.PRIVACY}>Privacy</FooterLink>
+          <FooterLink href={ROUTES.SPONSORS}>Sponsors</FooterLink>
+          <FooterLink href={ROUTES.PRIVACY} mt={4}>
+            Privacy
+          </FooterLink>
           <FooterLink href={ROUTES.CODE_OF_CONDUCT} mt={4}>
             Code of Conduct
           </FooterLink>
           <FooterLink href={ROUTES.ROOT} mt={4}>
-            Accessibility
-          </FooterLink>
-          <FooterLink href={ROUTES.ROOT} mt={4}>
             Cookies
-          </FooterLink>
-          <FooterLink href={ROUTES.ROOT} mt={4}>
-            GDPR
           </FooterLink>
         </GridItem>
         <GridItem>

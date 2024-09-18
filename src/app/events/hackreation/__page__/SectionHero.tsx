@@ -1,17 +1,19 @@
-import { Box, Heading, Image } from "@chakra-ui/react";
-import NextImage from "next/image";
-
+import { LogoEventbrite } from "@/common/components/Logos/LogoEventbrite";
+import { LogoMeetup } from "@/common/components/Logos/LogoMeetup.tsx";
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
+import { ROUTES } from "@/config/routes";
+import { Link } from "@chakra-ui/next-js";
+import { Button, Grid, Heading, Text } from "@chakra-ui/react";
 
 export interface SectionHeroProps extends Omit<WrapperProps, "children"> {}
 
 export const SectionHero = ({
+  background,
   maxWidth,
   paddingBottom,
   paddingTop,
   paddingLeft,
   paddingRight,
-  background,
   marginBottom,
   marginLeft,
   marginRight,
@@ -30,41 +32,84 @@ export const SectionHero = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-      <Box
-        height={{ base: "300px", md: "400px", lg: "500px" }}
-        width="100%"
-        position="relative"
-        overflow="hidden"
+      <Heading
+        mb={4}
+        ml={5}
+        display="inline-block"
+        size={{ sm: "2xl", xl: "3xl", xxl: "4xl" }}
       >
-        <Box
-          bg="hsl(0,0%,0%, 0.75)"
-          position="absolute"
-          width="100%"
-          height="100%"
-          zIndex="1"
+        Hackreation
+      </Heading>
+
+      <Text fontSize="xl" ml={6} maxWidth="700px" mb={5}>
+        Are you a hobbyist with a passion for tech? An entrepreneur building
+        something new? Or just curious about software development and
+        engineering? No matter your background, we’ve got the perfect space for
+        you to create, connect, and showcase your skills!
+      </Text>
+
+      <Text fontSize="xl" ml={6} maxWidth="700px" mb={5} fontWeight="bold">
+        At our hackathon, you can:
+      </Text>
+      <Text fontSize="xl" ml={6} maxWidth="700px" mb={5}>
+        Work on your own project: Already have something you’re building? Bring
+        it, and let’s see what you’ve got! Take on a fun challenge: If you’re
+        looking for inspiration, we’ll provide a creative project with
+        real-world applications for you to solve. This is your chance to engage
+        with like-minded builders, learn from others, and stretch your
+        engineering skills. Whether you're building from scratch or leveling up
+        an existing idea, this event is for YOU.
+      </Text>
+      <Text fontSize="xl" ml={6} maxWidth="700px" mb={5} fontWeight="bold">
+        💡 Requirements:
+      </Text>
+      <Text fontSize="xl" ml={6} maxWidth="700px" mb={5}>
+        The project must focus on software. You’ll need to demonstrate
+        engineering effort and showcase your solution by the end of the event.
+        Come for the challenge, stay for the community. Let’s build something
+        awesome together!
+      </Text>
+      <Text fontSize="xl" ml={6} maxWidth="700px" mb={5}>
+        Like all our other events, our Resume Workshop abides by the following
+        code of conduct found{" "}
+        <Link color="blue.600" href={ROUTES.CODE_OF_CONDUCT}>
+          here.
+        </Link>
+      </Text>
+
+      <Text fontSize="xl" ml={6} maxWidth="700px" mb={5}>
+        You can register for our Resume Workshop events by either looking
+        through our calendar on Eventbrite or Meetup.
+      </Text>
+
+      <Grid
+        templateColumns={{ base: "1fr 1fr", lg: "1fr 1fr" }}
+        maxWidth="400px"
+      >
+        <Button
+          as="a"
+          target="_blank"
+          href="https://www.meetup.com/milwaukee-code-and-coffee/?eventOrigin=event_home_page"
+          variant="outline"
+          verticalAlign="baseline"
+          mx={6}
+          size="lg"
+          leftIcon={<LogoMeetup />}
         >
-          <Heading
-            position="absolute"
-            top="50%"
-            right="50%"
-            transform="translate(50%, -50%)"
-            color="white"
-            textAlign="center"
-            fontSize="6xl"
-          >
-            Hackreation
-          </Heading>
-        </Box>
-        <Image
-          // as={NextImage}
-          alt="serious banner"
-          src="@/common/assets/images/heroes/backdrop-min.jpeg"
-          position="absolute"
-          top={{ base: "0", md: "-100px", lg: "-150px" }}
-          transform="translateX(50%, -50%)"
-          width="100%"
-        />
-      </Box>
+          Meetup
+        </Button>
+        <Button
+          as="a"
+          target="_blank"
+          href="https://www.eventbrite.com/o/code-brews-collective-49824193943"
+          variant="outline"
+          verticalAlign="baseline"
+          size="lg"
+          leftIcon={<LogoEventbrite />}
+        >
+          Eventbrite
+        </Button>
+      </Grid>
     </Wrapper>
   );
 };

@@ -16,10 +16,22 @@ export const FooterLink = ({ href, children, ...rest }: FooterLinkProps) => {
       fontWeight={700}
       textAlign="left"
       fontSize="lg"
+      _hover={{
+        ".icon": {
+          transform: "rotate(45deg)",
+        },
+      }}
       {...rest}
     >
       {children}
-      <Icon height={5} width={5} ml={2} as={LuArrowUpRight} />
+      <Icon
+        className="icon"
+        height={5}
+        width={5}
+        ml={2}
+        as={LuArrowUpRight}
+        transition="transform 0.3s ease-in-out"
+      />
     </Link>
   );
 };
