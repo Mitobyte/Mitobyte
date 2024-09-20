@@ -1,7 +1,10 @@
-import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 import { Button, Heading, Text } from "@chakra-ui/react";
 import { LiaHandsHelpingSolid } from "react-icons/lia";
 import { AiOutlineMail } from "react-icons/ai";
+import { Link } from "@chakra-ui/next-js";
+
+import { ROUTES } from "@/config/routes";
+import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
 export interface SectionHeadingProps extends Omit<WrapperProps, "children"> {}
 
@@ -53,12 +56,12 @@ export const SectionHeading = ({
         or
       </Text>{" "}
       <Button
-        as="a"
+        as={Link}
         variant="solid"
         size="lg"
         colorScheme="deployOrange"
         leftIcon={<LiaHandsHelpingSolid size="25px" />}
-        href="https://hcb.hackclub.com/donations/start/mitobyte"
+        href={ROUTES.EXTERNAL.HACK_CLUB}
         target="_blank"
       >
         Contribute
