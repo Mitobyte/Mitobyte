@@ -14,7 +14,7 @@ export const PageHome = () => {
   return (
     <>
       <SectionHero />
-      <SectionEventsLink maxWidth="8xl" paddingTop={40} paddingBottom={20} />
+      <SectionEventsLink maxWidth="6xl" paddingTop={40} paddingBottom={20} />
       <SectionAboutUs maxWidth="6xl" paddingTop={20} paddingBottom={10} />
       <SectionStats
         maxWidth="6xl"
