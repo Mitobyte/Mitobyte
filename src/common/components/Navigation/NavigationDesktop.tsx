@@ -40,7 +40,7 @@ export const NavigationDesktop = () => {
             Team
           </Link>
           <Link
-            href="https://us5.list-manage.com/contact-form?u=e1e45fd6e057c2ffc679ea161&form_id=a9b4712bef02361db14007105b78d1b9"
+            href={ROUTES.EXTERNAL.MAILCHIMP}
             px={6}
             py={2}
             target="_blank"
@@ -50,31 +50,34 @@ export const NavigationDesktop = () => {
             Contact
           </Link>
           <Link
-            href={ROUTES.SPONSORS}
+            href={ROUTES.PROJECTS}
             px={6}
             py={2}
             fontWeight="500"
             fontSize="xl"
           >
-            Sponsors
+            Projects
           </Link>
         </Box>
         <Spacer />
-        <Box>
-          <Button
-            as="a"
-            variant="ghost"
-            href="https://hcb.hackclub.com/donations/start/mitobyte"
-            colorScheme="codeBlue"
-            fontWeight="700"
-            fontSize="xl"
-            target="_blank"
-            rightIcon={<FaGrinStars />}
-            size="lg"
-          >
-            Sponsor us!
-          </Button>
-        </Box>
+        <Button
+          as={Link}
+          colorScheme="codeBlue"
+          variant="ghost"
+          // variant="outline"
+          // bg="deployOrange.300"
+          // color="white"
+          // _hover={{ bg: "deployOrange.400", textDecoration: "none" }}
+          // _active={{ bg: "deployOrange.700" }}
+          href="https://hcb.hackclub.com/donations/start/mitobyte"
+          fontWeight="700"
+          fontSize="xl"
+          target="_blank"
+          rightIcon={<FaGrinStars />}
+          size="lg"
+        >
+          Sponsor us!
+        </Button>
       </Box>
     </Box>
   );

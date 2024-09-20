@@ -116,7 +116,7 @@ export const NavigationMobile = () => {
               Team
             </Link>
             <Link
-              href="https://us5.list-manage.com/contact-form?u=e1e45fd6e057c2ffc679ea161&form_id=a9b4712bef02361db14007105b78d1b9"
+              href={ROUTES.EXTERNAL.MAILCHIMP}
               px={6}
               py={2}
               target="_blank"
@@ -126,16 +126,16 @@ export const NavigationMobile = () => {
               Contact
             </Link>
             <Link
-              href={ROUTES.SPONSORS}
+              href={ROUTES.PROJECTS}
               px={6}
               py={2}
               fontWeight="500"
               fontSize="3xl"
             >
-              Sponsors
+              PROJECTS
             </Link>
             <Link
-              href="https://hcb.hackclub.com/donations/start/mitobyte"
+              href={ROUTES.SPONSORS}
               target="_blank"
               px={6}
               py={2}

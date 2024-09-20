@@ -12,7 +12,7 @@ export const EventsLink = () => {
     >
       <GridItem
         borderRightColor="syntaxBlack.300"
-        borderRightWidth={{ base: "1px" }}
+        borderRightWidth={{ base: 0, lg: "1px" }}
         borderBottomColor="syntaxBlack.300"
         borderBottomWidth={{ base: "1px" }}
       >
@@ -26,7 +26,6 @@ export const EventsLink = () => {
       <GridItem
         borderBottomColor="syntaxBlack.300"
         borderBottomWidth={{ base: "1px" }}
-        pt={{ base: 12, lg: 0 }}
       >
         <CardEventLink
           title="Code + Brews"
@@ -36,9 +35,10 @@ export const EventsLink = () => {
         />
       </GridItem>
       <GridItem
-        pt={{ base: 12, lg: 0 }}
         borderRightColor="syntaxBlack.300"
-        borderRightWidth={{ base: "1px" }}
+        borderRightWidth={{ base: 0, lg: "1px" }}
+        borderBottomColor="syntaxBlack.300"
+        borderBottomWidth={{ base: "1px", lg: 0 }}
       >
         <CardEventLink
           title="Resume Workshop"
@@ -47,10 +47,7 @@ export const EventsLink = () => {
           href={ROUTES.EVENTS.RESUME_WORKSHOP}
         />
       </GridItem>
-      <GridItem
-        pt={{ base: 12, lg: 0 }}
-        // borderRight="1px solid black"
-      >
+      <GridItem>
         <CardEventLink
           title="Hackreation"
           time="9:00am to 4:00pm"
