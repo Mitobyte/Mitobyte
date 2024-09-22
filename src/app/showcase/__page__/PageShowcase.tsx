@@ -3,7 +3,7 @@
 import { SectionHero } from "./SectionHero";
 import { SectionProjects } from "./SectionProjects";
 
-export const PageProjects = () => {
+export const PageShowcase = () => {
   return (
     <>
       <SectionHero paddingTop={20} maxWidth="6xl" />
