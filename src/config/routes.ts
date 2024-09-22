@@ -1,6 +1,6 @@
 export const ROUTES = {
   ROOT: "/",
-  PROJECTS: "/projects",
+  SHOWCASE: "/showcase",
   EVENTS: {
     CODE_AND_BREWS: "/events/code-and-brews",
     CODE_AND_COFFEE: "/events/code-and-coffee",

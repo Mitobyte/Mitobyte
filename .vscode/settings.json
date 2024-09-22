@@ -1,15 +1,19 @@
 {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "[javascript]": {
-    "editor.formatOnSave": true
-  },
-  "[javascriptreact]": {
-    "editor.formatOnSave": true
-  },
+  "editor.rulers": [120], // Set's the ruler to eslint's mex-len and prettier's printWidth
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
-  "eslint.validate": ["javascript"]
+  "eslint.validate": ["javascript"],
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

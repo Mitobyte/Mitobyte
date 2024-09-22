@@ -1,8 +1,4 @@
-import { LogoEventbrite } from "@/common/components/Logos/LogoEventbrite";
-import { LogoMeetup } from "@/common/components/Logos/LogoMeetup.tsx";
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
-import { ROUTES } from "@/config/routes";
-import { Link } from "@chakra-ui/next-js";
 import {
   Button,
   Grid,
@@ -11,6 +7,9 @@ import {
   GridItem,
   AspectRatio,
 } from "@chakra-ui/react";
+import NextImage from "next/image";
+
+import derricksproject from "@/common/assets/images/showcase/ollamaWebview.png";
 
 export interface SectionProjectsProps extends Omit<WrapperProps, "children"> {}
 
@@ -39,7 +38,12 @@ export const SectionProjects = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-      <Grid gridTemplateColumns={{ base: "1fr", lg: "1fr 1fr" }}>
+      <Grid
+        gridTemplateColumns={{ base: "1fr", lg: "1fr 1fr" }}
+        gap={6}
+        borderColor="syntaxBlack.300"
+        borderWidth="1px"
+      >
         <GridItem>
           <AspectRatio ratio={16 / 9}>
             <iframe
@@ -50,13 +54,11 @@ export const SectionProjects = ({
           </AspectRatio>
         </GridItem>
         <GridItem>
-          <Heading
-            mb={4}
-            ml={5}
-            display="inline-block"
-            size={{ sm: "lg", xl: "xl", xxl: "2xl" }}
-          >
+          <Heading mt={8} ml={5} size={{ sm: "lg", xl: "xl", xxl: "2xl" }}>
             Nuyulu
+          </Heading>
+          <Heading mt={2} ml={5} mb={6} size={{ base: "md" }}>
+            Creator - Ben Juarez
           </Heading>
 
           <Text fontSize="lg" ml={6} maxWidth="700px" mb={5}>
@@ -77,6 +79,50 @@ export const SectionProjects = ({
           >
             Support Ben's Project
           </Button>
+        </GridItem>
+      </Grid>
+
+      <Grid
+        gridTemplateColumns={{ base: "1fr", lg: "1fr 1fr" }}
+        gap={6}
+        borderColor="syntaxBlack.300"
+        borderWidth="1px"
+        mt={20}
+      >
+        <GridItem>
+          <Heading mt={8} ml={5} size={{ sm: "lg", xl: "xl", xxl: "2xl" }}>
+            Ollama Copilot
+          </Heading>
+          <Heading mt={2} ml={5} mb={6} size={{ base: "md" }}>
+            Creator - Derrick Williams
+          </Heading>
+
+          <Text fontSize="lg" ml={6} maxWidth="700px" mb={5}>
+            This extension integrates AI capabilities into VS Code, providing
+            intelligent code suggestions, detecting boilerplate code, and
+            offering inline completions. It also includes a Webview interface
+            for user interactions with the AI, enhancing coding efficiency and
+            productivity.
+          </Text>
+          <Button
+            target="_blank"
+            colorScheme="codeBlue"
+            ml={6}
+            as="a"
+            href="https://github.com/0112Derrick/ollamaCopilot"
+          >
+            View Derrick's Project
+          </Button>
+        </GridItem>
+        <GridItem>
+          <AspectRatio ratio={16 / 9}>
+            <NextImage
+              src={derricksproject}
+              height={1406}
+              width={1164}
+              alt="derrick ollama project"
+            />
+          </AspectRatio>
         </GridItem>
       </Grid>
     </Wrapper>

@@ -50,13 +50,13 @@ export const NavigationDesktop = () => {
             Contact
           </Link>
           <Link
-            href={ROUTES.PROJECTS}
+            href={ROUTES.SHOWCASE}
             px={6}
             py={2}
             fontWeight="500"
             fontSize="xl"
           >
-            Projects
+            Showcase
           </Link>
         </Box>
         <Spacer />
@@ -64,11 +64,6 @@ export const NavigationDesktop = () => {
           as={Link}
           colorScheme="codeBlue"
           variant="ghost"
-          // variant="outline"
-          // bg="deployOrange.300"
-          // color="white"
-          // _hover={{ bg: "deployOrange.400", textDecoration: "none" }}
-          // _active={{ bg: "deployOrange.700" }}
           href="https://hcb.hackclub.com/donations/start/mitobyte"
           fontWeight="700"
           fontSize="xl"
