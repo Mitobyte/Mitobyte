@@ -126,13 +126,13 @@ export const NavigationMobile = () => {
               Contact
             </Link>
             <Link
-              href={ROUTES.PROJECTS}
+              href={ROUTES.SHOWCASE}
               px={6}
               py={2}
               fontWeight="500"
               fontSize="3xl"
             >
-              PROJECTS
+              Showcase
             </Link>
             <Link
               href={ROUTES.SPONSORS}

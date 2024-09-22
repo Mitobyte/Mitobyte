@@ -32,23 +32,25 @@ export const SectionHero = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-      <Heading
-        mb={4}
-        ml={5}
-        display="inline-block"
-        size={{ sm: "2xl", xl: "3xl", xxl: "4xl" }}
-      >
-        Community Projects
-      </Heading>
+      <Grid justifyContent="center">
+        <Heading
+          mb={4}
+          ml={5}
+          display="inline-block"
+          size={{ sm: "2xl", xl: "3xl", xxl: "4xl" }}
+        >
+          Community Showcase
+        </Heading>
 
-      <Text fontSize="xl" ml={6} maxWidth="700px" mb={5}>
-        Our Community Projects page showcases the innovative work happening
-        within the Mitobyte community. Whether it's a personal project, startup
-        idea, or open-source contribution, we want to highlight the best ideas.
-        To get featured, simply present or demo your project at one of our
-        events. This helps us ensure each project reflects our mission of
-        fostering creativity and collaboration.
-      </Text>
+        <Text fontSize="xl" ml={6} maxWidth="700px" mb={5}>
+          Our Community Showcase page displays the innovative work happening
+          within the Mitobyte community. Whether it's a personal project,
+          startup idea, or open-source contribution, we want to highlight the
+          best ideas. To get featured, simply present or demo your project at
+          one of our events. This helps us ensure each project reflects our
+          mission of fostering creativity and collaboration.
+        </Text>
+      </Grid>
     </Wrapper>
   );
 };

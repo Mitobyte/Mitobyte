@@ -1,12 +1,12 @@
 import { type Metadata } from "next";
-import { PageProjects } from "./__page__/PageProjects";
+import { PageShowcase } from "./__page__/PageShowcase";
 
 export const metadata: Metadata = {
   title: "Community Projects",
 };
 
 const Privacy = () => {
-  return <PageProjects />;
+  return <PageShowcase />;
 };
 
 export default Privacy;
