@@ -47,10 +47,15 @@ export const SectionProjects = ({
         <GridItem>
           <AspectRatio ratio={16 / 9}>
             <iframe
-              src="https://www.kickstarter.com/d21c4e2c-c3f0-48ad-8cb9-634963a687ef"
-              allowFullScreen
-              title="Nuyulu"
-            />
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/W4EBTpEjK-Q?si=7BYGecSDXCt2Mv0z"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
           </AspectRatio>
         </GridItem>
         <GridItem>
@@ -73,6 +78,7 @@ export const SectionProjects = ({
           <Button
             target="_blank"
             colorScheme="codeBlue"
+            mb={10}
             ml={6}
             as="a"
             href="https://www.kickstarter.com/projects/ben-juarez/nuyulu-story?ref=discovery&term=nuyulu&total_hits=1&category_id=272"
@@ -89,7 +95,7 @@ export const SectionProjects = ({
         borderWidth="1px"
         mt={20}
       >
-        <GridItem>
+        <GridItem order={{ base: 1, lg: -1 }}>
           <Heading mt={8} ml={5} size={{ sm: "lg", xl: "xl", xxl: "2xl" }}>
             Ollama Copilot
           </Heading>
@@ -108,13 +114,14 @@ export const SectionProjects = ({
             target="_blank"
             colorScheme="codeBlue"
             ml={6}
+            mb={10}
             as="a"
             href="https://github.com/0112Derrick/ollamaCopilot"
           >
             View Derrick's Project
           </Button>
         </GridItem>
-        <GridItem>
+        <GridItem order={{ base: -1, lg: 1 }}>
           <AspectRatio ratio={16 / 9}>
             <NextImage
               src={derricksproject}
