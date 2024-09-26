@@ -33,7 +33,7 @@ export const SectionQuotes = ({
         Hear From Attendees
       </Heading>
       <Text fontSize="lg" mb={4}>
-        Derick Williams Jr.
+        Bilbo Baggins
       </Text>
       {/* TODO - actually add in a quote */}
       <Text fontSize="lg" maxWidth={{ base: "600px" }}>
