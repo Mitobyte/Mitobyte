@@ -46,7 +46,7 @@ export const SectionHeading = ({
         size="lg"
         colorScheme="codeBlue"
         leftIcon={<AiOutlineMail size="25px" />}
-        href="mailto:allan@mitobyte.com"
+        href="mailto:contact@mitobyte.com"
         target="_blank"
         mr={3}
       >

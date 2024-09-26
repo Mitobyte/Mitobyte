@@ -205,8 +205,7 @@ export const Privacy = () => {
         </Text>
         <List spacing={3}>
           <ListItem>**Mitobyte**</ListItem>
-          <ListItem>allan@mitobyte.com</ListItem>
-          <ListItem>joe@mitobyte.com</ListItem>
+          <ListItem>contact@mitobyte.com</ListItem>
         </List>
 
         {/* Consent Section */}
