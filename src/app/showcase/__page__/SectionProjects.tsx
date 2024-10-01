@@ -47,14 +47,14 @@ export const SectionProjects = ({
         <GridItem>
           <AspectRatio ratio={16 / 9}>
             <iframe
+              style={{ border: 0 }}
               width="560"
               height="315"
               src="https://www.youtube.com/embed/W4EBTpEjK-Q?si=7BYGecSDXCt2Mv0z"
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
             ></iframe>
           </AspectRatio>
         </GridItem>

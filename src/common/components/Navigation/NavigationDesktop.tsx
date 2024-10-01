@@ -64,14 +64,13 @@ export const NavigationDesktop = () => {
           as={Link}
           colorScheme="codeBlue"
           variant="ghost"
-          href="https://hcb.hackclub.com/donations/start/mitobyte"
+          href={ROUTES.SPONSORS}
           fontWeight="700"
           fontSize="xl"
-          target="_blank"
           rightIcon={<FaGrinStars />}
           size="lg"
         >
-          Sponsor us!
+          Sponsor an event!
         </Button>
       </Box>
     </Box>

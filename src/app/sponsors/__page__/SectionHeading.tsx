@@ -62,9 +62,10 @@ export const SectionHeading = ({
         colorScheme="deployOrange"
         leftIcon={<LiaHandsHelpingSolid size="25px" />}
         href={ROUTES.EXTERNAL.HACK_CLUB}
+        rel="noreferrer"
         target="_blank"
       >
-        Contribute
+        Donate
       </Button>
     </Wrapper>
   );

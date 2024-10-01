@@ -136,14 +136,24 @@ export const NavigationMobile = () => {
             </Link>
             <Link
               href={ROUTES.SPONSORS}
+              px={6}
+              py={2}
+              fontWeight="500"
+              fontSize="3xl"
+            >
+              Sponsor
+            </Link>
+            <Link
+              href={ROUTES.EXTERNAL.HACK_CLUB}
               target="_blank"
+              rel="noreferrer"
               px={6}
               py={2}
               color="codeBlue.300"
               fontWeight="700"
               fontSize="3xl"
             >
-              Sponsor an event
+              Donate today!
               <Icon as={FaGrinStars} style={{ marginLeft: "8px" }} />
             </Link>
           </Flex>
