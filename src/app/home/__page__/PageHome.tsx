@@ -3,7 +3,7 @@
 import { SectionHero } from "./SectionHero";
 import { SectionSponsors } from "./SectionSponsors";
 import { SectionEventsLink } from "./SectionEventsLink";
-import { SectionAboutUs } from "./SecitionAboutUs";
+import { SectionAboutUs } from "./SectionAboutUs";
 import { SectionStats } from "./SectionStats";
 import { SectionFaq } from "./SectionSponsorFaq";
 import { SectionTeam } from "./SectionTeam";
