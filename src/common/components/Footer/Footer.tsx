@@ -62,6 +62,7 @@ export const Footer = () => {
               display="inline-block"
               href="https://www.shovel.studio/"
               rel="noreferrer"
+              target="_blank"
             >
               Shovel Studio
             </FooterLink>
@@ -78,6 +79,7 @@ export const Footer = () => {
               display="inline-block"
               href="https://www.artisanhosting.net/"
               rel="noreferrer"
+              target="_blank"
             >
               Artisan Hosting
             </FooterLink>
