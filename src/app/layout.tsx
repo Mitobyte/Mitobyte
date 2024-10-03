@@ -23,9 +23,7 @@ const satoshi = localFont({
 
 export const metadata: Metadata = {
   title: "Mitobyte",
-  description: "Build cool shit.",
-  // TODO: remove this when we go live
-  robots: "noindex,",
+  description: "Build it.",
 };
 
 export default function RootLayout({
