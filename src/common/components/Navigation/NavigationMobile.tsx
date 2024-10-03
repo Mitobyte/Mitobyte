@@ -159,20 +159,22 @@ export const NavigationMobile = () => {
               Founded in Milwaukee, WI
             </Text>
             <Text as="span" fontSize="xl">
-              ©2024 Mitobyte LLC
+              ©2024 Mitobyte. All rights reserved.
             </Text>
             <Link
               href="https://blazesmith.xyz/"
               target="_blank"
               py={2}
               fontSize="xl"
+              rel="noreferrer"
               textDecoration="underline"
             >
               Website by Blaze Smith @ Shovel Studio
             </Link>
             <Link
-              href="#"
+              href="https://www.artisanhosting.net/"
               target="_blank"
+              rel="noreferrer"
               py={2}
               fontSize="xl"
               textDecoration="underline"

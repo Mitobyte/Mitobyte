@@ -65,7 +65,6 @@ export const SectionProjects = ({
           <Heading mt={2} ml={5} mb={6} size={{ base: "md" }}>
             Creator - Ben Juarez
           </Heading>
-
           <Text fontSize="lg" ml={6} maxWidth="700px" mb={5}>
             In this interactive story, you follow Nuyulu Tatukani, a powerful
             yet kind dark priestess, as she discovers a mysterious man washed
@@ -95,14 +94,13 @@ export const SectionProjects = ({
         borderWidth="1px"
         mt={20}
       >
-        <GridItem order={{ base: 1, lg: -1 }}>
+        <GridItem order={{ base: 1, lg: -1 }} ml={{ base: 0, lg: 6 }}>
           <Heading mt={8} ml={5} size={{ sm: "lg", xl: "xl", xxl: "2xl" }}>
             Ollama Copilot
           </Heading>
           <Heading mt={2} ml={5} mb={6} size={{ base: "md" }}>
             Creator - Derrick Williams
           </Heading>
-
           <Text fontSize="lg" ml={6} maxWidth="700px" mb={5}>
             This extension integrates AI capabilities into VS Code, providing
             intelligent code suggestions, detecting boilerplate code, and

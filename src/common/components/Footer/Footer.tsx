@@ -1,4 +1,4 @@
-import { Box, Grid, GridItem, Text } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Link, Text } from "@chakra-ui/react";
 import logo from "@/common/assets/logos-mitobyte/mb-bw-small.svg";
 import NextImage from "next/image";
 import { ROUTES } from "@/config/routes";
@@ -42,6 +42,7 @@ export const Footer = () => {
           <FooterLink
             href="https://us5.list-manage.com/contact-form?u=e1e45fd6e057c2ffc679ea161&form_id=a9b4712bef02361db14007105b78d1b9"
             mt={4}
+            rel="noreferrer"
           >
             Contact
           </FooterLink>
@@ -60,13 +61,30 @@ export const Footer = () => {
         </GridItem>
         <GridItem>
           <Text fontSize="lg" textAlign={{ base: "left", lg: "right" }}>
-            Designed by Shovel
+            Designed by{" "}
+            <FooterLink
+              display="inline-block"
+              href="https://www.shovel.studio/"
+              rel="noreferrer"
+            >
+              Shovel Studio
+            </FooterLink>
           </Text>
-          <Text fontSize="lg" textAlign={{ base: "left", lg: "right" }}>
-            Developed by Mitobyte
+          <Text fontSize="lg" textAlign={{ base: "left", lg: "right" }} mt={4}>
+            Developed by{" "}
+            <FooterLink display="inline-block" href={ROUTES.ABOUT}>
+              Mitobyte
+            </FooterLink>
           </Text>
-          <Text fontSize="lg" textAlign={{ base: "left", lg: "right" }}>
-            Powered by Artisan Hosting
+          <Text fontSize="lg" textAlign={{ base: "left", lg: "right" }} mt={4}>
+            Powered by{" "}
+            <FooterLink
+              display="inline-block"
+              href="https://www.artisanhosting.net/"
+              rel="noreferrer"
+            >
+              Artisan Hosting
+            </FooterLink>
           </Text>
         </GridItem>
       </Grid>
