@@ -39,11 +39,7 @@ export const Footer = () => {
           <FooterLink href={ROUTES.ABOUT} mt={4}>
             About
           </FooterLink>
-          <FooterLink
-            href="https://us5.list-manage.com/contact-form?u=e1e45fd6e057c2ffc679ea161&form_id=a9b4712bef02361db14007105b78d1b9"
-            mt={4}
-            rel="noreferrer"
-          >
+          <FooterLink href={ROUTES.EXTERNAL.MAILCHIMP} mt={4} rel="noreferrer">
             Contact
           </FooterLink>
         </GridItem>

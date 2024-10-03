@@ -64,7 +64,8 @@ export const NavigationDesktop = () => {
           as={Link}
           colorScheme="codeBlue"
           variant="ghost"
-          href="https://hcb.hackclub.com/donations/start/mitobyte"
+          href={ROUTES.EXTERNAL.HACK_CLUB}
+          rel="noreferrer"
           fontWeight="700"
           fontSize="xl"
           target="_blank"

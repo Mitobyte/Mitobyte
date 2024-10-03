@@ -39,10 +39,10 @@ export const SectionHero = ({
       >
         <GridItem>
           <NextImage
-            height={422}
-            width={2000}
+            height={510}
+            width={680}
             src={hero}
-            alt="A group of people collaborating at a large table in a modern office space, with laptops and drinks on the table, and a whiteboard in the background."
+            alt="A group of nerds gather for conversation and heated discussion."
           />
         </GridItem>
         <GridItem>
@@ -76,32 +76,6 @@ export const SectionHero = ({
                 collaborative events and workshops.
               </Text>
             </GridItem>
-            {/* <GridItem alignSelf="end">
-              <Button
-                as="a"
-                href="/events"
-                px="24px"
-                py="12px"
-                height={{ base: "auto", sm: "48px" }}
-                bg="deployOrange.300"
-                color="white.300"
-                fontSize="lg"
-                fontWeight="700"
-                lineHeight="28px"
-                borderRadius="6px"
-                display="inline-flex"
-                flexWrap={{ base: "wrap", sm: "nowrap" }}
-                alignItems="center"
-                whiteSpace={{ base: "normal", sm: "nowrap" }}
-                mt={4}
-                width={{ base: "100%", sm: "auto" }}
-                _hover={{ bg: "deployOrange.400" }}
-                _active={{ bg: "deployOrange.700" }}
-              >
-                Become a sponsor
-              <Icon as={FaChevronCircleRight} style={{ marginLeft: "8px" }} />
-            </Button>
-            </GridItem> */}
           </Grid>
         </GridItem>
       </Grid>

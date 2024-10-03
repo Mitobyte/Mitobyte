@@ -63,8 +63,8 @@ export const SectionHero = () => {
       </GridItem>
       <GridItem>
         <NextImage
-          height={422}
-          width={2000}
+          height={563}
+          width={750}
           src={hero}
           alt="A group of people collaborating at a large table in a modern office space, with laptops and drinks on the table, and a whiteboard in the background."
         />
