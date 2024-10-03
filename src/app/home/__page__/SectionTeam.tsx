@@ -50,14 +50,14 @@ export const SectionTeam = ({
         gap={{ base: 12, lg: 3 }}
       >
         <GridItem>
-          <NextImage src={joe} height={700} width={700} alt="joseph murphy" />
+          <NextImage src={joe} height={365} width={365} alt="joseph murphy" />
           <Heading mt={4} as="h6" size="md">
             Joseph Murphy
           </Heading>
           <Text>Software Engineer @ Little Otter</Text>
         </GridItem>
         <GridItem>
-          <NextImage src={allan} height={700} width={700} alt="allan wick" />
+          <NextImage src={allan} height={365} width={365} alt="allan wick" />
           <Heading mt={4} as="h6" size="md">
             Allan Wick
           </Heading>

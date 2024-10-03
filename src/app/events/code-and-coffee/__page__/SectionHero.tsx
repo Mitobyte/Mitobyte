@@ -42,7 +42,11 @@ export const SectionHero = ({
       </Heading>
 
       <Text fontSize="xl" ml={6} maxWidth="700px" mb={5}>
-        <Link color="blue.600" href="https://codeandcoffee.org/">
+        <Link
+          color="blue.600"
+          href="https://codeandcoffee.org/"
+          rel="noreferrer"
+        >
           Code & Coffee
         </Link>{" "}
         is part of a national network of software engineering and community lead
@@ -65,7 +69,8 @@ export const SectionHero = ({
         <Button
           as="a"
           target="_blank"
-          href="https://www.meetup.com/milwaukee-code-and-coffee/?eventOrigin=event_home_page"
+          href={ROUTES.EXTERNAL.MEETUP}
+          rel="noreferrer"
           variant="outline"
           verticalAlign="baseline"
           mx={6}
@@ -77,7 +82,8 @@ export const SectionHero = ({
         <Button
           as="a"
           target="_blank"
-          href="https://www.eventbrite.com/o/code-brews-collective-49824193943"
+          href={ROUTES.EXTERNAL.EVENTBRITE}
+          rel="noreferrer"
           variant="outline"
           verticalAlign="baseline"
           size="lg"

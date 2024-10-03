@@ -80,6 +80,7 @@ export const SectionProjects = ({
             mb={10}
             ml={6}
             as="a"
+            rel="noreferrer"
             href="https://www.kickstarter.com/projects/ben-juarez/nuyulu-story?ref=discovery&term=nuyulu&total_hits=1&category_id=272"
           >
             Support Ben's Project

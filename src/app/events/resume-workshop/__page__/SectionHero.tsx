@@ -66,9 +66,10 @@ export const SectionHero = ({
         <Button
           as="a"
           target="_blank"
-          href="https://www.meetup.com/milwaukee-code-and-coffee/?eventOrigin=event_home_page"
+          href={ROUTES.EXTERNAL.MEETUP}
           variant="outline"
           verticalAlign="baseline"
+          rel="noreferrer"
           mx={6}
           size="lg"
           leftIcon={<LogoMeetup />}
@@ -78,8 +79,9 @@ export const SectionHero = ({
         <Button
           as="a"
           target="_blank"
-          href="https://www.eventbrite.com/o/code-brews-collective-49824193943"
+          href={ROUTES.EXTERNAL.EVENTBRITE}
           variant="outline"
+          rel="noreferrer"
           verticalAlign="baseline"
           size="lg"
           leftIcon={<LogoEventbrite />}

@@ -129,6 +129,7 @@ export const Conduct = () => {
             color="codeBlue.400"
             target="_blank"
             href="https://www.thehotline.org"
+            rel="noreferrer"
             isExternal
           >
             Chat online
@@ -140,6 +141,7 @@ export const Conduct = () => {
             color="codeBlue.400"
             target="_blank"
             href="https://civilrights.justice.gov/report/"
+            rel="noreferrer"
             isExternal
           >
             US Department of Justice Civil Rights Division
@@ -155,6 +157,7 @@ export const Conduct = () => {
         <Link
           target="_blank"
           color="codeBlue.400"
+          rel="noreferrer"
           href="https://geekfeminism.fandom.com/wiki/Conference_anti-harassment/Policy"
         >
           Geek Feminism conference anti-harassment policy
