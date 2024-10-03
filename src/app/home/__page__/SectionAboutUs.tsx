@@ -42,7 +42,7 @@ export const SectionAboutUs = ({
             height={547}
             width={730}
             src={hero}
-            alt="A group of people collaborating at a large table in a modern office space, with laptops and drinks on the table, and a whiteboard in the background."
+            alt="People collaborating. Generally having a really good time."
           />
         </GridItem>
         <GridItem>
