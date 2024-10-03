@@ -7,7 +7,12 @@ export const PageShowcase = () => {
   return (
     <>
       <SectionHero paddingTop={20} maxWidth="6xl" />
-      <SectionProjects paddingTop={20} paddingBottom={20} maxWidth="8xl" />
+      <SectionProjects
+        paddingTop={20}
+        paddingBottom={20}
+        marginBottom={20}
+        maxWidth="8xl"
+      />
     </>
   );
 };

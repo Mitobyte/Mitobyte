@@ -30,18 +30,22 @@ export const SectionQuotes = ({
       marginTop={marginTop}
     >
       <Heading size={{ sm: "2xl", xl: "3xl", xxl: "4xl" }}>
-        Hear From Attendees
+        Passionate drives us.
       </Heading>
       <Text fontSize="lg" mb={4}>
-        Bilbo Baggins
+        Joseph Murphy
       </Text>
       {/* TODO - actually add in a quote */}
       <Text fontSize="lg" maxWidth={{ base: "600px" }}>
-        “[Placeholder] Attending these developer-focused networking events has
-        been a game-changer for me. I’ve connected with like-minded
-        professionals, gained insights from experienced engineers, and
-        discovered new tools that have elevated my projects. It’s not just about
-        networking, it’s about building a community that helps you grow.”
+        "At Mitobyte, we are a team fueled by our love for technology and our
+        desire to push boundaries. Our passion is the cornerstone of everything
+        we do—from hosting community-driven events to fostering innovation and
+        collaboration among engineers. We believe that when people are
+        passionate about their work, incredible things happen. It’s this energy
+        that drives us to continuously learn, grow, and support the tech
+        community around us. As a team, we are committed to creating an
+        inclusive, vibrant space where creativity thrives and where every idea,
+        no matter how bold, has the potential to change the future."
       </Text>
     </Wrapper>
   );
