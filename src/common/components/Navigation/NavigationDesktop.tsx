@@ -41,6 +41,7 @@ export const NavigationDesktop = () => {
           </Link>
           <Link
             href={ROUTES.EXTERNAL.MAILCHIMP}
+            rel="noreferrer"
             px={6}
             py={2}
             target="_blank"
@@ -64,8 +65,7 @@ export const NavigationDesktop = () => {
           as={Link}
           colorScheme="codeBlue"
           variant="ghost"
-          href={ROUTES.EXTERNAL.HACK_CLUB}
-          rel="noreferrer"
+          href={ROUTES.SPONSORS}
           fontWeight="700"
           fontSize="xl"
           target="_blank"
