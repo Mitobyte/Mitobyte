@@ -2,8 +2,8 @@ import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 import { Grid, GridItem } from "@chakra-ui/react";
 import { MdOutlineCoffee } from "react-icons/md";
 import { RiBeerLine } from "react-icons/ri";
-import { CgFileDocument } from "react-icons/cg";
-import { PiCodeSimpleBold } from "react-icons/pi";
+import { GrDocumentText } from "react-icons/gr";
+import { RiCodeFill } from "react-icons/ri";
 import { EventDescription } from "@/common/components/EventDescription/EventDescription";
 
 const iconSize = "125px";
@@ -77,7 +77,7 @@ export const SectionEventsDescription = ({
               "Regular sessions with advice from engineers and recruiters",
               "Help attendees polish their resumes",
             ]}
-            imageSlot={<CgFileDocument size={iconSize} />}
+            imageSlot={<GrDocumentText size={iconSize} />}
           />
         </GridItem>
         <GridItem
@@ -87,7 +87,7 @@ export const SectionEventsDescription = ({
           <EventDescription
             title="Hackreation"
             description={["Biannual Event", "Showcase innovative projects"]}
-            imageSlot={<PiCodeSimpleBold size={iconSize} />}
+            imageSlot={<RiCodeFill size={iconSize} />}
           />
         </GridItem>
       </Grid>

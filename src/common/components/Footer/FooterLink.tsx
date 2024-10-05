@@ -1,6 +1,6 @@
 import { Link } from "@chakra-ui/next-js";
 import { Icon, LinkProps } from "@chakra-ui/react";
-import { LuArrowUpRight } from "react-icons/lu";
+import { RiArrowRightUpLine } from "react-icons/ri";
 
 interface FooterLinkProps extends LinkProps {
   href: string;
@@ -17,6 +17,7 @@ export const FooterLink = ({ href, children, ...rest }: FooterLinkProps) => {
       textAlign="left"
       fontSize="lg"
       _hover={{
+        textDecoration: "underline",
         ".icon": {
           transform: "rotate(45deg)",
         },
@@ -29,8 +30,8 @@ export const FooterLink = ({ href, children, ...rest }: FooterLinkProps) => {
         height={5}
         width={5}
         ml={2}
-        as={LuArrowUpRight}
-        transition="transform 0.3s ease-in-out"
+        as={RiArrowRightUpLine}
+        transition="transform 0.15s ease-in-out"
       />
     </Link>
   );

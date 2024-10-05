@@ -66,8 +66,8 @@ export const SectionTeam = ({
               <GridItem order={{ base: 0, md: 1 }}>
                 <NextImage
                   src={allan}
-                  height={700}
-                  width={700}
+                  height={400}
+                  width={400}
                   alt="allan wick"
                 />
               </GridItem>
@@ -80,13 +80,13 @@ export const SectionTeam = ({
               <Heading mt={4} as="h6" size="xl">
                 Blaze Smith
               </Heading>
-              <Text fontSize="xl">UX Design Intern @ Associated Bank</Text>
+              <Text fontSize="xl">Founder @ Shovel Studio</Text>
             </GridItem>
             <GridItem order={{ base: 0, md: 1 }}>
               <NextImage
                 src={blaze}
-                height={700}
-                width={700}
+                height={400}
+                width={400}
                 alt="blaze smith"
               />
             </GridItem>
@@ -103,8 +103,8 @@ export const SectionTeam = ({
             <GridItem order={{ base: 0, md: 1 }}>
               <NextImage
                 src={paul}
-                height={700}
-                width={700}
+                height={400}
+                width={400}
                 alt="paul rinaldi"
               />
             </GridItem>
