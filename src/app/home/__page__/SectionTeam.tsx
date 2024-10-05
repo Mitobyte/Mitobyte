@@ -8,7 +8,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import NextImage from "next/image";
-import { LuArrowUpRight } from "react-icons/lu";
+import { RiArrowRightUpLine } from "react-icons/ri";
 import { Link } from "@chakra-ui/next-js";
 
 import joe from "@/common/assets/images/people/profile-joe.jpg";
@@ -50,14 +50,14 @@ export const SectionTeam = ({
         gap={{ base: 12, lg: 3 }}
       >
         <GridItem>
-          <NextImage src={joe} height={365} width={365} alt="joseph murphy" />
+          <NextImage src={joe} height={450} width={450} alt="joseph murphy" />
           <Heading mt={4} as="h6" size="md">
             Joseph Murphy
           </Heading>
           <Text>Software Engineer @ Little Otter</Text>
         </GridItem>
         <GridItem>
-          <NextImage src={allan} height={365} width={365} alt="allan wick" />
+          <NextImage src={allan} height={450} width={450} alt="allan wick" />
           <Heading mt={4} as="h6" size="md">
             Allan Wick
           </Heading>
@@ -71,12 +71,20 @@ export const SectionTeam = ({
               bg="white"
               borderWidth="1px"
               borderColor="syntaxBlack.300"
+              _hover={{
+                ".icon": {
+                  transform: "rotate(45deg)",
+                },
+                ".deco": {
+                  textDecoration: "underline",
+                },
+              }}
             >
               <Icon
                 height={75}
                 width={75}
-                as={LuArrowUpRight}
-                transition="transform 0.3s ease-in-out"
+                as={RiArrowRightUpLine}
+                transition="transform 0.15s ease-in-out"
                 className="icon"
               />
             </AspectRatio>

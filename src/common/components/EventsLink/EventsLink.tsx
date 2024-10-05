@@ -9,6 +9,7 @@ export const EventsLink = () => {
       templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}
       borderColor="syntaxBlack.300"
       borderWidth="1px"
+      overflow="hidden"
     >
       <GridItem
         borderRightColor="syntaxBlack.300"

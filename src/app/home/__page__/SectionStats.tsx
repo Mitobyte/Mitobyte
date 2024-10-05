@@ -34,7 +34,7 @@ export const SectionStats = ({
         border="1px solid black"
       >
         <GridItem borderRight={{ base: 0, lg: "1px solid black" }} ml={6} p={6}>
-          <Heading>650+</Heading>
+          <Heading>750+</Heading>
           <Text>Members across Meetup & Eventbrite</Text>
         </GridItem>
         <GridItem borderRight={{ base: 0, lg: "1px solid black" }} ml={6} p={6}>

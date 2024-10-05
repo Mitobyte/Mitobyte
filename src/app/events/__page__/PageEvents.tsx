@@ -18,6 +18,7 @@ export const PageEvents = () => {
         marginRight={5}
         paddingTop={20}
         paddingBottom={20}
+        marginBottom={20}
         maxWidth="8xl"
       />
     </>
