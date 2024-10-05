@@ -32,11 +32,10 @@ export const SectionQuotes = ({
       <Heading size={{ sm: "2xl", xl: "3xl", xxl: "4xl" }}>
         Passionate drives us.
       </Heading>
-      <Text fontSize="lg" mb={4}>
+      <Text fontSize="xl" mb={4}>
         Joseph Murphy
       </Text>
-      {/* TODO - actually add in a quote */}
-      <Text fontSize="lg" maxWidth={{ base: "600px" }}>
+      <Text fontSize="xl" maxWidth={{ base: "600px" }}>
         "At Mitobyte, we are a team fueled by our love for technology and our
         desire to push boundaries. Our passion is the cornerstone of everything
         we do—from hosting community-driven events to fostering innovation and

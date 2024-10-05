@@ -1,9 +1,8 @@
-import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
-import { Grid, GridItem, Heading, Button, Icon, Text } from "@chakra-ui/react";
-import { FaChevronCircleRight } from "react-icons/fa";
+import { Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 import NextImage from "next/image";
 
 import hero from "@/common/assets/images/events/code-and-brews/IMG_4372.jpeg";
+import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
 export interface SectionHeroProps extends Omit<WrapperProps, "children"> {}
 
@@ -65,7 +64,6 @@ export const SectionHero = ({
               <Text
                 fontSize={{ md: "lg", lg: "xl" }}
                 color="syntaxBlack.300"
-                fontWeight="500"
                 lineHeight="29.26px"
                 mt={4}
               >

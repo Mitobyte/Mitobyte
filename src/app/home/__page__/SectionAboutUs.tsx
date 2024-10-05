@@ -39,10 +39,10 @@ export const SectionAboutUs = ({
       >
         <GridItem>
           <NextImage
-            height={547}
-            width={730}
+            height={676}
+            width={900}
             src={hero}
-            alt="People collaborating. Generally having a really good time."
+            alt="Coders relax after a long day of hard work."
           />
         </GridItem>
         <GridItem>
@@ -63,9 +63,9 @@ export const SectionAboutUs = ({
             m={6}
           >
             Every year Mitobyte connects with over 1,000 Milwaukee developers
-            annually through innovative networking events and hackathons. We
-            foster collaboration, creativity, and growth in the local tech
-            community. Join us to shape the future of technology in Milwaukee.
+            through innovative networking events and hackathons. We foster
+            collaboration, creativity, and growth in the local tech community.
+            Join us to shape the future of technology in Milwaukee.
           </Text>
         </GridItem>
       </Grid>

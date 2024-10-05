@@ -1,6 +1,6 @@
 import { Grid, GridItem, Heading, Icon, Text } from "@chakra-ui/react";
 import { Link, LinkProps } from "@chakra-ui/next-js";
-import { LuArrowUpRight } from "react-icons/lu";
+import { RiArrowRightUpLine } from "react-icons/ri";
 
 export interface CardEventLinkProps {
   date: string;
@@ -42,8 +42,8 @@ export const CardEventLink = ({
         <Icon
           height={75}
           width={75}
-          as={LuArrowUpRight}
-          transition="transform 0.3s ease-in-out"
+          as={RiArrowRightUpLine}
+          transition="transform 0.15s ease-in-out"
           className="icon"
         />
       </GridItem>
