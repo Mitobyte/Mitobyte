@@ -2,7 +2,9 @@
   "extends": [
     "next/core-web-vitals",
     "plugin:eslint-plugin-next-on-pages/recommended",
-    "prettier"
+    "prettier",
+    "plugin:storybook/recommended",
+    "plugin:storybook/recommended"
   ],
   "plugins": [
     "prettier",
@@ -11,6 +13,5 @@
   "rules": {
     "prettier/prettier": "error",
     "react/no-unescaped-entities": "off"
-
   }
 }
