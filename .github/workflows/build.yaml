@@ -32,23 +32,25 @@ jobs:
       - name: Install dependencies
         run: npm i
       - name: Build
-        run: npm run
+        run: npm run build
+      - name: Deploy
+        run: npm run deploy
 
-  # Deploy job
-  deploy:
-    # Add a dependency to the build job
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
-    name: Deploy to Cloudflare Pages
-    steps:
-      - name: Publish
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: mitobyte # e.g. 'my-project'
-          directory: .vercel/output/static # e.g. 'dist'
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+  # # Deploy job
+  # deploy:
+  #   # Add a dependency to the build job
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: read
+  #     deployments: write
+  #   name: Deploy to Cloudflare Pages
+  #   steps:
+  #     - name: Publish
+  #       uses: cloudflare/pages-action@v1
+  #       with:
+  #         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+  #         accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+  #         projectName: mitobyte # e.g. 'my-project'
+  #         directory: .vercel/output/static # e.g. 'dist'
+  #         gitHubToken: ${{ secrets.GITHUB_TOKEN }}
