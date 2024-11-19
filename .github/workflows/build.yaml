@@ -21,14 +21,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v3
-        with:
-          # Automatically inject pathPrefix in your Gatsby configuration file.
-          #
-          # You may remove this line if you want to manage the configuration yourself.
-          static_site_generator: remix
       - name: Install dependencies
         run: npm i
       - name: Lint
@@ -49,7 +41,11 @@ jobs:
       deployments: write
     name: Deploy to Cloudflare Pages
     steps:
-      - name: Lint
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: npm i
+      - name: build
         run: npm run build
       - name: Publish
         uses: cloudflare/pages-action@v1
