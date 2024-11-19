@@ -2,4 +2,4 @@ name = "mitobyte"
 compatibility_date = "2024-07-29"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".vercel/output/static"
-account = "23fac1cfe2cb8001183c25e5f61e7b3f"
+account_id = "23fac1cfe2cb8001183c25e5f61e7b3f"
