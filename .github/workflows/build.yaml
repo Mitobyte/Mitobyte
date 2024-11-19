@@ -1,0 +1,54 @@
+#
+name: Build and Deploy Site to Cloudflare pages.
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v3
+        with:
+          # Automatically inject pathPrefix in your Gatsby configuration file.
+          #
+          # You may remove this line if you want to manage the configuration yourself.
+          static_site_generator: remix
+      - name: Install dependencies
+        run: npm i
+      - name: Build
+        run: npm run
+
+  # Deploy job
+  deploy:
+    # Add a dependency to the build job
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    name: Deploy to Cloudflare Pages
+    steps:
+      - name: Publish
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: mitobyte # e.g. 'my-project'
+          directory: .vercel/output/static # e.g. 'dist'
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
