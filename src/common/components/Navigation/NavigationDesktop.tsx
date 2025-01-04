@@ -40,11 +40,10 @@ export const NavigationDesktop = () => {
             Team
           </Link>
           <Link
-            href={ROUTES.EXTERNAL.MAILCHIMP}
+            href={ROUTES.CONTACT_US}
             rel="noreferrer"
             px={6}
             py={2}
-            target="_blank"
             fontWeight="500"
             fontSize="xl"
           >

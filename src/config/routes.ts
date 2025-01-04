@@ -8,6 +8,7 @@ export const ROUTES = {
     RESUME_WORKSHOP: "/events/resume-workshop",
     ROOT: "/events",
   },
+  CONTACT_US: "/contact",
   SPONSORS: "/sponsors",
   TEAM: "/team",
   CODE_OF_CONDUCT: "/code-of-conduct",
@@ -19,7 +20,5 @@ export const ROUTES = {
     MEETUP:
       "https://www.meetup.com/milwaukee-code-and-coffee/?eventOrigin=event_home_page",
     HACK_CLUB: "https://hcb.hackclub.com/donations/start/mitobyte",
-    MAILCHIMP:
-      "https://us5.list-manage.com/contact-form?u=e1e45fd6e057c2ffc679ea161&form_id=a9b4712bef02361db14007105b78d1b9",
   },
 };
