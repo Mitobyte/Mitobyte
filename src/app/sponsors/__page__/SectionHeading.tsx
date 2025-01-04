@@ -46,8 +46,7 @@ export const SectionHeading = ({
         size="lg"
         colorScheme="codeBlue"
         leftIcon={<AiOutlineMail size="25px" />}
-        href="mailto:contact@mitobyte.com"
-        target="_blank"
+        href={ROUTES.CONTACT_US}
         mr={3}
       >
         Contact

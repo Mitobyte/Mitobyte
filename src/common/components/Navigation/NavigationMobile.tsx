@@ -116,10 +116,9 @@ export const NavigationMobile = () => {
               Team
             </Link>
             <Link
-              href={ROUTES.EXTERNAL.MAILCHIMP}
+              href={ROUTES.CONTACT_US}
               px={6}
               py={2}
-              target="_blank"
               fontWeight="500"
               fontSize="3xl"
             >

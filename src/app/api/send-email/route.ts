@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 
-export async function POST(req) {
+export async function POST(req: NextRequest) {
   try {
     // Parse the request body to extract form data
     const { name, email, message } = await req.json();
@@ -10,7 +10,6 @@ export async function POST(req) {
     let transporter = nodemailer.createTransport({
       host: "smtp.gmail.com", // SMTP server address
       port: 465, // Port for secure email sending
-      logger: true,
       auth: {
         user: process.env.SMTP_EMAIL, // SMTP username from environment variables
         pass: process.env.SMTP_PASS, // SMTP password from environment variables

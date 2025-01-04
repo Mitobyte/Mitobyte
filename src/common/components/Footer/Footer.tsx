@@ -39,7 +39,7 @@ export const Footer = () => {
           <FooterLink href={ROUTES.ABOUT} mt={4}>
             About
           </FooterLink>
-          <FooterLink href={ROUTES.EXTERNAL.MAILCHIMP} mt={4} rel="noreferrer">
+          <FooterLink href={ROUTES.CONTACT_US} mt={4} rel="noreferrer">
             Contact
           </FooterLink>
         </GridItem>

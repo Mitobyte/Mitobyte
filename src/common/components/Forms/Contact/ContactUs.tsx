@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, SyntheticEvent } from "react";
 import {
   FormControl,
   FormLabel,
@@ -17,8 +17,16 @@ export const ContactUs = () => {
   const [email, setEmail] = useState("");
   const [content, setContent] = useState("");
 
+  const resetFields = () => {
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setContent("");
+    setButtonText("Submit");
+  };
+
   // Handle form submission
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: SyntheticEvent) => {
     event.preventDefault();
     setButtonText("Sending...");
 
@@ -37,7 +45,8 @@ export const ContactUs = () => {
 
       if (response.ok) {
         console.log("Email sent successfully");
-        setButtonText("Submitted");
+        setButtonText("Sent");
+        resetFields();
       } else {
         console.error("Error sending email:", response.statusText);
       }
@@ -104,7 +113,7 @@ export const ContactUs = () => {
             </FormControl>
           </GridItem>
           <GridItem style={{ paddingTop: 10 }}>
-            <Button type="submit">Submit</Button>
+            <Button type="submit">{buttonText}</Button>
           </GridItem>
         </Grid>
       </form>
