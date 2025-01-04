@@ -68,7 +68,6 @@ export const NavigationDesktop = () => {
           href={ROUTES.SPONSORS}
           fontWeight="700"
           fontSize="xl"
-          target="_blank"
           rightIcon={<FaGrinStars />}
           size="lg"
         >

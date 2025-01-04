@@ -136,7 +136,6 @@ export const NavigationMobile = () => {
             </Link>
             <Link
               href={ROUTES.SPONSORS}
-              target="_blank"
               px={6}
               py={2}
               color="codeBlue.300"
