@@ -1,9 +1,7 @@
 import nodemailer from "nodemailer";
 import { NextResponse, NextRequest } from "next/server";
 
-export const runtime = "edge";
-
-export async function POST(req: NextRequest) {
+export const POST = async (req: NextRequest) => {
   try {
     // Parse the request body to extract form data
     const { name, email, message } = await req.json();
@@ -94,4 +92,4 @@ export async function POST(req: NextRequest) {
       { status: 500 },
     );
   }
-}
+};
