@@ -1,6 +1,7 @@
 import { NextResponse, NextRequest } from "next/server";
 import { CreateEmailOptions, Resend } from "resend";
 
+export const runtime = "edge";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const POST = async (req: NextRequest) => {
