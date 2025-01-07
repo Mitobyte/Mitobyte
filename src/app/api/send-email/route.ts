@@ -1,20 +1,12 @@
-import nodemailer from "nodemailer";
 import { NextResponse, NextRequest } from "next/server";
+import { CreateEmailOptions, Resend } from "resend";
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const POST = async (req: NextRequest) => {
   try {
     // Parse the request body to extract form data
     const { name, email, message } = await req.json();
-
-    // Configure the Nodemailer transporter
-    let transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com", // SMTP server address
-      port: 465, // Port for secure email sending
-      auth: {
-        user: process.env.SMTP_EMAIL, // SMTP username from environment variables
-        pass: process.env.SMTP_PASS, // SMTP password from environment variables
-      },
-    });
 
     // Define the email options based on whether an attachment is provided
     let mailOptions;
@@ -22,7 +14,7 @@ export const POST = async (req: NextRequest) => {
     // If no attachment is provided, use this configuration
     mailOptions = {
       from: process.env.SMTP_EMAIL, // Sender's email address
-      to: "contact@mitobyte.com", // Recipient's email address
+      to: ["contact@mitobyte.com"], // Recipient's email address
       subject: `New Message from ${email}`, // Email subject
       html: `
           <html lang="en">
@@ -75,10 +67,10 @@ export const POST = async (req: NextRequest) => {
               </div>
             </body>
           </html>`,
-    };
+    } as CreateEmailOptions;
 
     // Send the email with the configured options
-    const info = await transporter.sendMail(mailOptions);
+    const { data, error } = await resend.emails.send(mailOptions);
 
     // Respond with success message
     return NextResponse.json(

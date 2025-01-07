@@ -2,8 +2,7 @@
 const nextConfig = {
   productionBrowserSourceMaps: true,
   env: {
-    SMTP_EMAIL: "allan@mitobyte.com",
-    SMTP_PASS: "twnr lgni uawk towm",
+    RESEND_API_KEY: process.env.RESEND_API_KEY,
   },
 };
 
