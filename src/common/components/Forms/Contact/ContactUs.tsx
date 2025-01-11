@@ -6,7 +6,7 @@ import {
   Grid,
   GridItem,
   Input,
-  Heading,
+  Textarea,
   Button,
 } from "@chakra-ui/react";
 
@@ -103,13 +103,11 @@ export const ContactUs = () => {
           <GridItem>
             <FormControl>
               <FormLabel>Message</FormLabel>
-              <Input
+              <Textarea
                 name="CONTENT"
-                type="text"
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
               />
-              <FormHelperText>We'll never share your email.</FormHelperText>
             </FormControl>
           </GridItem>
           <GridItem style={{ paddingTop: 10 }}>
