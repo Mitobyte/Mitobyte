@@ -1,5 +1,6 @@
 import { extendTheme } from "@chakra-ui/react";
 import { accordionTheme } from "./customizations/accordionTheme";
+import { inputTheme } from "./customizations/inputTheme";
 
 export const mitobyteTheme = extendTheme({
   colors: {
@@ -92,6 +93,7 @@ export const mitobyteTheme = extendTheme({
   },
   components: {
     Accordion: accordionTheme,
+    Input: inputTheme,
   },
   styles: {
     global: {

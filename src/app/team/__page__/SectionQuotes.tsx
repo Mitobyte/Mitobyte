@@ -30,7 +30,7 @@ export const SectionQuotes = ({
       marginTop={marginTop}
     >
       <Heading size={{ sm: "2xl", xl: "3xl", xxl: "4xl" }}>
-        Passionate drives us.
+        Passion drives us.
       </Heading>
       <Text fontSize="xl" mb={4}>
         Joseph Murphy

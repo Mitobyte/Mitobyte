@@ -25,7 +25,7 @@ export const MailingListSignup = () => {
         target="_blank"
       >
         <Grid templateColumns={{ base: "1fr" }}>
-          <GridItem>
+          <GridItem mb="4">
             <input type="hidden" name="u" value="e1e45fd6e057c2ffc679ea161" />
             <input type="hidden" name="id" value="79264db8fd" />
 
@@ -34,27 +34,29 @@ export const MailingListSignup = () => {
               <Input name="FNAME" type="text" />
             </FormControl>
           </GridItem>
-          <GridItem>
+          <GridItem mb="4">
             <FormControl isRequired>
               <FormLabel>Last Name</FormLabel>
               <Input name="LNAME" type="text" />
             </FormControl>
           </GridItem>
-          <GridItem>
+          <GridItem mb="4">
             <FormControl>
-              <FormLabel>Position</FormLabel>
+              <FormLabel>Position / Role</FormLabel>
               <Input name="POSITION" type="text" />
             </FormControl>
           </GridItem>
-          <GridItem>
+          <GridItem nb="4">
             <FormControl isRequired>
               <FormLabel>Email address</FormLabel>
               <Input name="EMAIL" type="email" />
               <FormHelperText>We'll never share your email.</FormHelperText>
             </FormControl>
           </GridItem>
-          <GridItem style={{ paddingTop: 10 }}>
-            <Button type="submit">Submit</Button>
+          <GridItem mt="8">
+            <Button type="submit" width="full" size="lg" colorScheme="codeBlue">
+              Submit
+            </Button>
           </GridItem>
         </Grid>
       </form>

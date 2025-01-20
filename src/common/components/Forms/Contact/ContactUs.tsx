@@ -62,7 +62,7 @@ export const ContactUs = () => {
         id="mc-embedded-contact-us-form"
         name="mc-embedded-contact-us-form"
       >
-        <Grid templateColumns={{ base: "1fr" }}>
+        <Grid templateColumns={{ base: "1fr" }} maxWidth="md" margin="0 auto">
           <GridItem>
             <input type="hidden" name="u" value="e1e45fd6e057c2ffc679ea161" />
             <input type="hidden" name="id" value="79264db8fd" />
@@ -111,7 +111,9 @@ export const ContactUs = () => {
             </FormControl>
           </GridItem>
           <GridItem style={{ paddingTop: 10 }}>
-            <Button type="submit">{buttonText}</Button>
+            <Button type="submit" width="full" size="lg" colorScheme="codeBlue">
+              {buttonText}
+            </Button>
           </GridItem>
         </Grid>
       </form>
