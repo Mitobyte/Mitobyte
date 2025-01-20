@@ -5,6 +5,6 @@ export const boxLabelStyles: FormLabelProps = {
   padding: "4",
   margin: 0,
   borderRadius: 0,
-  borderRight: 0,
+  borderLeft: 0,
   borderTop: 0,
 };

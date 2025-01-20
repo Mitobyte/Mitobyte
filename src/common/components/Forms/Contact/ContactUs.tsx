@@ -9,11 +9,14 @@ import {
   Textarea,
   Button,
   Box,
+  InputLeftAddon,
+  InputGroup,
 } from "@chakra-ui/react";
 import { boxLabelStyles } from "../Forms.styles";
+import { ChevronRightIcon } from "@chakra-ui/icons";
 
 export const ContactUs = () => {
-  const [buttonText, setButtonText] = useState("Submit");
+  const [buttonText, setButtonText] = useState("SUBMIT FORM");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -64,34 +67,44 @@ export const ContactUs = () => {
         id="mc-embedded-contact-us-form"
         name="mc-embedded-contact-us-form"
       >
-        <Grid templateColumns={{ base: "1fr" }} maxWidth="md" margin="0 auto">
+        <Grid templateColumns={{ base: "1fr" }} maxWidth="lg" margin="0 auto">
           <GridItem>
             <input type="hidden" name="u" value="e1e45fd6e057c2ffc679ea161" />
             <input type="hidden" name="id" value="79264db8fd" />
 
             <FormControl isRequired>
               <FormLabel {...boxLabelStyles}>First Name</FormLabel>
-              <Input
-                name="FNAME"
-                type="text"
-                value={firstName}
-                variant="box"
-                onChange={(e) => setFirstName(e.target.value)}
-                placeholder="first name"
-              />
+              <InputGroup variant="box">
+                <InputLeftAddon>
+                  <ChevronRightIcon />
+                </InputLeftAddon>
+                <Input
+                  name="FNAME"
+                  type="text"
+                  value={firstName}
+                  variant="box"
+                  onChange={(e) => setFirstName(e.target.value)}
+                  placeholder="enter first name"
+                />
+              </InputGroup>
             </FormControl>
           </GridItem>
           <GridItem>
             <FormControl isRequired>
               <FormLabel {...boxLabelStyles}>Last Name</FormLabel>
-              <Input
-                name="LNAME"
-                type="text"
-                value={lastName}
-                variant="box"
-                onChange={(e) => setLastName(e.target.value)}
-                placeholder="last name"
-              />
+              <InputGroup variant="box">
+                <InputLeftAddon>
+                  <ChevronRightIcon />
+                </InputLeftAddon>
+                <Input
+                  name="LNAME"
+                  type="text"
+                  value={lastName}
+                  variant="box"
+                  onChange={(e) => setLastName(e.target.value)}
+                  placeholder="enter last name"
+                />
+              </InputGroup>
             </FormControl>
           </GridItem>
           <GridItem>
@@ -100,31 +113,46 @@ export const ContactUs = () => {
                 <FormLabel>Email address</FormLabel>
                 <FormHelperText>We'll never share your email.</FormHelperText>
               </Box>
-
-              <Input
-                name="EMAIL"
-                type="email"
-                value={email}
-                variant="box"
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="email"
-              />
+              <InputGroup variant="box">
+                <InputLeftAddon>
+                  <ChevronRightIcon />
+                </InputLeftAddon>
+                <Input
+                  name="EMAIL"
+                  type="email"
+                  value={email}
+                  variant="box"
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="enter email"
+                />
+              </InputGroup>
             </FormControl>
           </GridItem>
           <GridItem>
             <FormControl>
               <FormLabel {...boxLabelStyles}>Message</FormLabel>
-              <Textarea
-                name="CONTENT"
-                value={content}
-                variant="box"
-                placeholder="message content"
-                onChange={(e) => setContent(e.target.value)}
-              />
+              <InputGroup variant="box">
+                <InputLeftAddon>
+                  <ChevronRightIcon />
+                </InputLeftAddon>
+                <Textarea
+                  name="CONTENT"
+                  value={content}
+                  variant="box"
+                  placeholder="enter message here"
+                  onChange={(e) => setContent(e.target.value)}
+                />
+              </InputGroup>
             </FormControl>
           </GridItem>
-          <GridItem style={{ paddingTop: 10 }}>
-            <Button type="submit" width="full" size="lg" colorScheme="codeBlue">
+          <GridItem mt="4">
+            <Button
+              type="submit"
+              width="full"
+              size="lg"
+              colorScheme="codeBlue"
+              variant="ghost"
+            >
               {buttonText}
             </Button>
           </GridItem>

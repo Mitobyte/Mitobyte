@@ -8,16 +8,23 @@ import {
   Input,
   Heading,
   Button,
+  InputLeftAddon,
+  InputGroup,
+  InputRightAddon,
+  Box,
 } from "@chakra-ui/react";
 import { boxLabelStyles } from "../Forms.styles";
+import { ChevronRightIcon } from "@chakra-ui/icons";
 
 export const MailingListSignup = () => {
   return (
     <>
       <Heading
-        mb={12}
-        size={{ sm: "sm", xl: "md", xxl: "lg" }}
+        size={{ sm: "md", xl: "lg", xxl: "xl" }}
+        p="3"
         textAlign="center"
+        borderBottom="1px solid"
+        borderBottomColor="black"
       >
         Sign up for email notifictions.
       </Heading>
@@ -36,51 +43,79 @@ export const MailingListSignup = () => {
 
             <FormControl isRequired>
               <FormLabel {...boxLabelStyles}>First Name</FormLabel>
-              <Input
-                name="FNAME"
-                type="text"
-                variant="box"
-                placeholder="first name"
-              />
+              <InputGroup variant="box">
+                <InputLeftAddon>
+                  <ChevronRightIcon />
+                </InputLeftAddon>
+                <Input
+                  name="FNAME"
+                  type="text"
+                  variant="box"
+                  placeholder="enter first name"
+                />
+              </InputGroup>
             </FormControl>
           </GridItem>
           <GridItem>
             <FormControl isRequired>
               <FormLabel {...boxLabelStyles}>Last Name</FormLabel>
-              <Input
-                name="LNAME"
-                type="text"
-                variant="box"
-                placeholder="last name"
-              />
+              <InputGroup variant="box">
+                <InputLeftAddon>
+                  <ChevronRightIcon />
+                </InputLeftAddon>
+                <Input
+                  name="LNAME"
+                  type="text"
+                  variant="box"
+                  placeholder="enter last name"
+                />
+              </InputGroup>
             </FormControl>
           </GridItem>
           <GridItem>
             <FormControl>
               <FormLabel {...boxLabelStyles}>Position / Role</FormLabel>
-              <Input
-                name="POSITION"
-                type="text"
-                variant="box"
-                placeholder="position"
-              />
+              <InputGroup variant="box">
+                <InputLeftAddon>
+                  <ChevronRightIcon />
+                </InputLeftAddon>
+                <Input
+                  name="POSITION"
+                  type="text"
+                  variant="box"
+                  placeholder="enter position"
+                />
+              </InputGroup>
             </FormControl>
           </GridItem>
           <GridItem>
             <FormControl isRequired>
-              <FormLabel {...boxLabelStyles}>Email address</FormLabel>
-              <Input
-                name="EMAIL"
-                type="email"
-                variant="box"
-                placeholder="email"
-              />
-              <FormHelperText>We'll never share your email.</FormHelperText>
+              <Box {...boxLabelStyles}>
+                <FormLabel>Email address</FormLabel>
+                <FormHelperText>We'll never share your email.</FormHelperText>
+              </Box>
+              <InputGroup variant="box">
+                <InputLeftAddon>
+                  <ChevronRightIcon />
+                </InputLeftAddon>
+                <Input
+                  name="EMAIL"
+                  type="email"
+                  variant="box"
+                  placeholder="enter email"
+                />
+              </InputGroup>
             </FormControl>
           </GridItem>
-          <GridItem mt="8">
-            <Button type="submit" width="full" size="lg" colorScheme="codeBlue">
-              Submit
+          <GridItem mt="4">
+            <Button
+              type="submit"
+              width="full"
+              size="lg"
+              colorScheme="codeBlue"
+              variant="ghost"
+            >
+              SUBMIT FORM
             </Button>
           </GridItem>
         </Grid>

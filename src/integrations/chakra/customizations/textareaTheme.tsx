@@ -5,8 +5,10 @@ const box = defineStyle({
   borderBottom: "1px solid",
   borderBottomColor: "black",
 
-  borderRight: "1px solid",
-  borderRightColor: "black",
+  borderLeft: "1px solid",
+  borderLeftColor: "black",
+
+  borderRadius: 0,
 });
 
 export const textareaTheme = defineStyleConfig({

@@ -2,7 +2,7 @@ import { type Metadata } from "next";
 import { PageContact } from "./__page__/PageContact";
 
 export const metadata: Metadata = {
-  title: "Code of Conduct",
+  title: "Contact Us",
 };
 
 const CodeOfConduct = () => {
