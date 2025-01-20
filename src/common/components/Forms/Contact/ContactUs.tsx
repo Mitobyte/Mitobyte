@@ -8,7 +8,9 @@ import {
   Input,
   Textarea,
   Button,
+  Box,
 } from "@chakra-ui/react";
+import { boxLabelStyles } from "../Forms.styles";
 
 export const ContactUs = () => {
   const [buttonText, setButtonText] = useState("Submit");
@@ -68,44 +70,55 @@ export const ContactUs = () => {
             <input type="hidden" name="id" value="79264db8fd" />
 
             <FormControl isRequired>
-              <FormLabel>First Name</FormLabel>
+              <FormLabel {...boxLabelStyles}>First Name</FormLabel>
               <Input
                 name="FNAME"
                 type="text"
                 value={firstName}
+                variant="box"
                 onChange={(e) => setFirstName(e.target.value)}
+                placeholder="first name"
               />
             </FormControl>
           </GridItem>
           <GridItem>
             <FormControl isRequired>
-              <FormLabel>Last Name</FormLabel>
+              <FormLabel {...boxLabelStyles}>Last Name</FormLabel>
               <Input
                 name="LNAME"
                 type="text"
                 value={lastName}
+                variant="box"
                 onChange={(e) => setLastName(e.target.value)}
+                placeholder="last name"
               />
             </FormControl>
           </GridItem>
           <GridItem>
             <FormControl isRequired>
-              <FormLabel>Email address</FormLabel>
+              <Box {...boxLabelStyles}>
+                <FormLabel>Email address</FormLabel>
+                <FormHelperText>We'll never share your email.</FormHelperText>
+              </Box>
+
               <Input
                 name="EMAIL"
                 type="email"
                 value={email}
+                variant="box"
                 onChange={(e) => setEmail(e.target.value)}
+                placeholder="email"
               />
-              <FormHelperText>We'll never share your email.</FormHelperText>
             </FormControl>
           </GridItem>
           <GridItem>
             <FormControl>
-              <FormLabel>Message</FormLabel>
+              <FormLabel {...boxLabelStyles}>Message</FormLabel>
               <Textarea
                 name="CONTENT"
                 value={content}
+                variant="box"
+                placeholder="message content"
                 onChange={(e) => setContent(e.target.value)}
               />
             </FormControl>

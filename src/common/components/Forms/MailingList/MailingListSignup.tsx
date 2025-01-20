@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   FormControl,
   FormLabel,
@@ -9,11 +9,16 @@ import {
   Heading,
   Button,
 } from "@chakra-ui/react";
+import { boxLabelStyles } from "../Forms.styles";
 
 export const MailingListSignup = () => {
   return (
     <>
-      <Heading mb={12} size={{ sm: "sm", xl: "md", xxl: "lg" }}>
+      <Heading
+        mb={12}
+        size={{ sm: "sm", xl: "md", xxl: "lg" }}
+        textAlign="center"
+      >
         Sign up for email notifictions.
       </Heading>
 
@@ -25,31 +30,51 @@ export const MailingListSignup = () => {
         target="_blank"
       >
         <Grid templateColumns={{ base: "1fr" }}>
-          <GridItem mb="4">
+          <GridItem>
             <input type="hidden" name="u" value="e1e45fd6e057c2ffc679ea161" />
             <input type="hidden" name="id" value="79264db8fd" />
 
             <FormControl isRequired>
-              <FormLabel>First Name</FormLabel>
-              <Input name="FNAME" type="text" />
+              <FormLabel {...boxLabelStyles}>First Name</FormLabel>
+              <Input
+                name="FNAME"
+                type="text"
+                variant="box"
+                placeholder="first name"
+              />
             </FormControl>
           </GridItem>
-          <GridItem mb="4">
+          <GridItem>
             <FormControl isRequired>
-              <FormLabel>Last Name</FormLabel>
-              <Input name="LNAME" type="text" />
+              <FormLabel {...boxLabelStyles}>Last Name</FormLabel>
+              <Input
+                name="LNAME"
+                type="text"
+                variant="box"
+                placeholder="last name"
+              />
             </FormControl>
           </GridItem>
-          <GridItem mb="4">
+          <GridItem>
             <FormControl>
-              <FormLabel>Position / Role</FormLabel>
-              <Input name="POSITION" type="text" />
+              <FormLabel {...boxLabelStyles}>Position / Role</FormLabel>
+              <Input
+                name="POSITION"
+                type="text"
+                variant="box"
+                placeholder="position"
+              />
             </FormControl>
           </GridItem>
-          <GridItem nb="4">
+          <GridItem>
             <FormControl isRequired>
-              <FormLabel>Email address</FormLabel>
-              <Input name="EMAIL" type="email" />
+              <FormLabel {...boxLabelStyles}>Email address</FormLabel>
+              <Input
+                name="EMAIL"
+                type="email"
+                variant="box"
+                placeholder="email"
+              />
               <FormHelperText>We'll never share your email.</FormHelperText>
             </FormControl>
           </GridItem>

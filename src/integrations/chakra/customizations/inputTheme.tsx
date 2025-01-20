@@ -1,55 +1,31 @@
 import { inputAnatomy } from "@chakra-ui/anatomy";
-import {
-  createMultiStyleConfigHelpers,
-  defineStyle,
-  SystemStyleObject,
-  PartsStyleObject,
-} from "@chakra-ui/react";
+import { createMultiStyleConfigHelpers } from "@chakra-ui/react";
 
 const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(inputAnatomy.keys);
 
-const pill = definePartsStyle({
+const box = definePartsStyle({
   field: {
-    border: "1px solid",
-    borderColor: "gray.200",
-    background: "gray.50",
-    borderRadius: "full",
+    border: 0,
+    borderBottom: "1px solid",
+    borderBottomColor: "black",
 
-    // Let's also provide dark mode alternatives
-    _dark: {
-      borderColor: "gray.600",
-      background: "gray.800",
-    },
-  },
-  addon: {
-    border: "1px solid",
-    borderColor: "gray.200",
-    background: "gray.200",
-    borderRadius: "full",
-    color: "gray.500",
-
-    _dark: {
-      borderColor: "gray.600",
-      background: "gray.600",
-      color: "gray.400",
-    },
+    borderRight: "1px solid",
+    borderRightColor: "black",
   },
 });
 
-const baseStyleField: SystemStyleObject = {
-  border: "1px solid",
-  borderColor: "gray.800",
-  borderRadius: 0,
-};
-
-const baseStyle: PartsStyleObject<typeof inputAnatomy> = {
-  field: baseStyleField,
-};
+const baseStyle = definePartsStyle({
+  // define the part you're going to style
+  field: {
+    borderRadius: 0,
+    padding: "6",
+  },
+});
 
 export const inputTheme = defineMultiStyleConfig({
   baseStyle,
-  // variants: {
-  //   pill,
-  // },
+  variants: {
+    box,
+  },
 });
