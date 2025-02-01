@@ -3,6 +3,7 @@ import logo from "@/common/assets/logos-mitobyte/mb-bw-small.svg";
 import NextImage from "next/image";
 import { ROUTES } from "@/config/routes";
 import { FooterLink } from "./FooterLink";
+import { ImageAndContent } from "../ImageAndContent/ImageAndContent";
 
 export const Footer = () => {
   return (
@@ -82,6 +83,17 @@ export const Footer = () => {
               target="_blank"
             >
               Artisan Hosting
+            </FooterLink>
+          </Text>
+          <Text fontSize="lg" textAlign={{ base: "left", lg: "right" }} mt={4}>
+            Mitobyte Discord{" "}
+            <FooterLink
+              display="inline-block"
+              href="https://discord.gg/bRDpmysPQA"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Discord Server
             </FooterLink>
           </Text>
         </GridItem>
