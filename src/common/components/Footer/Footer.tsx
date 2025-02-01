@@ -86,7 +86,7 @@ export const Footer = () => {
             </FooterLink>
           </Text>
           <Text fontSize="lg" textAlign={{ base: "left", lg: "right" }} mt={4}>
-            Mitobyte Discord{" "}
+            Mitobyte{" "}
             <FooterLink
               display="inline-block"
               href="https://discord.gg/bRDpmysPQA"
