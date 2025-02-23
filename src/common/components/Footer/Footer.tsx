@@ -96,6 +96,17 @@ export const Footer = () => {
               Discord Server
             </FooterLink>
           </Text>
+          <Text fontSize="lg" textAlign={{ base: "left", lg: "right" }} mt={4}>
+            Mitobyte{" "}
+            <FooterLink
+              display="inline-block"
+              href="https://calendar.google.com/calendar/ical/c_6163348bab0e7b89b588ebeda8f5c2cd7109dce92ebb773e22165e78f3072acc%40group.calendar.google.com/public/basic.ics"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Event Calentar
+            </FooterLink>
+          </Text>
         </GridItem>
       </Grid>
     </Box>
