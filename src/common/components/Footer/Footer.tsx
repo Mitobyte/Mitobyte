@@ -100,7 +100,7 @@ export const Footer = () => {
             Mitobyte{" "}
             <FooterLink
               display="inline-block"
-              href="https://calendar.google.com/calendar/ical/c_6163348bab0e7b89b588ebeda8f5c2cd7109dce92ebb773e22165e78f3072acc%40group.calendar.google.com/public/basic.ics"
+              href="https://calendar.google.com/calendar/u/2?cid=Y182MTYzMzQ4YmFiMGU3Yjg5YjU4OGViZWRhOGY1YzJjZDcxMDlkY2U5MmViYjc3M2UyMjE2NWU3OGYzMDcyYWNjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
               rel="noreferrer"
               target="_blank"
             >
