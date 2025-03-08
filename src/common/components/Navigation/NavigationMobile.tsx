@@ -15,6 +15,7 @@ import { FaGrinStars } from "react-icons/fa";
 import { ROUTES } from "@/config/routes";
 
 import { LogoSmallMitobyte } from "../Logos/LogoSmallMitobyte";
+import { MenuLinks } from "./MenuLinks";
 
 export const NavigationMobile = () => {
   const { getDisclosureProps, getButtonProps, isOpen } = useDisclosure();
@@ -39,9 +40,7 @@ export const NavigationMobile = () => {
       id="navbar"
     >
       <Box as="nav" display="flex" alignItems="center">
-        <Link href={ROUTES.ROOT}>
-          <LogoSmallMitobyte />
-        </Link>
+        <MenuLinks />
         <Spacer />
         <Button border={0} variant="outline" {...buttonProps}>
           <Box

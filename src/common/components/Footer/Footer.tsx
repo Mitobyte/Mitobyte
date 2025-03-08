@@ -89,7 +89,7 @@ export const Footer = () => {
             Mitobyte{" "}
             <FooterLink
               display="inline-block"
-              href="https://discord.gg/bRDpmysPQA"
+              href={ROUTES.EXTERNAL.DISCORD}
               rel="noreferrer"
               target="_blank"
             >
@@ -100,7 +100,7 @@ export const Footer = () => {
             Mitobyte{" "}
             <FooterLink
               display="inline-block"
-              href="https://calendar.google.com/calendar/u/2?cid=Y182MTYzMzQ4YmFiMGU3Yjg5YjU4OGViZWRhOGY1YzJjZDcxMDlkY2U5MmViYjc3M2UyMjE2NWU3OGYzMDcyYWNjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
+              href={ROUTES.EXTERNAL.GOOGLE_CALENDAR}
               rel="noreferrer"
               target="_blank"
             >
