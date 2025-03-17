@@ -40,7 +40,11 @@ export const NavigationMobile = () => {
       id="navbar"
     >
       <Box as="nav" display="flex" alignItems="center">
-        <MenuLinks />
+        <Box>
+          <Link href={ROUTES.ROOT} mb={1}>
+            <LogoSmallMitobyte />
+          </Link>
+        </Box>
         <Spacer />
         <Button border={0} variant="outline" {...buttonProps}>
           <Box

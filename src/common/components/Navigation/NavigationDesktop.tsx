@@ -1,8 +1,9 @@
-import { Box, Link, Spacer, Button } from "@chakra-ui/react";
+import { Box, Link, Spacer, Button, LinkOverlay } from "@chakra-ui/react";
 import { FaGrinStars } from "react-icons/fa";
 
 import { ROUTES } from "@/config/routes";
 import { MenuLinks } from "./MenuLinks";
+import { LogoSmallMitobyte } from "../Logos/LogoSmallMitobyte";
 
 export const NavigationDesktop = () => {
   return (
@@ -22,7 +23,11 @@ export const NavigationDesktop = () => {
       id="navbar"
     >
       <Box as="nav" display="flex" alignItems="center">
-        <MenuLinks />
+        <Box>
+          <Link href={ROUTES.ROOT} mb={1}>
+            <LogoSmallMitobyte />
+          </Link>
+        </Box>
         <Box>
           <Link
             href={ROUTES.EVENTS.ROOT}
