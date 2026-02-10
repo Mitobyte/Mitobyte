@@ -15,6 +15,7 @@ export const ROUTES = {
   PRIVACY: "/privacy",
   ABOUT: "/about",
   EXTERNAL: {
+    MERCHANDISE: "https://shop.mitobyte.com/",
     DISCORD: "https://discord.gg/bRDpmysPQA",
     EVENTBRITE:
       "https://www.eventbrite.com/o/code-brews-collective-49824193943",

@@ -66,6 +66,17 @@ export const NavigationDesktop = () => {
           as={Link}
           colorScheme="codeBlue"
           variant="ghost"
+          href={ROUTES.EXTERNAL.MERCHANDISE}
+          fontWeight="700"
+          fontSize="xl"
+          size="lg"
+        >
+          Merchandise
+        </Button>
+        <Button
+          as={Link}
+          colorScheme="codeBlue"
+          variant="ghost"
           href={ROUTES.SPONSORS}
           fontWeight="700"
           fontSize="xl"
