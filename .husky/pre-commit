@@ -1,5 +1,7 @@
 # In file .husky/pre-commit
 
+eval "$(mise activate bash --shims)" 2>/dev/null || true
+
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 

@@ -6,7 +6,7 @@ import { SectionEventsLink } from "./SectionEventsLink";
 import { SectionAboutUs } from "./SectionAboutUs";
 import { SectionStats } from "./SectionStats";
 import { SectionFaq } from "./SectionSponsorFaq";
-import { SectionTeam } from "./SectionTeam";
+// import { SectionTeam } from "./SectionTeam";
 import { Divider } from "@chakra-ui/react";
 import { SectionContact } from "./SectionContact";
 
@@ -26,7 +26,7 @@ export const PageHome = () => {
       <SectionSponsors paddingTop={20} paddingBottom={10} maxWidth="100%" />
       <SectionFaq maxWidth="7xl" paddingTop={10} paddingBottom={20} />
       <Divider borderColor="syntaxBlack.500" />
-      <SectionTeam maxWidth="7xl" paddingTop={20} paddingBottom={20} />
+      {/* <SectionTeam maxWidth="7xl" paddingTop={20} paddingBottom={20} /> */}
       <SectionContact maxWidth="7xl" paddingTop={20} paddingBottom={20} />
     </>
   );
