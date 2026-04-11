@@ -93,11 +93,7 @@ export const Conduct = () => {
       </Heading>
       <Text fontSize="lg" mb={4}>
         You can make a personal report by contacting a group organizer on your
-        local Meetup or emailing Allan Wick{" "}
-        <Link color="codeBlue.400" href="mailto:allan@mitobyte.com" isExternal>
-          allan@mitobyte.com
-        </Link>{" "}
-        or Joseph Murphy at{" "}
+        local Meetup or emailing Joseph Murphy at{" "}
         <Link color="codeBlue.400" href="mailto:joe@mitobyte.com" isExternal>
           joe@mitobyte.com
         </Link>

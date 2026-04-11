@@ -12,7 +12,6 @@ import { RiArrowRightUpLine } from "react-icons/ri";
 import { Link } from "@chakra-ui/next-js";
 
 import joe from "@/common/assets/images/people/profile-joe.jpg";
-import allan from "@/common/assets/images/people/profile-allan.jpg";
 import { ROUTES } from "@/config/routes";
 
 export interface SectionTeamProps extends Omit<WrapperProps, "children"> {}
@@ -54,14 +53,7 @@ export const SectionTeam = ({
           <Heading mt={4} as="h6" size="md">
             Joseph Murphy
           </Heading>
-          <Text>Software Engineer @ Little Otter</Text>
-        </GridItem>
-        <GridItem>
-          <NextImage src={allan} height={450} width={450} alt="allan wick" />
-          <Heading mt={4} as="h6" size="md">
-            Allan Wick
-          </Heading>
-          <Text>Software Engineer @ Tactacam</Text>
+          <Text>Software Engineer</Text>
         </GridItem>
         <GridItem>
           <Link as={Link} href={ROUTES.TEAM}>

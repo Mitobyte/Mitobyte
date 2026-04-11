@@ -2,7 +2,6 @@ import { Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 import NextImage from "next/image";
 
 import joe from "@/common/assets/images/people/profile-joe.jpg";
-import allan from "@/common/assets/images/people/profile-allan.jpg";
 import blaze from "@/common/assets/images/people/profile-blaze.jpg";
 import paul from "@/common/assets/images/people/profile-paul.jpg";
 
@@ -53,26 +52,6 @@ export const SectionTeam = ({
               />
             </GridItem>
           </Grid>
-        </GridItem>
-        <GridItem>
-          <GridItem>
-            <Grid templateColumns={{ base: "1fr", md: "2fr 1fr" }}>
-              <GridItem order={{ base: 1, md: 0 }}>
-                <Heading as="h6" size="xl">
-                  Allan Wick
-                </Heading>
-                <Text fontSize="xl">Software Engineer @ Tactacam</Text>
-              </GridItem>
-              <GridItem order={{ base: 0, md: 1 }}>
-                <NextImage
-                  src={allan}
-                  height={400}
-                  width={400}
-                  alt="allan wick"
-                />
-              </GridItem>
-            </Grid>
-          </GridItem>
         </GridItem>
         <GridItem>
           <Grid templateColumns={{ base: "1fr", md: "2fr 1fr" }}>
