@@ -3,13 +3,27 @@ import { CreateEmailOptions, Resend } from "resend";
 
 export const runtime = "edge";
 
+// Form values are interpolated into the email HTML below; unescaped input
+// would let a submitter inject markup into the email we receive.
+const escapeHtml = (value: unknown) =>
+  String(value ?? "").replace(
+    /[&<>"']/g,
+    (ch) =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[
+        ch
+      ] as string,
+  );
+
 export const POST = async (req: NextRequest) => {
   try {
     // Instantiated per request: the constructor throws without a key, which
     // breaks `next build` in environments where RESEND_API_KEY is not set.
     const resend = new Resend(process.env.RESEND_API_KEY);
     // Parse the request body to extract form data
-    const { name, email, message } = await req.json();
+    const body = await req.json();
+    const name = escapeHtml(body.name);
+    const email = escapeHtml(body.email);
+    const message = escapeHtml(body.message);
 
     // Define the email options based on whether an attachment is provided
     let mailOptions;
