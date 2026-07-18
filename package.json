@@ -16,7 +16,8 @@
     "deploy": "npm run pages:build && wrangler pages deploy",
     "prepare": "husky",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "postinstall": "chakra typegen ./src/integrations/chakra/mitobyte-theme.ts"
   },
   "dependencies": {
     "@chakra-ui/react": "^3.36.0",
@@ -29,6 +30,7 @@
     "sharp": "^0.33.5"
   },
   "devDependencies": {
+    "@chakra-ui/cli": "^3.36.0",
     "@chromatic-com/storybook": "^1.9.0",
     "@cloudflare/next-on-pages": "1.13.2",
     "@storybook/addon-essentials": "8.3.5",

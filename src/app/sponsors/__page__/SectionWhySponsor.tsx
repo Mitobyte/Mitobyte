@@ -1,8 +1,10 @@
 import { Heading, Text, Box } from "@chakra-ui/react";
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
-export interface SectionWhySponsorProps
-  extends Omit<WrapperProps, "children"> {}
+export interface SectionWhySponsorProps extends Omit<
+  WrapperProps,
+  "children"
+> {}
 
 export const SectionWhySponsor = ({
   background,

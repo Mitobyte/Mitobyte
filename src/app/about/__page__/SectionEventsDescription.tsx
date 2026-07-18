@@ -8,8 +8,10 @@ import { FaHandHoldingHeart } from "react-icons/fa";
 
 const iconSize = "125px";
 
-export interface SectionDescriptionProps
-  extends Omit<WrapperProps, "children"> {}
+export interface SectionDescriptionProps extends Omit<
+  WrapperProps,
+  "children"
+> {}
 
 export const SectionEventsDescription = ({
   background,

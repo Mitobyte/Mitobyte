@@ -1,5 +1,12 @@
-import { Heading, Text, Button, Icon, GridItem, Grid } from "@chakra-ui/react";
-import { Link } from "@chakra-ui/next-js";
+import {
+  Heading,
+  Text,
+  Button,
+  Icon,
+  GridItem,
+  Grid,
+  Link,
+} from "@chakra-ui/react";
 import NextImage from "next/image";
 import { FaChevronCircleRight } from "react-icons/fa";
 
@@ -69,8 +76,6 @@ export const SectionHero = ({
             </GridItem>
             <GridItem alignSelf="end">
               <Button
-                as={Link}
-                href={ROUTES.EVENTS.ROOT}
                 size="lg"
                 mt={6}
                 bg="codeBlue.500"
@@ -78,9 +83,12 @@ export const SectionHero = ({
                 width={{ base: "100%", sm: "auto" }}
                 _hover={{ bg: "codeBlue.700", textDecoration: "none" }}
                 _active={{ bg: "codeBlue.600" }}
-                rightIcon={<FaChevronCircleRight />}
+                asChild
               >
-                View events and register
+                <Link href={ROUTES.EVENTS.ROOT}>
+                  View events and register
+                  <FaChevronCircleRight />
+                </Link>
               </Button>
             </GridItem>
           </Grid>

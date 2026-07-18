@@ -1,7 +1,6 @@
-import { Button, Heading, Text } from "@chakra-ui/react";
+import { Button, Heading, Text, Link } from "@chakra-ui/react";
 import { LiaHandsHelpingSolid } from "react-icons/lia";
 import { AiOutlineMail } from "react-icons/ai";
-import { Link } from "@chakra-ui/next-js";
 
 import { ROUTES } from "@/config/routes";
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
@@ -41,29 +40,20 @@ export const SectionHeading = ({
         opportunities for the next generation of tech talent by becoming a
         sponsor.
       </Text>
-      <Button
-        as="a"
-        size="lg"
-        colorScheme="codeBlue"
-        leftIcon={<AiOutlineMail size="25px" />}
-        href={ROUTES.CONTACT_US}
-        mr={3}
-      >
-        Contact
+      <Button size="lg" colorPalette="codeBlue" mr={3} asChild>
+        <a href={ROUTES.CONTACT_US}>
+          <AiOutlineMail size="25px" />
+          Contact
+        </a>
       </Button>{" "}
       <Text fontSize="2xl" display="inline-block" mr={3}>
         or
       </Text>{" "}
-      <Button
-        as={Link}
-        variant="solid"
-        size="lg"
-        colorScheme="deployOrange"
-        leftIcon={<LiaHandsHelpingSolid size="25px" />}
-        href={ROUTES.EXTERNAL.HACK_CLUB}
-        target="_blank"
-      >
-        Contribute
+      <Button variant="solid" size="lg" colorPalette="deployOrange" asChild>
+        <Link href={ROUTES.EXTERNAL.HACK_CLUB} target="_blank">
+          <LiaHandsHelpingSolid size="25px" />
+          Contribute
+        </Link>
       </Button>
     </Wrapper>
   );

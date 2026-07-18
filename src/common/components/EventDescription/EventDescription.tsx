@@ -1,10 +1,4 @@
-import {
-  Grid,
-  GridItem,
-  Heading,
-  ListItem,
-  UnorderedList,
-} from "@chakra-ui/react";
+import { Grid, GridItem, Heading, List } from "@chakra-ui/react";
 
 interface EventDescriptionProps {
   title: string;
@@ -27,13 +21,13 @@ export const EventDescription = ({
         <Heading mb={3} size="lg">
           {title}
         </Heading>
-        <UnorderedList>
+        <List.Root as="ul">
           {description.map((desc) => (
-            <ListItem key={desc} fontSize="md">
+            <List.Item key={desc} fontSize="md">
               {desc}
-            </ListItem>
+            </List.Item>
           ))}
-        </UnorderedList>
+        </List.Root>
       </GridItem>
       <GridItem>{imageSlot}</GridItem>
     </Grid>

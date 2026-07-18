@@ -2,8 +2,10 @@ import React from "react";
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 import { MailingListSignup } from "@/common/components/Forms/MailingList/MailingListSignup";
 
-export interface SectionEventsLinkProps
-  extends Omit<WrapperProps, "children"> {}
+export interface SectionEventsLinkProps extends Omit<
+  WrapperProps,
+  "children"
+> {}
 
 export const MailingListSignupSection = ({
   maxWidth,

@@ -1,19 +1,17 @@
 import React, { useState, SyntheticEvent } from "react";
 import {
-  FormControl,
-  FormLabel,
-  FormHelperText,
   Grid,
   GridItem,
   Input,
   Textarea,
   Button,
   Box,
-  InputLeftAddon,
-  InputGroup,
+  InputAddon,
+  Group,
+  Field,
 } from "@chakra-ui/react";
 import { boxLabelStyles } from "../Forms.styles";
-import { ChevronRightIcon } from "@chakra-ui/icons";
+import { LuChevronRight } from "react-icons/lu";
 
 export const ContactUs = () => {
   const [buttonText, setButtonText] = useState("SUBMIT FORM");
@@ -72,12 +70,12 @@ export const ContactUs = () => {
             <input type="hidden" name="u" value="e1e45fd6e057c2ffc679ea161" />
             <input type="hidden" name="id" value="79264db8fd" />
 
-            <FormControl isRequired>
-              <FormLabel {...boxLabelStyles}>First Name</FormLabel>
-              <InputGroup variant="box">
-                <InputLeftAddon>
-                  <ChevronRightIcon />
-                </InputLeftAddon>
+            <Field.Root required>
+              <Field.Label {...boxLabelStyles}>First Name</Field.Label>
+              <Group attached w="full">
+                <InputAddon variant="box">
+                  <LuChevronRight />
+                </InputAddon>
                 <Input
                   name="FNAME"
                   type="text"
@@ -86,16 +84,16 @@ export const ContactUs = () => {
                   onChange={(e) => setFirstName(e.target.value)}
                   placeholder="enter first name"
                 />
-              </InputGroup>
-            </FormControl>
+              </Group>
+            </Field.Root>
           </GridItem>
           <GridItem>
-            <FormControl isRequired>
-              <FormLabel {...boxLabelStyles}>Last Name</FormLabel>
-              <InputGroup variant="box">
-                <InputLeftAddon>
-                  <ChevronRightIcon />
-                </InputLeftAddon>
+            <Field.Root required>
+              <Field.Label {...boxLabelStyles}>Last Name</Field.Label>
+              <Group attached w="full">
+                <InputAddon variant="box">
+                  <LuChevronRight />
+                </InputAddon>
                 <Input
                   name="LNAME"
                   type="text"
@@ -104,19 +102,21 @@ export const ContactUs = () => {
                   onChange={(e) => setLastName(e.target.value)}
                   placeholder="enter last name"
                 />
-              </InputGroup>
-            </FormControl>
+              </Group>
+            </Field.Root>
           </GridItem>
           <GridItem>
-            <FormControl isRequired>
+            <Field.Root required>
               <Box {...boxLabelStyles}>
-                <FormLabel>Email address</FormLabel>
-                <FormHelperText>We'll never share your email.</FormHelperText>
+                <Field.Label>Email address</Field.Label>
+                <Field.HelperText>
+                  We'll never share your email.
+                </Field.HelperText>
               </Box>
-              <InputGroup variant="box">
-                <InputLeftAddon>
-                  <ChevronRightIcon />
-                </InputLeftAddon>
+              <Group attached w="full">
+                <InputAddon variant="box">
+                  <LuChevronRight />
+                </InputAddon>
                 <Input
                   name="EMAIL"
                   type="email"
@@ -125,16 +125,16 @@ export const ContactUs = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="enter email"
                 />
-              </InputGroup>
-            </FormControl>
+              </Group>
+            </Field.Root>
           </GridItem>
           <GridItem>
-            <FormControl>
-              <FormLabel {...boxLabelStyles}>Message</FormLabel>
-              <InputGroup variant="box">
-                <InputLeftAddon>
-                  <ChevronRightIcon />
-                </InputLeftAddon>
+            <Field.Root>
+              <Field.Label {...boxLabelStyles}>Message</Field.Label>
+              <Group attached w="full">
+                <InputAddon variant="box">
+                  <LuChevronRight />
+                </InputAddon>
                 <Textarea
                   name="CONTENT"
                   value={content}
@@ -142,15 +142,15 @@ export const ContactUs = () => {
                   placeholder="enter message here"
                   onChange={(e) => setContent(e.target.value)}
                 />
-              </InputGroup>
-            </FormControl>
+              </Group>
+            </Field.Root>
           </GridItem>
           <GridItem mt="4">
             <Button
               type="submit"
               width="full"
               size="lg"
-              colorScheme="codeBlue"
+              colorPalette="codeBlue"
               variant="ghost"
             >
               {buttonText}

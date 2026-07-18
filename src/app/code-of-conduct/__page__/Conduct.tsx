@@ -1,11 +1,4 @@
-import {
-  Box,
-  Heading,
-  Text,
-  UnorderedList,
-  ListItem,
-  Link,
-} from "@chakra-ui/react";
+import { Box, Heading, Text, Link, List } from "@chakra-ui/react";
 
 export const Conduct = () => {
   return (
@@ -35,24 +28,25 @@ export const Conduct = () => {
       <Heading as="h2" size="md" mt={6} mb={2}>
         Harassment includes, but is not limited to:
       </Heading>
-      <UnorderedList mb={4}>
-        <ListItem>
+      <List.Root as="ul" mb={4}>
+        <List.Item>
           Verbal comments that reinforce social structures of domination related
           to gender, gender identity and expression, sexual orientation,
           disability, physical appearance, body size, race, age, religion, or
           level of experience
-        </ListItem>
-        <ListItem>Sexual images in public spaces</ListItem>
-        <ListItem>Deliberate intimidation, stalking, or following</ListItem>
-        <ListItem>Harassing photography or recording</ListItem>
-        <ListItem>Sustained disruption of discussion or other events</ListItem>
-        <ListItem>Inappropriate physical contact</ListItem>
-        <ListItem>Unwelcome sexual attention</ListItem>
-        <ListItem>
+        </List.Item>
+        <List.Item>Sexual images in public spaces</List.Item>
+        <List.Item>Deliberate intimidation, stalking, or following</List.Item>
+        <List.Item>Harassing photography or recording</List.Item>
+        <List.Item>
+          Sustained disruption of discussion or other events
+        </List.Item>
+        <List.Item>Inappropriate physical contact</List.Item>
+        <List.Item>Unwelcome sexual attention</List.Item>
+        <List.Item>
           Advocating for, or encouraging, any of the above behavior
-        </ListItem>
-      </UnorderedList>
-
+        </List.Item>
+      </List.Root>
       <Heading as="h2" size="md" mt={6} mb={2}>
         Enforcement
       </Heading>
@@ -64,7 +58,6 @@ export const Conduct = () => {
         offender or expulsion from the event. We expect participants to follow
         these rules at all event venues and event-related social activities.
       </Text>
-
       <Heading as="h2" size="md" mt={6} mb={2}>
         Reporting
       </Heading>
@@ -78,7 +71,6 @@ export const Conduct = () => {
       <Text fontSize="lg" mb={4}>
         You can make a report either personally or anonymously.
       </Text>
-
       <Heading as="h3" size="sm" mt={4} mb={2}>
         Anonymous Report
       </Heading>
@@ -87,19 +79,22 @@ export const Conduct = () => {
         with you directly, but we will fully investigate it and take whatever
         action is necessary to prevent a recurrence.
       </Text>
-
       <Heading as="h3" size="sm" mt={4} mb={2}>
         Personal Report
       </Heading>
       <Text fontSize="lg" mb={4}>
         You can make a personal report by contacting a group organizer on your
         local Meetup or emailing Joseph Murphy at{" "}
-        <Link color="codeBlue.400" href="mailto:joe@mitobyte.com" isExternal>
+        <Link
+          color="codeBlue.400"
+          href="mailto:joe@mitobyte.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           joe@mitobyte.com
         </Link>
         .
       </Text>
-
       <Text fontSize="lg" mb={4}>
         When taking a personal report, our organizers may involve other
         organizers to ensure your report is managed properly. This can be
@@ -107,18 +102,16 @@ export const Conduct = () => {
         include someone to support you. You won't be asked to confront anyone
         and we won't tell anyone who you are.
       </Text>
-
       <Text fontSize="lg" mb={4}>
         Our team will be happy to help you contact law enforcement, provide
         escorts, or otherwise assist you to feel safe for the duration of the
         event. We value your attendance.
       </Text>
-
       <Heading as="h2" size="md" mt={6} mb={2}>
         More Resources
       </Heading>
-      <UnorderedList mb={4}>
-        <ListItem>
+      <List.Root as="ul" mb={4}>
+        <List.Item>
           National Domestic Violence Hotline: 1-800-799-7233 SMS: Text START to
           88788 or{" "}
           <Link
@@ -126,25 +119,22 @@ export const Conduct = () => {
             target="_blank"
             href="https://www.thehotline.org"
             rel="noreferrer"
-            isExternal
           >
             Chat online
           </Link>
-        </ListItem>
-        <ListItem>
+        </List.Item>
+        <List.Item>
           Report unlawful discrimination online to{" "}
           <Link
             color="codeBlue.400"
             target="_blank"
             href="https://civilrights.justice.gov/report/"
             rel="noreferrer"
-            isExternal
           >
             US Department of Justice Civil Rights Division
           </Link>
-        </ListItem>
-      </UnorderedList>
-
+        </List.Item>
+      </List.Root>
       <Heading as="h2" size="md" mt={6} mb={2}>
         Attribution
       </Heading>

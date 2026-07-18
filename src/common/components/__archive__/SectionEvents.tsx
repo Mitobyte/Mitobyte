@@ -50,8 +50,8 @@ export const SectionEvents = ({
       />
       <SimpleGrid
         columns={[3, null]}
-        spacingX={9}
-        spacingY={9}
+        columnGap={9}
+        rowGap={9}
         alignItems="stretch"
       >
         <CardEvent

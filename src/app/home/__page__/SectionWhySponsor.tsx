@@ -1,11 +1,12 @@
-import { Heading, Text, Box, Flex, Button } from "@chakra-ui/react";
+import { Heading, Text, Box, Flex, Button, Link } from "@chakra-ui/react";
 import { ListPoint } from "@/common/components/ListPoint/ListPoint";
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
-import { Link } from "@chakra-ui/next-js";
 import { ROUTES } from "@/config/routes";
 
-export interface SectionWhySponsorProps
-  extends Omit<WrapperProps, "children"> {}
+export interface SectionWhySponsorProps extends Omit<
+  WrapperProps,
+  "children"
+> {}
 
 export const SectionWhySponsor = ({
   background,
@@ -51,15 +52,14 @@ export const SectionWhySponsor = ({
       </Box>
       <Flex alignItems="center">
         <Button
-          as={Link}
           mt="12"
-          href={ROUTES.SPONSORS}
           size="lg"
           variant="solid"
-          colorScheme="blue"
+          colorPalette="blue"
           flex="1"
+          asChild
         >
-          Learn More
+          <Link href={ROUTES.SPONSORS}>Learn More</Link>
         </Button>
       </Flex>
     </Wrapper>

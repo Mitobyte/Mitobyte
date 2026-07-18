@@ -40,7 +40,7 @@ export const CardSimpleWide = ({
   return (
     <Grid gap={2} gridTemplateColumns={gridTemplateColumns}>
       <GridItem>
-        <Image as={NextImage} src={imageUrl} alt={imageAlt} width={150} />
+        <Image src={imageUrl} alt={imageAlt} width="150px" />
       </GridItem>
       <GridItem>
         <Heading textAlign="center" fontSize="lg">

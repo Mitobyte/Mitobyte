@@ -1,6 +1,7 @@
 "use client";
 
-import { Box, keyframes } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import { keyframes } from "@emotion/react";
 import NextImage from "next/image";
 
 import logoCaredirect from "@/common/assets/logos-sponsors/logo-caredirect.png";
@@ -64,18 +65,18 @@ const InnerCarousel = () => {
       >
         {sponsors.map((sponsor) => (
           <Box
-            as={NextImage}
+            key={sponsor.name}
             flexBasis={sponsor.width}
             height={sponsor.height}
             marginLeft="2rem"
             marginRight="2rem"
             display="inline-block"
             width={sponsor.width}
-            alt="sponsor"
             objectFit="contain"
-            src={sponsor.logo}
-            key={sponsor.name}
-          />
+            asChild
+          >
+            <NextImage src={sponsor.logo} alt="sponsor" />
+          </Box>
         ))}
       </Box>
       <Box

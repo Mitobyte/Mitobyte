@@ -1,7 +1,7 @@
 # Dependency Migration Plan
 
 **Session:** 2026-07-17
-**Status:** Phase 0 complete (2026-07-17). Phases 1 through 4 not started.
+**Status:** Phases 0, 1, and 2 complete (2026-07-18). Phases 3 and 4 not started.
 **Scope:** Full dependency modernization of the mitobyte site, preceded by package manager hardening.
 
 ## Why
@@ -84,6 +84,25 @@ Done on Next 14 / React 18, which Chakra 3 supports. This isolates the largest c
 7. Consider deleting `src/app/home/__page__/SectionContact.tsx` (self-described placeholder, loads a Mailchimp script but was never finished).
 
 Verification: every page visually checked against production, stories build, no Chakra 2 imports remain (`grep` for `@chakra-ui/icons`, `@chakra-ui/next-js`, `framer-motion`).
+
+### Phase 1 completion notes (2026-07-18)
+
+- Removed the `env` block and `productionBrowserSourceMaps` from next.config.mjs (now empty config). Key rotation not done; still optional.
+- Removed the eight dead dependencies plus `@next/bundle-analyzer` (imported nowhere, not even in next.config).
+- next and eslint-config-next bumped to 14.2.35. `npm audit` went from 72 vulnerabilities (6 critical) to 56 (0 critical); the rest live under Storybook/webpack tooling that Phase 4 clears.
+- User input is now HTML-escaped before interpolation into the contact email (send-email route).
+- `@storybook/nextjs` pinned exactly to 8.3.5; its caret range was pulling 8.6.x and conflicting with the exact-pinned `storybook` package. Resolves in Phase 4.
+
+### Phase 2 completion notes (2026-07-18)
+
+- @chakra-ui/react 3.36.0 installed; @chakra-ui/icons, @chakra-ui/next-js, framer-motion, and @emotion/styled removed. Dependencies are down to 8 packages.
+- Theme rewritten as `createSystem(defaultConfig, defineConfig(...))` in `src/integrations/chakra/mitobyte-theme.ts` (exported as `system`; the Chakra CLI requires that name). Custom breakpoints, brand palettes, fonts, and font sizes ported as value-wrapped tokens; semantic tokens added per brand palette so `colorPalette="codeBlue"` etc. resolve (solid maps to the 300 shade, matching the v2 usage). Input/InputAddon/Textarea "box" variants ported as recipe extensions; the accordion customization as a slot recipe. The customizations directory and unused ChakraImage.tsx were deleted.
+- `@chakra-ui/cli` added as a devDependency with a `postinstall` typegen script; custom tokens/variants do not typecheck without it, and the generated types live in node_modules so every fresh install must regenerate them.
+- The official codemod (`npx @chakra-ui/codemod transform <name> ./src`, all transforms in the removed/components/props/types groups) did the bulk of the 73-file sweep, including the @chakra-ui/next-js Link replacement and icon migration to react-icons. Known codemod bugs fixed by hand afterward: a spurious `Steps` import added to every touched file, `onChange` wrongly renamed to `onValueChange` on plain Input/Textarea, a doubled `asChild` on one Link, and v2 InputGroup/InputLeftAddon structure left behind (rebuilt as `Group attached` + `InputAddon`).
+- Other hand fixes: `keyframes` imports moved to @emotion/react, v3 `useDisclosure` API in NavigationMobile (no more getButtonProps/getDisclosureProps), `MenuGroup` to `Menu.ItemGroup`, nested `.icon`/`.deco` hover selectors prefixed with `&`, Card.Footer `justify` to `justifyContent`, NextImage props moved onto the child in asChild compositions.
+- Deleted `SectionContact.tsx` (home page placeholder): it returned null before any JSX, so removal changes nothing visually.
+- Also removed per user request (2026-07-18): the Merchandise link in desktop and mobile navigation and the `ROUTES.EXTERNAL.MERCHANDISE` config entry (the store is no longer controlled by the team).
+- Verification: `tsc --noEmit` zero errors, production build green, all 13 routes return 200 with full-sized HTML from `next start`, zero v2 imports remain. Storybook stories typecheck but Storybook itself was not run (its Chakra 3 compatibility gets resolved with the Phase 4 upgrade).
 
 ## Phase 3: Next 16, React 19, OpenNext on Workers
 

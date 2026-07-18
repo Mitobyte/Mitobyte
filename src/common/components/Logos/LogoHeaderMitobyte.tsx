@@ -1,4 +1,5 @@
-import { Box, Flex, keyframes } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
+import { keyframes } from "@emotion/react";
 import NextImage from "next/image";
 
 import logo from "@/common/assets/logos-mitobyte/mb-lg.svg";

@@ -74,20 +74,17 @@ export const SectionProjects = ({
             challenges to return the man home and prevent the kingdoms of
             Anáhuac from falling into chaos.
           </Text>
-          <Button
-            target="_blank"
-            colorScheme="codeBlue"
-            mb={10}
-            ml={6}
-            as="a"
-            rel="noreferrer"
-            href="https://www.kickstarter.com/projects/ben-juarez/nuyulu-story?ref=discovery&term=nuyulu&total_hits=1&category_id=272"
-          >
-            Support Ben's Project
+          <Button colorPalette="codeBlue" mb={10} ml={6} asChild>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.kickstarter.com/projects/ben-juarez/nuyulu-story?ref=discovery&term=nuyulu&total_hits=1&category_id=272"
+            >
+              Support Ben's Project
+            </a>
           </Button>
         </GridItem>
       </Grid>
-
       <Grid
         gridTemplateColumns={{ base: "1fr", lg: "1fr 1fr" }}
         gap={6}
@@ -109,15 +106,13 @@ export const SectionProjects = ({
             for user interactions with the AI, enhancing coding efficiency and
             productivity.
           </Text>
-          <Button
-            target="_blank"
-            colorScheme="codeBlue"
-            ml={6}
-            mb={10}
-            as="a"
-            href="https://github.com/0112Derrick/ollamaCopilot"
-          >
-            View Derrick's Project
+          <Button colorPalette="codeBlue" ml={6} mb={10} asChild>
+            <a
+              target="_blank"
+              href="https://github.com/0112Derrick/ollamaCopilot"
+            >
+              View Derrick's Project
+            </a>
           </Button>
         </GridItem>
         <GridItem order={{ base: -1, lg: 1 }}>

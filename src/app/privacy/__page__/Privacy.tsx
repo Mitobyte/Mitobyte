@@ -1,9 +1,9 @@
-import { Box, Heading, Text, VStack, ListItem, List } from "@chakra-ui/react";
+import { Box, Heading, Text, VStack, List } from "@chakra-ui/react";
 
 export const Privacy = () => {
   return (
     <Box maxW="800px" mx="auto" p={6} my={20}>
-      <VStack align="start" spacing={5}>
+      <VStack align="start" gap={5}>
         {/* Privacy Policy Heading */}
         <Heading as="h1" size="2xl">
           Mitobyte Privacy Policy
@@ -29,27 +29,27 @@ export const Privacy = () => {
           We may collect the following types of personal information when you
           interact with us:
         </Text>
-        <List spacing={3}>
-          <ListItem>
+        <List.Root gap={3}>
+          <List.Item>
             Personal Information: Name, email address, phone number, and contact
             details when you register for events, sign up for newsletters, or
             contact us directly.
-          </ListItem>
-          <ListItem>
+          </List.Item>
+          <List.Item>
             Payment Information: Billing address, credit card, or other
             financial data for event payments or sponsorship transactions
             (processed securely by third-party payment processors).
-          </ListItem>
-          <ListItem>
+          </List.Item>
+          <List.Item>
             Event Data: Information related to your participation in events,
             including photos, video recordings, and feedback surveys.
-          </ListItem>
-          <ListItem>
+          </List.Item>
+          <List.Item>
             Technical Data: IP addresses, browser type, and other technical
             information collected via cookies or similar tracking technologies
             when you visit our website.
-          </ListItem>
-        </List>
+          </List.Item>
+        </List.Root>
 
         {/* Section 2: How We Use Your Information */}
         <Heading as="h2" size="lg">
@@ -58,28 +58,28 @@ export const Privacy = () => {
         <Text>
           We use the information we collect for the following purposes:
         </Text>
-        <List spacing={3}>
-          <ListItem>
+        <List.Root gap={3}>
+          <List.Item>
             Event Management: To organize and manage events, including
             registration, communication, and logistics.
-          </ListItem>
-          <ListItem>
+          </List.Item>
+          <List.Item>
             Communication: To send you information about upcoming events,
             workshops, and important updates.
-          </ListItem>
-          <ListItem>
+          </List.Item>
+          <List.Item>
             Improvement of Services: To analyze trends, improve our website, and
             enhance user experience.
-          </ListItem>
-          <ListItem>
+          </List.Item>
+          <List.Item>
             Marketing: To send promotional materials, newsletters, and special
             offers. You can opt-out of marketing communications at any time.
-          </ListItem>
-          <ListItem>
+          </List.Item>
+          <List.Item>
             Compliance: To comply with legal obligations and prevent fraud or
             misuse of our services.
-          </ListItem>
-        </List>
+          </List.Item>
+        </List.Root>
 
         {/* Section 3: How We Share Your Information */}
         <Heading as="h2" size="lg">
@@ -89,24 +89,24 @@ export const Privacy = () => {
           We do not sell or rent your personal information to third parties. We
           may share your information in the following circumstances:
         </Text>
-        <List spacing={3}>
-          <ListItem>
+        <List.Root gap={3}>
+          <List.Item>
             Service Providers: We work with third-party service providers (e.g.,
             event platforms, payment processors) to assist in delivering our
             services. These providers are bound by confidentiality agreements
             and are only permitted to use your information for specified
             purposes.
-          </ListItem>
-          <ListItem>
+          </List.Item>
+          <List.Item>
             Event Sponsors: With your consent, we may share your contact
             information with event sponsors, especially when you participate in
             sponsored activities.
-          </ListItem>
-          <ListItem>
+          </List.Item>
+          <List.Item>
             Legal Requirements: We may disclose your information if required by
             law or in response to valid legal requests from public authorities.
-          </ListItem>
-        </List>
+          </List.Item>
+        </List.Root>
 
         {/* Section 4: Data Security */}
         <Heading as="h2" size="lg">
@@ -142,25 +142,25 @@ export const Privacy = () => {
           Depending on your location, you may have certain rights regarding your
           personal data, such as:
         </Text>
-        <List spacing={3}>
-          <ListItem>
+        <List.Root gap={3}>
+          <List.Item>
             Access: You can request access to the personal information we hold
             about you.
-          </ListItem>
-          <ListItem>
+          </List.Item>
+          <List.Item>
             Correction: You can ask us to update or correct your personal data
             if it's inaccurate.
-          </ListItem>
-          <ListItem>
+          </List.Item>
+          <List.Item>
             Deletion: You can request that we delete your personal data, subject
             to certain legal obligations.
-          </ListItem>
-          <ListItem>
+          </List.Item>
+          <List.Item>
             Opt-Out: You may opt out of receiving marketing communications at
             any time by following the unsubscribe instructions in the emails we
             send.
-          </ListItem>
-        </List>
+          </List.Item>
+        </List.Root>
 
         {/* Section 7: Data Retention */}
         <Heading as="h2" size="lg">
@@ -203,10 +203,10 @@ export const Privacy = () => {
           If you have any questions or concerns about this Privacy Policy or our
           data practices, please contact us at:
         </Text>
-        <List spacing={3}>
-          <ListItem>**Mitobyte**</ListItem>
-          <ListItem>contact@mitobyte.com</ListItem>
-        </List>
+        <List.Root gap={3}>
+          <List.Item>**Mitobyte**</List.Item>
+          <List.Item>contact@mitobyte.com</List.Item>
+        </List.Root>
 
         {/* Consent Section */}
         <Heading as="h2" size="lg">

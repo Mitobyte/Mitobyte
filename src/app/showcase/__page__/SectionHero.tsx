@@ -2,8 +2,7 @@ import { LogoEventbrite } from "@/common/components/Logos/LogoEventbrite";
 import { LogoMeetup } from "@/common/components/Logos/LogoMeetup.tsx";
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 import { ROUTES } from "@/config/routes";
-import { Link } from "@chakra-ui/next-js";
-import { Button, Grid, Heading, Text } from "@chakra-ui/react";
+import { Button, Grid, Heading, Text, Link } from "@chakra-ui/react";
 
 export interface SectionHeroProps extends Omit<WrapperProps, "children"> {}
 

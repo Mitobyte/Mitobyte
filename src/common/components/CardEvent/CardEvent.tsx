@@ -1,13 +1,6 @@
-import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-} from "@chakra-ui/react";
-import { Link } from "@chakra-ui/next-js";
-import { InfoIcon } from "@chakra-ui/icons";
+import { Button, Card, Link } from "@chakra-ui/react";
 import NextImage, { StaticImageData } from "next/image";
+import { LuInfo } from "react-icons/lu";
 
 export interface CardEventProps {
   heading: string;
@@ -31,8 +24,8 @@ export const CardEvent = ({
   showLink = true,
 }: CardEventProps) => {
   return (
-    <Card maxW="md">
-      <CardHeader pb={2}>
+    <Card.Root maxW="md">
+      <Card.Header pb={2}>
         <NextImage
           objectFit="cover"
           src={imageSrc}
@@ -40,33 +33,28 @@ export const CardEvent = ({
           width={150}
           height={150}
         />
-      </CardHeader>
-
-      <CardBody>{description}</CardBody>
-
-      <CardFooter
-        justify="space-between"
+      </Card.Header>
+      <Card.Body>{description}</Card.Body>
+      <Card.Footer
+        justifyContent="space-between"
         flexWrap="wrap"
         columnGap={1}
         rowGap={1}
-        sx={{
+        css={{
           "& > button": {
             minW: "136px",
           },
         }}
       >
         {showLink && (
-          <Button
-            as={Link}
-            flex="1"
-            variant="ghost"
-            leftIcon={<InfoIcon />}
-            href={linkTo ?? ""}
-          >
-            {linkText}
+          <Button flex="1" variant="ghost" asChild>
+            <Link href={linkTo ?? ""}>
+              <LuInfo />
+              {linkText}
+            </Link>
           </Button>
         )}
-      </CardFooter>
-    </Card>
+      </Card.Footer>
+    </Card.Root>
   );
 };

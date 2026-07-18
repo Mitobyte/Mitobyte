@@ -29,7 +29,7 @@ export const CardPerson = ({ imageSrc, name, role }: CardPersonProps) => {
         overflow="hidden"
         mx="auto"
       >
-        <Image w="full" h={56} fit="cover" src={imageSrc} alt="avatar" />
+        <Image w="full" h={56} objectFit="cover" src={imageSrc} alt="avatar" />
 
         <Box py={5} textAlign="center">
           <Link

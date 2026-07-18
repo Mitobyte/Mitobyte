@@ -1,9 +1,9 @@
+import NextLink from "next/link";
 import { LogoEventbrite } from "@/common/components/Logos/LogoEventbrite";
 import { LogoMeetup } from "@/common/components/Logos/LogoMeetup.tsx";
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 import { ROUTES } from "@/config/routes";
-import { Link } from "@chakra-ui/next-js";
-import { Button, Grid, Heading, Text } from "@chakra-ui/react";
+import { Button, Grid, Heading, Text, Link } from "@chakra-ui/react";
 
 export interface SectionHeroProps extends Omit<WrapperProps, "children"> {}
 
@@ -40,12 +40,11 @@ export const SectionHero = ({
       >
         Core Events
       </Heading>
-
       <Text fontSize="xl" ml={6} maxWidth="700px" mb={5}>
         Currently, we offer 4 recurring events in the Milwaukee community. Each
         of our events adhere to the code of conduct outlined{" "}
-        <Link color="blue.600" href={ROUTES.CODE_OF_CONDUCT}>
-          here.
+        <Link color="blue.600" asChild>
+          <NextLink href={ROUTES.CODE_OF_CONDUCT}>here.</NextLink>
         </Link>
       </Text>
       <Grid
@@ -53,29 +52,22 @@ export const SectionHero = ({
         maxWidth="400px"
       >
         <Button
-          as="a"
-          target="_blank"
-          href={ROUTES.EXTERNAL.MEETUP}
-          rel="noreferrer"
           variant="outline"
           verticalAlign="baseline"
           mx={6}
           size="lg"
-          leftIcon={<LogoMeetup />}
+          asChild
         >
-          Meetup
+          <a target="_blank" href={ROUTES.EXTERNAL.MEETUP} rel="noreferrer">
+            <LogoMeetup />
+            Meetup
+          </a>
         </Button>
-        <Button
-          as="a"
-          target="_blank"
-          href={ROUTES.EXTERNAL.EVENTBRITE}
-          rel="noreferrer"
-          variant="outline"
-          verticalAlign="baseline"
-          size="lg"
-          leftIcon={<LogoEventbrite />}
-        >
-          Eventbrite
+        <Button variant="outline" verticalAlign="baseline" size="lg" asChild>
+          <a target="_blank" href={ROUTES.EXTERNAL.EVENTBRITE} rel="noreferrer">
+            <LogoEventbrite />
+            Eventbrite
+          </a>
         </Button>
       </Grid>
     </Wrapper>

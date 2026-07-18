@@ -63,27 +63,17 @@ export const NavigationDesktop = () => {
         </Box>
         <Spacer />
         <Button
-          as={Link}
-          colorScheme="codeBlue"
+          colorPalette="codeBlue"
           variant="ghost"
-          href={ROUTES.EXTERNAL.MERCHANDISE}
           fontWeight="700"
           fontSize="xl"
           size="lg"
+          asChild
         >
-          Merchandise
-        </Button>
-        <Button
-          as={Link}
-          colorScheme="codeBlue"
-          variant="ghost"
-          href={ROUTES.SPONSORS}
-          fontWeight="700"
-          fontSize="xl"
-          rightIcon={<FaGrinStars />}
-          size="lg"
-        >
-          Sponsor us!
+          <Link href={ROUTES.SPONSORS}>
+            Sponsor us!
+            <FaGrinStars />
+          </Link>
         </Button>
       </Box>
     </Box>

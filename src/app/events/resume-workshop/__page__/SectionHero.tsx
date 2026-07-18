@@ -1,9 +1,9 @@
+import NextLink from "next/link";
 import { LogoEventbrite } from "@/common/components/Logos/LogoEventbrite";
 import { LogoMeetup } from "@/common/components/Logos/LogoMeetup.tsx";
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 import { ROUTES } from "@/config/routes";
-import { Link } from "@chakra-ui/next-js";
-import { Button, Grid, Heading, Text } from "@chakra-ui/react";
+import { Button, Grid, Heading, Text, Link } from "@chakra-ui/react";
 
 export interface SectionHeroProps extends Omit<WrapperProps, "children"> {}
 
@@ -40,7 +40,6 @@ export const SectionHero = ({
       >
         Resume Workshop
       </Heading>
-
       <Text fontSize="xl" ml={6} maxWidth="700px" mb={5}>
         Our Resume Workshop event is meant to bring together recruiters, hiring
         managers, and software engineers together to help fellow developers
@@ -49,44 +48,35 @@ export const SectionHero = ({
         software engineers, we hope to provide a unique perspective on what it
         takes to get hired in the tech industry. Like all our other events, our
         Resume Workshop abides by the following code of conduct found{" "}
-        <Link color="blue.600" href={ROUTES.CODE_OF_CONDUCT}>
-          here.
+        <Link color="blue.600" asChild>
+          <NextLink href={ROUTES.CODE_OF_CONDUCT}>here.</NextLink>
         </Link>
       </Text>
-
       <Text fontSize="xl" ml={6} maxWidth="700px" mb={5}>
         You can register for our Resume Workshop events by either looking
         through our calendar on Eventbrite or Meetup.
       </Text>
-
       <Grid
         templateColumns={{ base: "1fr 1fr", lg: "1fr 1fr" }}
         maxWidth="400px"
       >
         <Button
-          as="a"
-          target="_blank"
-          href={ROUTES.EXTERNAL.MEETUP}
           variant="outline"
           verticalAlign="baseline"
-          rel="noreferrer"
           mx={6}
           size="lg"
-          leftIcon={<LogoMeetup />}
+          asChild
         >
-          Meetup
+          <a target="_blank" href={ROUTES.EXTERNAL.MEETUP} rel="noreferrer">
+            <LogoMeetup />
+            Meetup
+          </a>
         </Button>
-        <Button
-          as="a"
-          target="_blank"
-          href={ROUTES.EXTERNAL.EVENTBRITE}
-          variant="outline"
-          rel="noreferrer"
-          verticalAlign="baseline"
-          size="lg"
-          leftIcon={<LogoEventbrite />}
-        >
-          Eventbrite
+        <Button variant="outline" verticalAlign="baseline" size="lg" asChild>
+          <a target="_blank" href={ROUTES.EXTERNAL.EVENTBRITE} rel="noreferrer">
+            <LogoEventbrite />
+            Eventbrite
+          </a>
         </Button>
       </Grid>
     </Wrapper>

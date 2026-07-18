@@ -42,22 +42,17 @@ export const SectionIntroWithButtons = ({
         </Text>
       )}
       <Flex margin="0 auto" mb={14} textAlign="center" justifyContent="center">
-        <Button
-          as="a"
-          variant="outline"
-          leftIcon={buttonOneSlot}
-          mr={3}
-          href={buttonOneLink ?? ""}
-        >
-          {buttonOneText}
+        <Button variant="outline" mr={3} asChild>
+          <a href={buttonOneLink ?? ""}>
+            {buttonOneSlot}
+            {buttonOneText}
+          </a>
         </Button>
-        <Button
-          as="a"
-          variant="outline"
-          leftIcon={buttonTwoSlot}
-          href={buttonTwoLink ?? ""}
-        >
-          {buttonTwoText}
+        <Button variant="outline" asChild>
+          <a href={buttonTwoLink ?? ""}>
+            {buttonTwoSlot}
+            {buttonTwoText}
+          </a>
         </Button>
       </Flex>
     </>

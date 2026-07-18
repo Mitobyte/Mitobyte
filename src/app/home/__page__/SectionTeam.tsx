@@ -1,3 +1,4 @@
+import NextLink from "next/link";
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 import {
   AspectRatio,
@@ -6,10 +7,10 @@ import {
   Heading,
   Icon,
   Text,
+  Link,
 } from "@chakra-ui/react";
 import NextImage from "next/image";
 import { RiArrowRightUpLine } from "react-icons/ri";
-import { Link } from "@chakra-ui/next-js";
 
 import joe from "@/common/assets/images/people/profile-joe.jpg";
 import { ROUTES } from "@/config/routes";
@@ -56,33 +57,37 @@ export const SectionTeam = ({
           <Text>Software Engineer</Text>
         </GridItem>
         <GridItem>
-          <Link as={Link} href={ROUTES.TEAM}>
-            <AspectRatio
-              maxW={{ base: "700px", lg: "700px" }}
-              ratio={{ base: 3, lg: 1 }}
-              bg="white"
-              borderWidth="1px"
-              borderColor="syntaxBlack.300"
-              _hover={{
-                ".icon": {
-                  transform: "rotate(45deg)",
-                },
-                ".deco": {
-                  textDecoration: "underline",
-                },
-              }}
-            >
-              <Icon
-                height={75}
-                width={75}
-                as={RiArrowRightUpLine}
-                transition="transform 0.15s ease-in-out"
-                className="icon"
-              />
-            </AspectRatio>
-            <Heading mt={4} as="h6" size="md">
-              Meet more of our team...
-            </Heading>
+          <Link asChild>
+            <NextLink href={ROUTES.TEAM}>
+              <AspectRatio
+                maxW={{ base: "700px", lg: "700px" }}
+                ratio={{ base: 3, lg: 1 }}
+                bg="white"
+                borderWidth="1px"
+                borderColor="syntaxBlack.300"
+                _hover={{
+                  "& .icon": {
+                    transform: "rotate(45deg)",
+                  },
+                  "& .deco": {
+                    textDecoration: "underline",
+                  },
+                }}
+              >
+                <Icon
+                  height={75}
+                  width={75}
+                  transition="transform 0.15s ease-in-out"
+                  className="icon"
+                  asChild
+                >
+                  <RiArrowRightUpLine />
+                </Icon>
+              </AspectRatio>
+              <Heading mt={4} as="h6" size="md">
+                Meet more of our team...
+              </Heading>
+            </NextLink>
           </Link>
         </GridItem>
       </Grid>

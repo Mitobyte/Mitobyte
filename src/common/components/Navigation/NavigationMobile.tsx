@@ -18,10 +18,7 @@ import { LogoSmallMitobyte } from "../Logos/LogoSmallMitobyte";
 import { MenuLinks } from "./MenuLinks";
 
 export const NavigationMobile = () => {
-  const { getDisclosureProps, getButtonProps, isOpen } = useDisclosure();
-
-  const buttonProps = getButtonProps();
-  const disclosureProps = getDisclosureProps();
+  const { open, onToggle } = useDisclosure();
 
   return (
     <Box
@@ -46,7 +43,12 @@ export const NavigationMobile = () => {
           </Link>
         </Box>
         <Spacer />
-        <Button border={0} variant="outline" {...buttonProps}>
+        <Button
+          border={0}
+          variant="outline"
+          onClick={onToggle}
+          aria-expanded={open}
+        >
           <Box
             as="span"
             width="30px"
@@ -64,7 +66,7 @@ export const NavigationMobile = () => {
               height="4px"
               bg="black"
               transition="transform 0.3s, opacity 0.3s"
-              transform={isOpen ? "rotate(45deg) translate(0, 5px)" : "none"}
+              transform={open ? "rotate(45deg) translate(0, 5px)" : "none"}
             />
             <Box
               as="span"
@@ -72,12 +74,12 @@ export const NavigationMobile = () => {
               height="4px"
               bg="black"
               transition="transform 0.3s, opacity 0.3s"
-              transform={isOpen ? "rotate(-45deg) translate(0, -5px)" : "none"}
+              transform={open ? "rotate(-45deg) translate(0, -5px)" : "none"}
             />
           </Box>
         </Button>
         <Box
-          {...disclosureProps}
+          display={open ? "flex" : "none"}
           flexDirection="column"
           alignItems="flex-start"
           justifyContent="space-between"
@@ -137,15 +139,6 @@ export const NavigationMobile = () => {
               Showcase
             </Link>
             <Link
-              href={ROUTES.EXTERNAL.MERCHANDISE}
-              px={6}
-              py={2}
-              fontWeight="500"
-              fontSize="3xl"
-            >
-              Merchandise
-            </Link>
-            <Link
               href={ROUTES.SPONSORS}
               px={6}
               py={2}
@@ -154,7 +147,9 @@ export const NavigationMobile = () => {
               fontSize="3xl"
             >
               Sponsor an event
-              <Icon as={FaGrinStars} style={{ marginLeft: "8px" }} />
+              <Icon style={{ marginLeft: "8px" }} asChild>
+                <FaGrinStars />
+              </Icon>
             </Link>
           </Flex>
           <Flex

@@ -1,9 +1,5 @@
 import {
   Accordion,
-  AccordionButton,
-  AccordionIcon,
-  AccordionItem,
-  AccordionPanel,
   Box,
   Button,
   Grid,
@@ -112,16 +108,15 @@ const FAQ = [
           impact on the tech community.
         </p>
         <Button
-          as="a"
-          href="mailto:contact@mitobyte.com"
           bg="codeBlue.500"
           color="white.300"
           mt={4}
           width={{ base: "100%", sm: "auto" }}
           _hover={{ bg: "codeBlue.700", textDecoration: "none" }}
           _active={{ bg: "codeBlue.600" }}
+          asChild
         >
-          Contact Us!
+          <a href="mailto:contact@mitobyte.com">Contact Us!</a>
         </Button>
       </>
     ),
@@ -137,21 +132,23 @@ export const FAQSponsors = () => {
         </Heading>
       </GridItem>
       <GridItem>
-        <Accordion allowToggle>
+        <Accordion.Root collapsible>
           {FAQ.map((faq) => (
-            <AccordionItem key={faq.title}>
+            <Accordion.Item key={faq.title} value={faq.title}>
               <Heading as="h6">
-                <AccordionButton>
+                <Accordion.ItemTrigger>
                   <Box as="span" flex="1" textAlign="left">
                     {faq.title}
                   </Box>
-                  <AccordionIcon />
-                </AccordionButton>
+                  <Accordion.ItemIndicator />
+                </Accordion.ItemTrigger>
               </Heading>
-              <AccordionPanel>{faq.content}</AccordionPanel>
-            </AccordionItem>
+              <Accordion.ItemContent>
+                <Accordion.ItemBody>{faq.content}</Accordion.ItemBody>
+              </Accordion.ItemContent>
+            </Accordion.Item>
           ))}
-        </Accordion>
+        </Accordion.Root>
       </GridItem>
     </Grid>
   );
