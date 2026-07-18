@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import { Providers } from "../../../../bootstrap/providers";
 import { ContactUs } from "./ContactUs";
 

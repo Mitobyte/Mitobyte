@@ -1,8 +1,6 @@
 import { NextResponse, NextRequest } from "next/server";
 import { CreateEmailOptions, Resend } from "resend";
 
-export const runtime = "edge";
-
 // Form values are interpolated into the email HTML below; unescaped input
 // would let a submitter inject markup into the email we receive.
 const escapeHtml = (value: unknown) =>

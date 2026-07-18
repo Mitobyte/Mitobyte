@@ -40,3 +40,7 @@ next-env.d.ts
 .env.local
 
 *storybook.log
+# build outputs
+.open-next/
+storybook-static/
+.wrangler/

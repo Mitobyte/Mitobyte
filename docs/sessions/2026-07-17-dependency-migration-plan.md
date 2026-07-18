@@ -1,7 +1,7 @@
 # Dependency Migration Plan
 
 **Session:** 2026-07-17
-**Status:** Phases 0, 1, and 2 complete (2026-07-18). Phases 3 and 4 not started.
+**Status:** Phases 0 through 3 complete (2026-07-18). Phase 4 is a small remainder (TypeScript, resend, misc bumps); Storybook and ESLint were pulled forward into Phase 3.
 **Scope:** Full dependency modernization of the mitobyte site, preceded by package manager hardening.
 
 ## Why
@@ -118,7 +118,21 @@ One branch; these cannot be separated because the old adapter caps at Next 14 an
 
 Verification: preview deploy on Workers, contact form end to end (email actually arrives), all pages render, image loading checked, production cutover last.
 
-## Phase 4: tooling modernization and final sweep
+### Phase 3 completion notes (2026-07-18)
+
+- next 16.2.10, react/react-dom 19.2.7, @types 19. Only React 19 code change needed: two `JSX.Element` annotations became `React.ReactNode` (React 19 removed the global JSX namespace). No defaultProps/propTypes/forwardRef existed.
+- Storybook was pulled forward from Phase 4 out of necessity: 8.3.5 peer-conflicts with Next 16. Now storybook 10.5 + @storybook/nextjs 10.5 + @chromatic-com/storybook 5. The addons list collapsed to just chromatic (essentials/interactions/links merged into SB core). Story imports moved to @storybook/nextjs and storybook/test. Deleted the `src/stories` onboarding scaffold (demo Button/Header/Page/Configure.mdx from storybook init; its MDX broke the SB10 build and none of it was project code). Dropped the `staticDirs: ["../public"]` config (no public directory exists; SB10 errors on it where SB8 ignored it). `build-storybook` passes.
+- Adapter swap: @opennextjs/cloudflare 1.20 + wrangler 4.110 replace @cloudflare/next-on-pages. wrangler.toml is now a Workers config (main = .open-next/worker.js, assets binding, nodejs_compat, compatibility_date 2026-06-01). open-next.config.ts is the default defineCloudflareConfig. Scripts: `preview`/`deploy` run `opennextjs-cloudflare build` then preview/deploy; pages:build and the worker: scripts are gone.
+- `export const runtime = "edge"` removed from the send-email route (OpenNext runs the Workers Node runtime).
+- middleware.ts deleted. Its 404 redirect never fired, and the existing `src/app/not-found.tsx` (which renders the home page for unknown paths) already provides the intended behavior. Left as is.
+- ESLint 9.39 flat config in eslint.config.mjs: eslint-config-next 16 imported directly (it is flat-native; FlatCompat breaks on it), storybook flat/recommended, prettier plugin, react/no-unescaped-entities off. .eslintrc.json deleted; `lint` script is `eslint src` (next lint no longer exists).
+- Image strategy decision: `images.unoptimized: true`. The Workers runtime has no sharp optimizer, the site's images are mostly static imports, and next-on-pages was not optimizing before either. Revisit only if Cloudflare Images is adopted.
+- Verification: tsc zero errors, lint clean, next build green (18 pages), and the OpenNext worker was served locally on workerd via `opennextjs-cloudflare preview`: all routes 200, unknown paths return 404 with home content, the API route degrades gracefully without a key. `npm audit`: 10 vulnerabilities (8 low, 2 moderate), down from 72 (6 critical) at the start of this effort.
+- NOT done here (requires dashboard access): create the Worker in Cloudflare, set RESEND_API_KEY (and SMTP_EMAIL) as Worker secrets, point the mitobyte.com route/DNS at the Worker, decommission the Pages project. The first real `npm run deploy` needs `wrangler login`.
+
+## Phase 4: remaining tooling sweep (shrunk by Phase 3)
+
+Remaining: typescript 5.9.x staying current (TS 7 evaluated separately), resend 4 to 6 (check emails.send API changes), @types/node to match Node 24, @emotion/react patch, eslint-config-prettier 10, lint-staged 17, sharp bump or removal (unused now that images are unoptimized; only next build's fallback uses it), final audit/outdated zeroing.
 
 1. Storybook 8.3.5 to 10.x (only 6 story files; alternatively decide to drop Storybook entirely and delete the stories, addons, and chromatic).
 2. TypeScript to latest 5.9.x. Evaluate TS 7 (native compiler) as its own future decision.

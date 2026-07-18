@@ -1,3 +1,4 @@
+import React from "react";
 import { Button, Flex, Heading, Text } from "@chakra-ui/react";
 
 export interface SectionIntroWithButtonsProps {
@@ -7,10 +8,10 @@ export interface SectionIntroWithButtonsProps {
   showText?: boolean;
   buttonOneText: string;
   buttonOneLink: string;
-  buttonOneSlot?: JSX.Element;
+  buttonOneSlot?: React.ReactNode;
   buttonTwoText: string;
   buttonTwoLink: string;
-  buttonTwoSlot?: JSX.Element;
+  buttonTwoSlot?: React.ReactNode;
 }
 
 export const SectionIntroWithButtons = ({
