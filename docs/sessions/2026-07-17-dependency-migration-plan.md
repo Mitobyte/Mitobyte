@@ -1,7 +1,7 @@
 # Dependency Migration Plan
 
 **Session:** 2026-07-17
-**Status:** Phases 0 through 3 complete (2026-07-18). Phase 4 is a small remainder (TypeScript, resend, misc bumps); Storybook and ESLint were pulled forward into Phase 3.
+**Status:** ALL PHASES COMPLETE (2026-07-18). The only outstanding work is the Cloudflare dashboard cutover (Phase 3 notes), which requires account access, plus two documented version holds (TypeScript 7, ESLint 10).
 **Scope:** Full dependency modernization of the mitobyte site, preceded by package manager hardening.
 
 ## Why
@@ -132,7 +132,19 @@ Verification: preview deploy on Workers, contact form end to end (email actually
 
 ## Phase 4: remaining tooling sweep (shrunk by Phase 3)
 
-Remaining: typescript 5.9.x staying current (TS 7 evaluated separately), resend 4 to 6 (check emails.send API changes), @types/node to match Node 24, @emotion/react patch, eslint-config-prettier 10, lint-staged 17, sharp bump or removal (unused now that images are unoptimized; only next build's fallback uses it), final audit/outdated zeroing.
+TypeScript: on 6.0.3 as of 2026-07-18 (latest version whose package still ships the JS compiler API Next depends on; tsc, next build, lint, and storybook all verified green). TS 7 evaluated same day: the 7.0 GA package (July 8, 2026) drops that JS API, so it breaks the build on stable Next; Next only supports TS 7 via `experimental.useTypeScriptCli` in the 16.3 Preview. Revisit when Next 16.3 is stable: bump Next, enable the flag, install typescript@7. Also remaining: resend 4 to 6 (check emails.send API changes), @types/node to match Node 24, @emotion/react patch, eslint-config-prettier 10, lint-staged 17, sharp bump or removal (unused now that images are unoptimized; only next build's fallback uses it), final audit/outdated zeroing.
+
+### Phase 4 completion notes (2026-07-18)
+
+- resend 4.0.1 to 6.17.2 (published 10 days prior, cleared the cooldown; `emails.send` and `CreateEmailOptions` typecheck unchanged, worker smoke test passes). @emotion/react 11.14, @types/node 24 (matches the Node 24 runtime; 26 exists but types should track the engine), eslint-config-prettier 10, lint-staged 17.
+- sharp removed entirely: images run unoptimized on Workers, so nothing uses it.
+- ESLint 10 attempted and reverted to 9.39: eslint-plugin-react (bundled inside eslint-config-next) calls `context.getFilename`, removed in ESLint 10, and crashes at lint time. Hold until eslint-config-next ships an ESLint-10-compatible release.
+- Final `npm outdated`: only the two documented holds (typescript 6.0.3 vs 7, @types/node 24 vs 26 by choice). Final audit: 10 vulnerabilities, all transitive dev tooling, none in the deployed worker's dependency tree. Accepted, with reasons:
+  - elliptic (8 low, one chain): @storybook/nextjs webpack crypto polyfill. Vulnerable range is `*` (no fixed version exists anywhere); runs only in local Storybook builds. Clears if/when Storybook drops the polyfill chain.
+  - esbuild (moderate): vendored in @chakra-ui/cli (typegen only). Advisory applies to the esbuild dev server on Windows; neither applies here. Clears when the CLI ships esbuild 0.28.1+.
+  - postcss (moderate): pinned inside next's own bundle; every next release is flagged, unfixable downstream. Clears when Vercel bumps their pin.
+  - Do NOT run `npm audit fix --force`: its proposed fixes are next@9.3.3 and @storybook/nextjs@7.0.14.
+- Verification after all bumps: tsc clean, lint clean, next build green, Storybook builds, OpenNext worker rebuilt and serving 200s on workerd.
 
 1. Storybook 8.3.5 to 10.x (only 6 story files; alternatively decide to drop Storybook entirely and delete the stories, addons, and chromatic).
 2. TypeScript to latest 5.9.x. Evaluate TS 7 (native compiler) as its own future decision.
