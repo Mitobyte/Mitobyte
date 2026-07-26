@@ -131,6 +131,18 @@ Verification: preview deploy on Workers, contact form end to end (email actually
 - NOT done here (requires dashboard access): create the Worker in Cloudflare, set RESEND_API_KEY (and SMTP_EMAIL) as Worker secrets, point the mitobyte.com route/DNS at the Worker, decommission the Pages project.
 - Deploys run from GitHub Actions on push to main (.github/workflows/build.yaml), discovered 2026-07-19 when the first Worker deploy failed with auth error 10000. The CLOUDFLARE_API_TOKEN repo secret was minted for Pages and lacks the Workers permission. Fix: in the Cloudflare dashboard, grant the token "Account: Workers Scripts: Edit" (keep the Pages permission until the Pages project is retired), then re-run the workflow. The workflow was also updated: setup-node 24 + npm 11 (the cooldown is silently ignored by older npm), `npm ci` instead of `npm i`, and a post-deploy step that syncs RESEND_API_KEY and SMTP_EMAIL from repo secrets onto the Worker (build-time env vars do not reach the Workers runtime). SMTP_EMAIL must exist as a GitHub repo secret for the contact form's from-address to work; verify it is set.
 
+### Production cutover runbook (Pages to Worker)
+
+Both the old Pages deployment and the Worker sit behind Cloudflare's proxy on the same account, so the cutover is an edge-config change: instant, no DNS propagation, instantly reversible.
+
+0. Verify on mitobyte.workers.dev first: all pages, mobile nav, sponsors FAQ, and a real contact form submission (first true end-to-end test of Resend on Workers with the synced secrets; confirm the email arrives).
+1. Workers & Pages, mitobyte Worker, Settings, Domains and Routes: add routes `mitobyte.com/*` and `www.mitobyte.com/*`. Routes intercept at the edge before the Pages project sees the request, so DNS records stay untouched and the flip is immediate. (Custom Domains are tidier long-term but a hostname cannot be on Pages and a Worker at once, so routes avoid the detach gap.)
+2. Soak for a day or two. Rollback at any time: delete the two routes; traffic falls back to Pages instantly.
+3. Retire Pages: remove the custom domains from the Pages project, then delete it. Optionally convert the Worker routes to Custom Domains once the hostnames are free.
+4. Close the security loop: remove "Pages Write" from the API token (leaving Workers Scripts Edit only) and revoke the unused "website deploy" token.
+
+Check before step 1: how apex vs www is handled in the zone (redirect rule or separate records); keep any existing redirect rule, since routes on both hostnames cover either arrangement.
+
 ## Phase 4: remaining tooling sweep (shrunk by Phase 3)
 
 TypeScript: on 6.0.3 as of 2026-07-18 (latest version whose package still ships the JS compiler API Next depends on; tsc, next build, lint, and storybook all verified green). TS 7 evaluated same day: the 7.0 GA package (July 8, 2026) drops that JS API, so it breaks the build on stable Next; Next only supports TS 7 via `experimental.useTypeScriptCli` in the 16.3 Preview. Revisit when Next 16.3 is stable: bump Next, enable the flag, install typescript@7. Also remaining: resend 4 to 6 (check emails.send API changes), @types/node to match Node 24, @emotion/react patch, eslint-config-prettier 10, lint-staged 17, sharp bump or removal (unused now that images are unoptimized; only next build's fallback uses it), final audit/outdated zeroing.

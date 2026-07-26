@@ -75,17 +75,6 @@ export const Footer = () => {
             </FooterLink>
           </Text>
           <Text fontSize="lg" textAlign={{ base: "left", lg: "right" }} mt={4}>
-            Powered by{" "}
-            <FooterLink
-              display="inline-block"
-              href="https://www.artisanhosting.net/"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Artisan Hosting
-            </FooterLink>
-          </Text>
-          <Text fontSize="lg" textAlign={{ base: "left", lg: "right" }} mt={4}>
             Mitobyte{" "}
             <FooterLink
               display="inline-block"
@@ -94,17 +83,6 @@ export const Footer = () => {
               target="_blank"
             >
               Discord Server
-            </FooterLink>
-          </Text>
-          <Text fontSize="lg" textAlign={{ base: "left", lg: "right" }} mt={4}>
-            Mitobyte{" "}
-            <FooterLink
-              display="inline-block"
-              href={ROUTES.EXTERNAL.GOOGLE_CALENDAR}
-              rel="noreferrer"
-              target="_blank"
-            >
-              Event Calentar
             </FooterLink>
           </Text>
         </GridItem>
