@@ -1,5 +1,4 @@
 import { Box, Flex } from "@chakra-ui/react";
-import { keyframes } from "@emotion/react";
 import NextImage from "next/image";
 
 import logo from "@/common/assets/logos-mitobyte/mb-lg.svg";
@@ -9,23 +8,17 @@ const dotcolor = "#999999";
 const dotsize = "2px";
 const dotspace = "15px";
 
-const slideInFromLeft = keyframes`
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-`;
-
 interface LogoHeaderMitobyteProps {
   animateIn?: boolean;
 }
 
 export const LogoHeaderMitobyte = ({ animateIn }: LogoHeaderMitobyteProps) => {
+  // slideInFromLeft is defined in the theme's keyframes (mitobyte-theme.ts);
+  // emotion's keyframes helper injects inline style tags during SSR and
+  // causes React hydration mismatches.
   const animationProps = animateIn
     ? {
-        animation: `${slideInFromLeft} .45s cubic-bezier(0.25, 0.46, 0.45, 0.94)`,
+        animation: `slideInFromLeft .45s cubic-bezier(0.25, 0.46, 0.45, 0.94)`,
       }
     : {};
 

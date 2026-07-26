@@ -131,6 +131,13 @@ Verification: preview deploy on Workers, contact form end to end (email actually
 - NOT done here (requires dashboard access): create the Worker in Cloudflare, set RESEND_API_KEY (and SMTP_EMAIL) as Worker secrets, point the mitobyte.com route/DNS at the Worker, decommission the Pages project.
 - Deploys run from GitHub Actions on push to main (.github/workflows/build.yaml), discovered 2026-07-19 when the first Worker deploy failed with auth error 10000. The CLOUDFLARE_API_TOKEN repo secret was minted for Pages and lacks the Workers permission. Fix: in the Cloudflare dashboard, grant the token "Account: Workers Scripts: Edit" (keep the Pages permission until the Pages project is retired), then re-run the workflow. The workflow was also updated: setup-node 24 + npm 11 (the cooldown is silently ignored by older npm), `npm ci` instead of `npm i`, and a post-deploy step that syncs RESEND_API_KEY and SMTP_EMAIL from repo secrets onto the Worker (build-time env vars do not reach the Workers runtime). SMTP_EMAIL must exist as a GitHub repo secret for the contact form's from-address to work; verify it is set.
 
+### Post-deploy incident: hydration mismatch (2026-07-26)
+
+First production deploy surfaced React hydration errors (`<style data-emotion="css-global">` server/client mismatch at LogoHeaderMitobyte). Two causes, both fixed:
+
+1. Next 16 builds with Turbopack by default, and Turbopack's Emotion CSS handling breaks Chakra v3 hydration. Official Chakra workaround applied: `next dev --webpack` and `next build --webpack` in the scripts. Revisit when chakra-ui issue 9867 / the Next.js Turbopack emotion fix lands, then drop the flags.
+2. Component-level `keyframes` from @emotion/react (LogoHeaderMitobyte, SponsorCarousel) inject inline style tags during SSR. Moved both animations into the theme (`theme.keyframes`: slideInFromLeft, logoloop) and reference them by name in `animation` props, which is the v3-native pattern.
+
 ### Production cutover runbook (Pages to Worker)
 
 Both the old Pages deployment and the Worker sit behind Cloudflare's proxy on the same account, so the cutover is an edge-config change: instant, no DNS propagation, instantly reversible.

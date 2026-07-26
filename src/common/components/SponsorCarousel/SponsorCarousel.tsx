@@ -1,7 +1,6 @@
 "use client";
 
 import { Box } from "@chakra-ui/react";
-import { keyframes } from "@emotion/react";
 import NextImage from "next/image";
 
 import logoCaredirect from "@/common/assets/logos-sponsors/logo-caredirect.png";
@@ -47,16 +46,11 @@ const sponsors = [
   },
 ];
 
-const logoloop = keyframes`
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-100%); }
-`;
-
 const InnerCarousel = () => {
   return (
     <>
       <Box
-        animation={`${logoloop} 90s linear infinite`}
+        animation="logoloop 90s linear infinite"
         flexFlow="row"
         flex="none"
         justifyContent="center"

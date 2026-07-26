@@ -22,6 +22,16 @@ const config = defineConfig({
     },
   },
   theme: {
+    keyframes: {
+      slideInFromLeft: {
+        "0%": { transform: "translateX(-100%)" },
+        "100%": { transform: "translateX(0)" },
+      },
+      logoloop: {
+        "0%": { transform: "translateX(0%)" },
+        "100%": { transform: "translateX(-100%)" },
+      },
+    },
     breakpoints: {
       sm: "258px",
       md: "576px",
