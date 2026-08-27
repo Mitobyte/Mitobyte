@@ -53,7 +53,7 @@ export const SectionAboutUs = ({
             fontWeight="700"
             mx={6}
           >
-            20+ Events!
+            20+ Events a Year!
           </Heading>
           <Text
             fontSize={{ md: "lg", lg: "xl" }}

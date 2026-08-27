@@ -29,7 +29,7 @@ export const Footer = () => {
           </Text>
           <Text fontSize="lg" textAlign="left">
             {" "}
-            &copy; 2026 Mitobyte. All rights reserved.
+            &copy; {new Date().getFullYear()} Mitobyte. All rights reserved.
           </Text>
         </GridItem>
         <GridItem>

@@ -77,7 +77,7 @@ export const POST = async (req: NextRequest) => {
                   ${message}
                 </p>
                 <p class="footer">
-                  &copy; mitobyte.com 2025. All rights reserved.
+                  &copy; mitobyte.com ${new Date().getFullYear()}. All rights reserved.
                 </p>
               </div>
             </body>
