@@ -1,13 +1,48 @@
-import { Grid, GridItem, Heading, Text } from "@chakra-ui/react";
-import NextImage from "next/image";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import NextImage, { StaticImageData } from "next/image";
 
-import joe from "@/common/assets/images/people/profile-joe.jpg";
-import blaze from "@/common/assets/images/people/profile-blaze.jpg";
-import paul from "@/common/assets/images/people/profile-paul.jpg";
+import yash from "@/common/assets/images/team/yash.jpeg";
+import clare from "@/common/assets/images/team/clare.jpeg";
+import jim from "@/common/assets/images/team/jim.jpeg";
+import joseph from "@/common/assets/images/team/joseph.jpeg";
 
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
 export interface SectionTeamProps extends Omit<WrapperProps, "children"> {}
+
+interface TeamMember {
+  name: string;
+  role: string;
+  bio: string;
+  image: StaticImageData;
+}
+
+const TEAM: TeamMember[] = [
+  {
+    name: "Yash Zode",
+    role: "President",
+    bio: "Yash leads Mitobyte's events, partnerships, and sponsorships. He's an AI software engineer, a Startup Mentor at gener8tor, and MKE Tech Navigator for MKE Tech Hub Coalition. He's usually the first person to say hi when you walk in.",
+    image: yash,
+  },
+  {
+    name: "Clare Fitzgerald",
+    role: "Vice President",
+    bio: "Clare keeps Mitobyte organized and welcoming: event planning, communications, and our newsletter. She's a controls engineer who bridges software and manufacturing.",
+    image: clare,
+  },
+  {
+    name: "Jim Vitrano",
+    role: "Treasury & Operations",
+    bio: "Jim keeps our books honest and our operations steady. He's an engineer and attorney who has spent his career making complicated things trustworthy.",
+    image: jim,
+  },
+  {
+    name: "Joseph Murphy",
+    role: "Founder",
+    bio: "Joseph is a software engineer with a habit of starting things. He founded Mitobyte in 2019 with one Saturday morning meetup. A hundred-plus events later, he advises the team and dreams up whatever comes next.",
+    image: joseph,
+  },
+];
 
 export const SectionTeam = ({
   background,
@@ -34,62 +69,51 @@ export const SectionTeam = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-      <Grid templateColumns="1fr" rowGap={{ base: 6, md: 0 }}>
-        <GridItem>
-          <Grid templateColumns={{ base: "1fr", md: "2fr 1fr" }}>
-            <GridItem order={{ base: 1, md: 0 }}>
-              <Heading mt={4} as="h6" size="xl">
-                Joseph Murphy
-              </Heading>
-              <Text fontSize="xl">Software Engineer @ Little Otter</Text>
-            </GridItem>
-            <GridItem order={{ base: 0, md: 1 }}>
+      <Box maxWidth="4xl" marginX="auto">
+        {TEAM.map((member, index) => (
+          <Flex
+            key={member.name}
+            direction={{
+              base: "column",
+              xl: index % 2 === 1 ? "row-reverse" : "row",
+            }}
+            alignItems="center"
+            gap={{ base: 5, xl: 12 }}
+            paddingY={{ base: 10, xl: 12 }}
+            borderBottomWidth={index === TEAM.length - 1 ? "0" : "1px"}
+            borderColor="syntaxBlack.100"
+          >
+            <Box
+              boxSize={{ base: "144px", md: "176px", xl: "240px" }}
+              flexShrink={0}
+              borderRadius="full"
+              overflow="hidden"
+            >
               <NextImage
-                src={joe}
-                height={700}
-                width={700}
-                alt="joseph murphy"
+                src={member.image}
+                alt={member.name}
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
-            </GridItem>
-          </Grid>
-        </GridItem>
-        <GridItem>
-          <Grid templateColumns={{ base: "1fr", md: "2fr 1fr" }}>
-            <GridItem order={{ base: 1, md: 0 }}>
-              <Heading mt={4} as="h6" size="xl">
-                Blaze Smith
+            </Box>
+            <Box flex="1" textAlign={{ base: "center", xl: "left" }}>
+              <Heading as="h3" size="2xl">
+                {member.name}
               </Heading>
-              <Text fontSize="xl">Founder @ Shovel Studio</Text>
-            </GridItem>
-            <GridItem order={{ base: 0, md: 1 }}>
-              <NextImage
-                src={blaze}
-                height={400}
-                width={400}
-                alt="blaze smith"
-              />
-            </GridItem>
-          </Grid>
-        </GridItem>
-        <GridItem>
-          <Grid templateColumns={{ base: "1fr", md: "2fr 1fr" }}>
-            <GridItem order={{ base: 1, md: 0 }}>
-              <Heading mt={4} as="h6" size="xl">
-                Paul Rinaldi
-              </Heading>
-              <Text fontSize="xl">Developer Consultant @ Thoughtworks</Text>
-            </GridItem>
-            <GridItem order={{ base: 0, md: 1 }}>
-              <NextImage
-                src={paul}
-                height={400}
-                width={400}
-                alt="paul rinaldi"
-              />
-            </GridItem>
-          </Grid>
-        </GridItem>
-      </Grid>
+              <Text fontSize="md" fontWeight="bold" color="fg.muted" mt={1}>
+                {member.role}
+              </Text>
+              <Text
+                fontSize={{ base: "md", xl: "lg" }}
+                mt={3}
+                maxWidth={{ base: "560px", xl: "none" }}
+                marginX={{ base: "auto", xl: "0" }}
+              >
+                {member.bio}
+              </Text>
+            </Box>
+          </Flex>
+        ))}
+      </Box>
     </Wrapper>
   );
 };

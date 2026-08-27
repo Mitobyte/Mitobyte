@@ -31,9 +31,8 @@ export const SectionHeading = ({
       <Heading size={{ sm: "2xl", xl: "3xl", xxl: "4xl" }}>Our Team</Heading>
       <Text fontSize="xl" mt={4}>
         Mitobyte is built entirely by volunteers who share a passion for
-        technology and community. Our core team of Yash Zode, Leonardo Alvarez,
-        Jim Vitrano, and Joseph Murphy, along with countless other dedicated
-        volunteers, make it all possible.
+        technology and community. Our leadership team, along with countless
+        dedicated volunteers, makes it all possible.
       </Text>
     </Wrapper>
   );
