@@ -67,10 +67,7 @@ export const SectionHero = ({
           size="lg"
           asChild
         >
-          <a
-            target="_blank"
-            href="https://www.meetup.com/milwaukee-code-and-coffee/?eventOrigin=event_home_page"
-          >
+          <a target="_blank" href="https://www.meetup.com/mitobyte/">
             <LogoMeetup />
             Meetup
           </a>

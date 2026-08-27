@@ -18,8 +18,7 @@ export const ROUTES = {
     DISCORD: "https://discord.gg/Y5rzN2ru7Q",
     EVENTBRITE:
       "https://www.eventbrite.com/o/code-brews-collective-49824193943",
-    MEETUP:
-      "https://www.meetup.com/milwaukee-code-and-coffee/?eventOrigin=event_home_page",
+    MEETUP: "https://www.meetup.com/mitobyte/",
     HACK_CLUB: "https://hcb.hackclub.com/donations/start/mitobyte",
     GOOGLE_CALENDAR:
       "https://calendar.google.com/calendar/u/2?cid=Y182MTYzMzQ4YmFiMGU3Yjg5YjU4OGViZWRhOGY1YzJjZDcxMDlkY2U5MmViYjc3M2UyMjE2NWU3OGYzMDcyYWNjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20",

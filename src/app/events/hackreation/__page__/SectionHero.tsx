@@ -68,15 +68,15 @@ export const SectionHero = ({
         awesome together!
       </Text>
       <Text fontSize="xl" ml={6} maxWidth="700px" mb={5}>
-        Like all our other events, our Resume Workshop abides by the following
-        code of conduct found{" "}
+        Like all our other events, Hackreation abides by the following code of
+        conduct found{" "}
         <Link color="blue.600" asChild>
           <NextLink href={ROUTES.CODE_OF_CONDUCT}>here.</NextLink>
         </Link>
       </Text>
       <Text fontSize="xl" ml={6} maxWidth="700px" mb={5}>
-        You can register for our Resume Workshop events by either looking
-        through our calendar on Eventbrite or Meetup.
+        You can register for our Hackreation events by either looking through
+        our calendar on Eventbrite or Meetup.
       </Text>
       <Grid
         templateColumns={{ base: "1fr 1fr", lg: "1fr 1fr" }}

@@ -23,7 +23,7 @@ export const MailingListSignup = () => {
         borderBottom="1px solid"
         borderBottomColor="black"
       >
-        Sign up for email notifictions.
+        Sign up for email notifications.
       </Heading>
       <form
         action="https://eepurl.us5.list-manage.com/subscribe/post"
