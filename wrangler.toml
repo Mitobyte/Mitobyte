@@ -6,3 +6,10 @@ compatibility_flags = ["nodejs_compat"]
 [assets]
 directory = ".open-next/assets"
 binding = "ASSETS"
+
+# Cap CPU time per invocation. Workers Paid defaults to 30 s per request; the
+# worst cold start we've measured is ~2 s, so 5 s leaves headroom while bounding
+# what any single runaway request can cost. On the Free plan this is inert
+# (the hard 10 ms cap applies regardless).
+[limits]
+cpu_ms = 5_000
