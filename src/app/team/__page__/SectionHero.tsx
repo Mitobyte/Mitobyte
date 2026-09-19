@@ -1,7 +1,7 @@
 import { Grid, GridItem, Heading, Text } from "@chakra-ui/react";
 import NextImage from "next/image";
 
-import hero from "@/common/assets/images/events/code-and-brews/IMG_4372.jpeg";
+import hero from "@/common/assets/images/events/code-and-brews/IMG_4372.webp";
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 
 export interface SectionHeroProps extends Omit<WrapperProps, "children"> {}

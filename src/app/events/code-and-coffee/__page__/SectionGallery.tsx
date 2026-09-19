@@ -2,12 +2,12 @@ import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 import NextImage from "next/image";
 import { Grid, GridItem } from "@chakra-ui/react";
 
-import codeandcoffee1 from "@/common/assets/images/events/code-and-coffee/code_and_coffee1.jpeg";
-import codeandcoffee2 from "@/common/assets/images/events/code-and-coffee/code_and_coffee2.jpeg";
-import codeandcoffee3 from "@/common/assets/images/events/code-and-coffee/code_and_coffee3.jpg";
-import codeandcoffee4 from "@/common/assets/images/events/code-and-coffee/code_and_coffee4.jpeg";
-import codeandcoffee5 from "@/common/assets/images/events/code-and-coffee/code_and_coffee5.jpeg";
-import codeandcoffee6 from "@/common/assets/images/events/code-and-coffee/code_and_coffee6.jpg";
+import codeandcoffee1 from "@/common/assets/images/events/code-and-coffee/code_and_coffee1.webp";
+import codeandcoffee2 from "@/common/assets/images/events/code-and-coffee/code_and_coffee2.webp";
+import codeandcoffee3 from "@/common/assets/images/events/code-and-coffee/code_and_coffee3.webp";
+import codeandcoffee4 from "@/common/assets/images/events/code-and-coffee/code_and_coffee4.webp";
+import codeandcoffee5 from "@/common/assets/images/events/code-and-coffee/code_and_coffee5.webp";
+import codeandcoffee6 from "@/common/assets/images/events/code-and-coffee/code_and_coffee6.webp";
 
 export interface SectionGalleryProps extends Omit<WrapperProps, "children"> {}
 

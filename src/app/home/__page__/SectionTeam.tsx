@@ -12,7 +12,7 @@ import {
 import NextImage from "next/image";
 import { RiArrowRightUpLine } from "react-icons/ri";
 
-import joe from "@/common/assets/images/people/profile-joe.jpg";
+import joe from "@/common/assets/images/people/profile-joe.webp";
 import { ROUTES } from "@/config/routes";
 
 export interface SectionTeamProps extends Omit<WrapperProps, "children"> {}

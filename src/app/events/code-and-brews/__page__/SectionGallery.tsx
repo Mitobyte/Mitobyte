@@ -2,12 +2,12 @@ import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 import NextImage from "next/image";
 import { Grid, GridItem } from "@chakra-ui/react";
 
-import candb1 from "@/common/assets/images/events/code-and-brews/candb1.jpeg";
-import candb2 from "@/common/assets/images/events/code-and-brews/candb3.jpeg";
-import candb3 from "@/common/assets/images/events/code-and-brews/candb5.jpeg";
-import candb4 from "@/common/assets/images/events/code-and-brews/candb9.jpeg";
-import candb5 from "@/common/assets/images/events/code-and-brews/candb10.jpeg";
-import candb6 from "@/common/assets/images/events/code-and-brews/candb13.jpeg";
+import candb1 from "@/common/assets/images/events/code-and-brews/candb1.webp";
+import candb2 from "@/common/assets/images/events/code-and-brews/candb3.webp";
+import candb3 from "@/common/assets/images/events/code-and-brews/candb5.webp";
+import candb4 from "@/common/assets/images/events/code-and-brews/candb9.webp";
+import candb5 from "@/common/assets/images/events/code-and-brews/candb10.webp";
+import candb6 from "@/common/assets/images/events/code-and-brews/candb13.webp";
 
 export interface SectionGalleryProps extends Omit<WrapperProps, "children"> {}
 

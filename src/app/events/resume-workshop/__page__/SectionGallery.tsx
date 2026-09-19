@@ -2,9 +2,9 @@ import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 import NextImage from "next/image";
 import { Grid, GridItem } from "@chakra-ui/react";
 
-import resumeworkshop1 from "@/common/assets/images/events/resume-workshop/resume_workshop1.jpeg";
-import resumeworkshop2 from "@/common/assets/images/events/resume-workshop/resume_workshop2.jpeg";
-import resumeworkshop3 from "@/common/assets/images/events/resume-workshop/resume_workshop3.jpeg";
+import resumeworkshop1 from "@/common/assets/images/events/resume-workshop/resume_workshop1.webp";
+import resumeworkshop2 from "@/common/assets/images/events/resume-workshop/resume_workshop2.webp";
+import resumeworkshop3 from "@/common/assets/images/events/resume-workshop/resume_workshop3.webp";
 
 export interface SectionGalleryProps extends Omit<WrapperProps, "children"> {}
 

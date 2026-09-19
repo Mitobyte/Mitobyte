@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import NextImage from "next/image";
 
-import derricksproject from "@/common/assets/images/showcase/ollamaWebview.png";
+import derricksproject from "@/common/assets/images/showcase/ollamaWebview.webp";
 
 export interface SectionProjectsProps extends Omit<WrapperProps, "children"> {}
 

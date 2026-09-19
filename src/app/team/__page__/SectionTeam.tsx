@@ -1,10 +1,10 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import NextImage, { StaticImageData } from "next/image";
 
-import yash from "@/common/assets/images/team/yash.jpeg";
-import clare from "@/common/assets/images/team/clare.jpeg";
-import jim from "@/common/assets/images/team/jim.jpeg";
-import joseph from "@/common/assets/images/team/joseph.jpeg";
+import yash from "@/common/assets/images/team/yash.webp";
+import clare from "@/common/assets/images/team/clare.webp";
+import jim from "@/common/assets/images/team/jim.webp";
+import joseph from "@/common/assets/images/team/joseph.webp";
 
 import { Wrapper, WrapperProps } from "@/common/components/Wrapper/Wrapper";
 

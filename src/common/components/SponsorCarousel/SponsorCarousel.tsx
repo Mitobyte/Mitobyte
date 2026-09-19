@@ -3,20 +3,20 @@
 import { Box } from "@chakra-ui/react";
 import NextImage from "next/image";
 
-import logoCaredirect from "@/common/assets/logos-sponsors/logo-caredirect.png";
-import logoCodeworks from "@/common/assets/logos-sponsors/logo-codeworks.jpg";
+import logoCaredirect from "@/common/assets/logos-sponsors/logo-caredirect.webp";
+import logoCodeworks from "@/common/assets/logos-sponsors/logo-codeworks.webp";
 import logoExpansive from "@/common/assets/logos-sponsors/logo-expansive.png";
-import logoIndeed from "@/common/assets/logos-sponsors/logo-indeed.png";
-import logoExplorium from "@/common/assets/logos-sponsors/logo-explorium.png";
-import logoNewResources from "@/common/assets/logos-sponsors/logo-new-resources.png";
-import logoSkygen from "@/common/assets/logos-sponsors/logo-skygen.jpg";
-import logoWickidCool from "@/common/assets/logos-sponsors/logo-wickid-cool.png";
-import logoFormLabs from "@/common/assets/logos-sponsors/logo-form-labs.jpg";
+import logoIndeed from "@/common/assets/logos-sponsors/logo-indeed.webp";
+import logoExplorium from "@/common/assets/logos-sponsors/logo-explorium.webp";
+import logoNewResources from "@/common/assets/logos-sponsors/logo-new-resources.webp";
+import logoSkygen from "@/common/assets/logos-sponsors/logo-skygen.webp";
+import logoWickidCool from "@/common/assets/logos-sponsors/logo-wickid-cool.webp";
+import logoFormLabs from "@/common/assets/logos-sponsors/logo-form-labs.webp";
 import logoRoofMarketplace from "@/common/assets/logos-sponsors/logo-roof-marketplace.png";
-import logoPkware from "@/common/assets/logos-sponsors/logo-pkware.png";
-import logoMistura from "@/common/assets/logos-sponsors/logo-mistura.png";
-import logoNvisia from "@/common/assets/logos-sponsors/logo-nvisia.png";
-import logoNorthernGround from "@/common/assets/logos-sponsors/logo-northern-ground.png";
+import logoPkware from "@/common/assets/logos-sponsors/logo-pkware.webp";
+import logoMistura from "@/common/assets/logos-sponsors/logo-mistura.webp";
+import logoNvisia from "@/common/assets/logos-sponsors/logo-nvisia.webp";
+import logoNorthernGround from "@/common/assets/logos-sponsors/logo-northern-ground.webp";
 
 const sponsors = [
   { name: "CareDirect", logo: logoCaredirect, height: 100, width: 200 },

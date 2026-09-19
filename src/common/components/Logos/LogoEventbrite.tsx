@@ -1,6 +1,6 @@
 import NextImage from "next/image";
 
-import eventbriteLogo from "@/common/assets/logos-third-party/logo-eventbrite.png";
+import eventbriteLogo from "@/common/assets/logos-third-party/logo-eventbrite.webp";
 
 export const LogoEventbrite = () => {
   return (
