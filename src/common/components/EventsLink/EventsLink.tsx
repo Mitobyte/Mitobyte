@@ -31,7 +31,7 @@ export const EventsLink = () => {
         <CardEventLink
           title="Code + Brews"
           time="5:00pm to 8:00pm"
-          date="2nd Wednesday each month"
+          date="3rd Wednesday each month"
           href={ROUTES.EVENTS.CODE_AND_BREWS}
         />
       </GridItem>

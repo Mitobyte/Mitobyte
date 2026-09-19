@@ -39,7 +39,7 @@ export const SectionStats = ({
         </GridItem>
         <GridItem borderRight={{ base: 0, lg: "1px solid black" }} ml={6} p={6}>
           <Heading>Occurs</Heading>
-          <Text>2nd Wednesday each month</Text>
+          <Text>3rd Wednesday each month</Text>
         </GridItem>
         <GridItem borderRight={{ base: 0, lg: "1px solid black" }} ml={6} p={6}>
           <Heading>Timing</Heading>
