@@ -31,7 +31,7 @@ export const SectionEventsLink = ({
       marginRight={marginRight}
       marginTop={marginTop}
     >
-      <EventsLink />
+      <EventsLink detailed />
     </Wrapper>
   );
 };

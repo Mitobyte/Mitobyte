@@ -1,9 +1,16 @@
 import { Grid, GridItem } from "@chakra-ui/react";
 
 import { CardEventLink } from "@/common/components/CardEventLink/CardEventLink";
-import { ROUTES } from "@/config/routes";
+import { EVENTS } from "@/config/events";
 
-export const EventsLink = () => {
+export interface EventsLinkProps {
+  /** Show the event icon and one-line description in each card. */
+  detailed?: boolean;
+}
+
+export const EventsLink = ({ detailed = false }: EventsLinkProps) => {
+  const lastRowStart = EVENTS.length - 2;
+
   return (
     <Grid
       templateColumns={{ base: "1fr", lg: "repeat(2, 1fr)" }}
@@ -11,51 +18,33 @@ export const EventsLink = () => {
       borderWidth="1px"
       overflow="hidden"
     >
-      <GridItem
-        borderRightColor="syntaxBlack.300"
-        borderRightWidth={{ base: 0, lg: "1px" }}
-        borderBottomColor="syntaxBlack.300"
-        borderBottomWidth={{ base: "1px" }}
-      >
-        <CardEventLink
-          title="Code & Coffee"
-          time="9:00am to 12:00pm"
-          date="1st Saturday each month"
-          href={ROUTES.EVENTS.CODE_AND_COFFEE}
-        />
-      </GridItem>
-      <GridItem
-        borderBottomColor="syntaxBlack.300"
-        borderBottomWidth={{ base: "1px" }}
-      >
-        <CardEventLink
-          title="Code + Brews"
-          time="5:00pm to 8:00pm"
-          date="3rd Wednesday each month"
-          href={ROUTES.EVENTS.CODE_AND_BREWS}
-        />
-      </GridItem>
-      <GridItem
-        borderRightColor="syntaxBlack.300"
-        borderRightWidth={{ base: 0, lg: "1px" }}
-        borderBottomColor="syntaxBlack.300"
-        borderBottomWidth={{ base: "1px", lg: 0 }}
-      >
-        <CardEventLink
-          title="Resume Workshop"
-          time="9:00am to 12:00pm"
-          date="Once a quarter"
-          href={ROUTES.EVENTS.RESUME_WORKSHOP}
-        />
-      </GridItem>
-      <GridItem>
-        <CardEventLink
-          title="Hackreation"
-          time="9:00am to 4:00pm"
-          date="Twice a year"
-          href={ROUTES.EVENTS.HACKREATION}
-        />
-      </GridItem>
+      {EVENTS.map((event, index) => {
+        const isLeftColumn = index % 2 === 0;
+        const isLastRow = index >= lastRowStart;
+        const isLast = index === EVENTS.length - 1;
+
+        return (
+          <GridItem
+            key={event.href}
+            borderRightColor="syntaxBlack.300"
+            borderRightWidth={{ base: 0, lg: isLeftColumn ? "1px" : 0 }}
+            borderBottomColor="syntaxBlack.300"
+            borderBottomWidth={{
+              base: isLast ? 0 : "1px",
+              lg: isLastRow ? 0 : "1px",
+            }}
+          >
+            <CardEventLink
+              title={event.title}
+              date={event.cadence}
+              time={event.time}
+              href={event.href}
+              description={detailed ? event.description : undefined}
+              icon={detailed ? <event.icon /> : undefined}
+            />
+          </GridItem>
+        );
+      })}
     </Grid>
   );
 };
