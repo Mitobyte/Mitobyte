@@ -46,6 +46,7 @@ export const LogoHeaderMitobyte = ({ animateIn }: LogoHeaderMitobyteProps) => {
         >
           <NextImage
             alt="Mitobyte logo"
+            priority
             src={logo}
             height={274}
             width={836}

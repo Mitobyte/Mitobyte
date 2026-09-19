@@ -52,6 +52,7 @@ export const SectionProjects = ({
               height="315"
               src="https://www.youtube.com/embed/W4EBTpEjK-Q?si=7BYGecSDXCt2Mv0z"
               title="YouTube video player"
+              loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen

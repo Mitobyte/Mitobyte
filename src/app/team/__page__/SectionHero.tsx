@@ -40,6 +40,7 @@ export const SectionHero = ({
           <NextImage
             height={510}
             width={680}
+            priority
             src={hero}
             alt="A group of nerds gather for conversation and heated discussion."
           />
