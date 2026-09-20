@@ -51,15 +51,6 @@ export const NavigationDesktop = () => {
           >
             Contact
           </Link>
-          <Link
-            href={ROUTES.SHOWCASE}
-            px={6}
-            py={2}
-            fontWeight="500"
-            fontSize="xl"
-          >
-            Showcase
-          </Link>
         </Box>
         <Spacer />
         <Button
