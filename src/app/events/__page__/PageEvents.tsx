@@ -1,6 +1,6 @@
 "use client";
 
-import { MailingListSignupSection } from "./MailingListSignupSection";
+import { SectionMailingList } from "./SectionMailingList";
 import { SectionEventsLink } from "./SectionEventsLink";
 import { SectionHero } from "./SectionHero";
 
@@ -16,13 +16,7 @@ export const PageEvents = () => {
         marginBottom={5}
         maxWidth="8xl"
       />
-      <MailingListSignupSection
-        marginLeft={5}
-        marginRight={5}
-        paddingBottom={20}
-        marginBottom={20}
-        maxWidth="2xl"
-      />
+      <SectionMailingList maxWidth="8xl" marginBottom={20} />
     </>
   );
 };

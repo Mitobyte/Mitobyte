@@ -11,6 +11,11 @@ export interface WrapperProps {
   marginBottom?: BoxProps["marginBottom"];
   marginLeft?: BoxProps["marginLeft"];
   maxWidth?: ContainerProps["maxWidth"];
+  /** Hairline above the section, e.g. "1px solid". */
+  borderTop?: BoxProps["borderTop"];
+  /** Hairline below the section, e.g. "1px solid". */
+  borderBottom?: BoxProps["borderBottom"];
+  borderColor?: BoxProps["borderColor"];
   children: React.ReactNode;
 }
 
@@ -25,6 +30,9 @@ export const Wrapper = ({
   marginBottom,
   marginLeft,
   maxWidth = "full",
+  borderTop,
+  borderBottom,
+  borderColor,
   children,
 }: WrapperProps) => {
   return (
@@ -38,6 +46,9 @@ export const Wrapper = ({
       marginRight={marginRight}
       marginBottom={marginBottom}
       marginLeft={marginLeft}
+      borderTop={borderTop}
+      borderBottom={borderBottom}
+      borderColor={borderColor}
     >
       <Container maxWidth={maxWidth}>{children}</Container>
     </Box>
