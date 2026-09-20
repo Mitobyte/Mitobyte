@@ -39,6 +39,11 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # Optional override for the public Turnstile site key baked into the
+          # client bundle (ContactUs.tsx carries the production widget's key as
+          # its default). Set as a repository *variable* only to point a build at
+          # a different widget.
+          NEXT_PUBLIC_TURNSTILE_SITE_KEY: ${{ vars.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
         run: npm run deploy
 
       # Runtime env on Workers comes from Worker secrets, not build env vars.
@@ -49,10 +54,16 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           SMTP_EMAIL: ${{ secrets.SMTP_EMAIL }}
+          # Turnstile widget secret. Once set, the send-email route rejects
+          # submissions without a valid token.
+          TURNSTILE_SECRET: ${{ secrets.TURNSTILE_SECRET }}
         run: |
           if [ -n "$RESEND_API_KEY" ]; then
             echo "$RESEND_API_KEY" | npx wrangler secret put RESEND_API_KEY
           fi
           if [ -n "$SMTP_EMAIL" ]; then
             echo "$SMTP_EMAIL" | npx wrangler secret put SMTP_EMAIL
+          fi
+          if [ -n "$TURNSTILE_SECRET" ]; then
+            echo "$TURNSTILE_SECRET" | npx wrangler secret put TURNSTILE_SECRET
           fi

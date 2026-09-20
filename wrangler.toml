@@ -13,3 +13,8 @@ binding = "ASSETS"
 # (the hard 10 ms cap applies regardless).
 [limits]
 cpu_ms = 5_000
+
+# Hostnames a Turnstile token must have been issued for. Never include
+# localhost here; use a separate widget for local development.
+[vars]
+TURNSTILE_HOSTNAMES = "mitobyte.com,www.mitobyte.com"
