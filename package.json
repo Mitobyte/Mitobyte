@@ -43,7 +43,7 @@
     "prettier": "^3.3.3",
     "sharp": "^0.35.4",
     "storybook": "^10.5.0",
-    "typescript": "^6.0.3",
+    "typescript": "^7.0.2",
     "wrangler": "^4.131.0"
   },
   "lint-staged": {
