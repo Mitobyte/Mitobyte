@@ -144,6 +144,17 @@ const config = defineConfig({
               borderLeft: "1px solid",
               borderLeftColor: "black",
             },
+            // Self-contained field: hairline on all sides, square, white.
+            // Works on tinted bands where the open-edged "box" tab does not.
+            frame: {
+              bg: "white",
+              border: "1px solid",
+              borderColor: "black",
+              borderRadius: 0,
+              px: "4",
+              py: "0",
+              _hover: { borderColor: "black" },
+            },
           },
         },
       },
@@ -167,6 +178,15 @@ const config = defineConfig({
               borderLeft: "1px solid",
               borderLeftColor: "black",
               borderRadius: 0,
+            },
+            frame: {
+              bg: "white",
+              border: "1px solid",
+              borderColor: "black",
+              borderRadius: 0,
+              px: "4",
+              py: "3",
+              _hover: { borderColor: "black" },
             },
           },
         },

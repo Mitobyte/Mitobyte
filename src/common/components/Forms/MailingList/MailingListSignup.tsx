@@ -131,12 +131,8 @@ export const MailingListSignup = () => {
                 <Input
                   name="EMAIL"
                   type="email"
+                  variant="frame"
                   h={12}
-                  px={4}
-                  bg="white"
-                  borderRadius="0"
-                  borderColor="black"
-                  _hover={{ borderColor: "black" }}
                   maxLength={EMAIL_MAX}
                   placeholder="you@example.com"
                   value={email}
