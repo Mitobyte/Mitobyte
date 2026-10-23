@@ -17,34 +17,34 @@
     "postinstall": "chakra typegen ./src/integrations/chakra/mitobyte-theme.ts"
   },
   "dependencies": {
-    "@chakra-ui/react": "^3.36.0",
+    "@chakra-ui/react": "^3.37.0",
     "@emotion/react": "^11.14.0",
-    "next": "^16.3.3",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7",
+    "next": "^16.4.2",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
     "react-icons": "^5.3.0",
-    "resend": "^6.17.2"
+    "resend": "^6.33.0"
   },
   "devDependencies": {
-    "@chakra-ui/cli": "^3.36.0",
-    "@chromatic-com/storybook": "^5.2.1",
-    "@opennextjs/cloudflare": "^1.20.1",
-    "@storybook/nextjs": "^10.5.0",
-    "@types/node": "^24.13.3",
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
+    "@chakra-ui/cli": "^3.37.0",
+    "@chromatic-com/storybook": "^5.5.1",
+    "@opennextjs/cloudflare": "^1.20.12",
+    "@storybook/nextjs": "^10.6.2",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "eslint": "^9.39.5",
-    "eslint-config-next": "^16.2.10",
+    "eslint-config-next": "^16.4.2",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-storybook": "^10.5.0",
+    "eslint-plugin-prettier": "^5.5.7",
+    "eslint-plugin-storybook": "^10.6.2",
     "husky": "^9.1.6",
-    "lint-staged": "^17.0.8",
-    "prettier": "^3.3.3",
-    "sharp": "^0.35.4",
-    "storybook": "^10.5.0",
+    "lint-staged": "^17.6.0",
+    "prettier": "^3.9.10",
+    "sharp": "^0.35.5",
+    "storybook": "^10.6.2",
     "typescript": "^6.0.3",
-    "wrangler": "^4.131.0"
+    "wrangler": "^4.151.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,css,md}": "prettier --write",
@@ -56,14 +56,19 @@
     "npm": ">=11.10"
   },
   "allowScripts": {
-    "sharp@0.33.5": true,
     "fsevents@2.3.3": true,
     "fsevents@2.1.3": true,
-    "workerd@1.20260708.1": true,
-    "sharp@0.34.5": true,
-    "esbuild@0.27.7": true,
-    "esbuild@0.25.4": true,
-    "esbuild@0.28.1": true,
-    "unrs-resolver@1.12.2": true
+    "unrs-resolver@1.12.2": true,
+    "esbuild@0.28.2": true,
+    "workerd@1.20261012.1": true,
+    "core-js-pure@3.49.0": true
+  },
+  "overrides": {
+    "@node-minify/core": {
+      "glob": "^10.5.0"
+    },
+    "@storybook/builder-webpack5": {
+      "webpack-dev-middleware": "^7.4.6"
+    }
   }
 }
