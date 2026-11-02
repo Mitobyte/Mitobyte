@@ -19,32 +19,32 @@
   "dependencies": {
     "@chakra-ui/react": "^3.37.0",
     "@emotion/react": "^11.14.0",
-    "next": "^16.4.2",
+    "next": "^16.4.3",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-icons": "^5.3.0",
-    "resend": "^6.33.0"
+    "resend": "^6.34.1"
   },
   "devDependencies": {
     "@chakra-ui/cli": "^3.37.0",
-    "@chromatic-com/storybook": "^5.5.1",
-    "@opennextjs/cloudflare": "^1.20.12",
-    "@storybook/nextjs": "^10.6.2",
+    "@chromatic-com/storybook": "^5.6.0",
+    "@opennextjs/cloudflare": "^1.20.13",
+    "@storybook/nextjs": "^10.6.4",
     "@types/node": "^24.19.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "eslint": "^9.39.5",
-    "eslint-config-next": "^16.4.2",
+    "eslint-config-next": "^16.4.3",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.7",
-    "eslint-plugin-storybook": "^10.6.2",
+    "eslint-plugin-storybook": "^10.6.4",
     "husky": "^9.1.6",
     "lint-staged": "^17.6.0",
     "prettier": "^3.9.10",
     "sharp": "^0.35.5",
     "storybook": "^10.6.2",
     "typescript": "^6.0.3",
-    "wrangler": "^4.151.0"
+    "wrangler": "^4.152.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,css,md}": "prettier --write",
